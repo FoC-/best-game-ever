@@ -1,0 +1,80 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Mapper</title>
+    <meta charset="UTF-8" />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        background-color: #fae3e8;
+        line-height: 1.5;
+      }
+      #container {
+        margin: 1.5% auto;
+        padding: 20px;
+        width: fit-content;
+        background-color: #e3faf5;
+        display: flex;
+        box-shadow:
+          0 4px 8px 0 rgba(0, 0, 0, 0.2),
+          0 6px 20px 0 rgba(0, 0, 0, 0.19);
+      }
+
+      h1 {
+        text-align: center;
+      }
+
+      textarea {
+        min-width: 500px;
+        min-height: 90vh;
+      }
+
+      .separator {
+        min-width: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+      }
+
+      .hidden {
+        display: none !important;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="container">
+      <div class="from">
+        <textarea name="from"></textarea>
+      </div>
+      <div class="separator">
+        <button name="go">GO!!!</button>
+      </div>
+      <div class="to">
+        <textarea name="to" readonly></textarea>
+      </div>
+    </div>
+
+    <script type="module">
+      import * as core from "./src/core";
+
+      const fromTextarea = document.querySelector("textarea[name=from]");
+      const goButton = document.querySelector("button[name=go]");
+      const toTextarea = document.querySelector("textarea[name=to]");
+
+      goButton.onclick = () => {
+        const src = fromTextarea.value;
+        if (!src) return false;
+
+        if (src[0] == "0") {
+          toTextarea.value = JSON.stringify(core.Decoder(src), null, 2);
+        } else {
+          toTextarea.value = core.Encoder(JSON.parse(src));
+        }
+        return false;
+      };
+    </script>
+  </body>
+</html>

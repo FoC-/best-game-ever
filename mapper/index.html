@@ -51,6 +51,7 @@
       </div>
       <div class="separator">
         <button name="go">GO!!!</button>
+        <button name="generate">GENERATE!!!</button>
       </div>
       <div class="to">
         <textarea name="to" readonly></textarea>
@@ -62,6 +63,7 @@
 
       const fromTextarea = document.querySelector("textarea[name=from]");
       const goButton = document.querySelector("button[name=go]");
+      const generateButton = document.querySelector("button[name=generate]");
       const toTextarea = document.querySelector("textarea[name=to]");
 
       goButton.onclick = () => {
@@ -73,6 +75,16 @@
         } else {
           toTextarea.value = core.Encoder(JSON.parse(src));
         }
+        return false;
+      };
+
+      generateButton.onclick = () => {
+        const blueprint = core.Generate([
+          ["firearm-magazine", 500, 500],
+          ["iron-gear-wheel", 290, 600],
+        ]);
+        fromTextarea.value = JSON.stringify(blueprint, null, 2);
+        toTextarea.value = core.Encoder(blueprint);
         return false;
       };
     </script>

@@ -1,7 +1,7 @@
-declare type CompareOperations = "=" | "!=" | "<" | ">" | "<=" | ">=";
+declare type CompareOperations = "=" | "≠" | "<" | ">" | "≤" | "≥";
 declare type ArithmeticOperations = "+" | "-" | "*" | "/" | "%" | "^" | "<<" | ">>" | "AND" | "OR" | "XOR";
 declare type SignalTypes = "fluid" | "item" | "virtual" | "title" | "recipe";
-declare type Quality = undefined | "uncommon" | "rare" | "epic" | "legendary";
+declare type Quality = undefined | "normal" | "uncommon" | "rare" | "epic" | "legendary";
 
 declare type TEntityConnectionPort = 1 | 2 | 3 | 4 | 5;
 declare type TWire = [number, TEntityConnectionPort, number, TEntityConnectionPort];
@@ -36,26 +36,24 @@ declare type TIcon = {
   index: number;
 };
 
-declare type OutputNetwork = {
+declare type Networks = {
   red: boolean;
   green: boolean;
 };
 
-declare type InputSignal =
-  | {
-      first_signal: TSignal;
-      comparator?: CompareOperations;
-      constant?: number;
-      first_signal_networks?: OutputNetwork;
-    }[]
-  | TSignal;
+declare type Condition = {
+  first_signal: TSignal;
+  constant?: number;
+  comparator?: CompareOperations; // default value is "<"
+  first_signal_networks?: Networks;
+  compare_type?: "and";
+};
 
-declare type OutputSignal =
-  | {
-      signal: TSignal;
-      networks?: OutputNetwork;
-    }[]
-  | TSignal;
+declare type Output = {
+  signal: TSignal;
+  copy_count_from_input: boolean;
+  networks?: Networks;
+};
 
 declare type ArithmeticConditionBase = {
   first_signal: TSignal;
@@ -79,9 +77,9 @@ declare type TArithmeticCombinatorControlBehavior = {
 
 type SectionFilter = {
   index: number;
-  type?: "virtual" | undefined; // real signal has no type
+  type?: "virtual"; // real signal has no type
   name: string; // todo entity name
-  quality?: Quality;
+  quality: Quality;
   comparator: "="; // constant combinator always use '='
   count: number;
 };
@@ -102,12 +100,10 @@ declare type TConstantCombinatorControlBehavior = {
 };
 
 declare type TDeciderCombinatorControlBehavior = {
-  decider_conditions: TDeciderCombinatorControlBehaviorDeciderConditions;
-};
-
-declare type TDeciderCombinatorControlBehaviorDeciderConditions = {
-  conditions: InputSignal;
-  outputs: OutputSignal;
+  decider_conditions: {
+    conditions: Condition[];
+    outputs: Output[];
+  };
 };
 
 declare type CircuitConditionBase = {

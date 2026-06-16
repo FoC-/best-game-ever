@@ -12,6 +12,10 @@
         background-color: #fae3e8;
         line-height: 1.5;
       }
+      canvas {
+        display: block;
+      }
+
       #container {
         margin: 1.5% auto;
         padding: 20px;
@@ -39,12 +43,49 @@
         justify-content: space-around;
       }
 
+      .picker {
+        display: flex;
+        flex-direction: column;
+      }
+
+      .picker .buttons-row {
+        height: 100%;
+        width: 100%;
+        display: inline-flex;
+        background-color: #333;
+      }
+
+      .picker .button {
+        cursor: pointer;
+        scale: 60%;
+        outline: 3px solid #000;
+        outline-offset: 20px;
+      }
+
+      span[data-sprite] {
+        height: 64px;
+        width: 64px;
+        background-image: url(icons.webp);
+      }
+      span[data-sprite="solar-panel"] {
+        background-position: -462px -528px;
+      }
+
       .hidden {
         display: none !important;
       }
     </style>
   </head>
   <body>
+    <div class="picker">
+      <span class="buttons-row">
+        <span class="button" data-sprite="solar-panel"></span>
+        <span class="button" data-sprite="solar-panel"></span>
+      </span>
+      <span class="buttons-row">
+        <span class="button" data-sprite="solar-panel"></span>
+      </span>
+    </div>
     <div id="container">
       <div class="from">
         <textarea name="from"></textarea>

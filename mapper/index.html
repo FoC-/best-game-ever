@@ -3,6 +3,7 @@
   <head>
     <title>Mapper</title>
     <meta charset="UTF-8" />
+    <link rel="stylesheet" href="bin/icons.css" />
     <style>
       * {
         margin: 0;
@@ -62,15 +63,6 @@
         outline-offset: 20px;
       }
 
-      span[data-sprite] {
-        height: 64px;
-        width: 64px;
-        background-image: url(icons.webp);
-      }
-      span[data-sprite="solar-panel"] {
-        background-position: -462px -528px;
-      }
-
       .hidden {
         display: none !important;
       }
@@ -79,11 +71,11 @@
   <body>
     <div class="picker">
       <span class="buttons-row">
-        <span class="button" data-sprite="solar-panel"></span>
-        <span class="button" data-sprite="solar-panel"></span>
+        <span class="button" data-sprite="combat"></span>
+        <span class="button" data-sprite="space"></span>
       </span>
       <span class="buttons-row">
-        <span class="button" data-sprite="solar-panel"></span>
+        <span class="button" data-sprite="active-provider-chest"></span>
       </span>
     </div>
     <div id="container">

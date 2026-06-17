@@ -1,91 +1,178 @@
 export class Zip {
-  private zip: {
+  private crc32 = (data: BufferSource) => {
+    const table = new Uint32Array(256);
+    for (let i = 0; i < 256; i++) {
+      let c = i;
+      for (var b = 0; b < 8; b++) c = (c & 1 ? 0xedb88320 : 0) ^ (c >>> 1);
+      table[i] = c;
+    }
+
+    let crc = -1;
+    for (var i = 0; i < data.byteLength; i++) crc = table[(crc ^ data[i]) & 0xff] ^ (crc >>> 8);
+    return (crc ^ -1) >>> 0;
+  };
+
+  private convertToDosDate(source: Date) {
+    let date = 0;
+    date |= ((source.getFullYear() - 1980) & 0b1111111) << 9;
+    date |= ((source.getMonth() + 1) & 0b1111) << 5;
+    date |= source.getDate() & 0b11111;
+
+    let time = 0;
+    time |= (source.getHours() & 0b11111) << 11;
+    time |= (source.getMinutes() & 0b111111) << 5;
+    time |= Math.round(source.getSeconds() / 2) & 0b11111;
+
+    return { date, time };
+  }
+
+  private createLocalFileHeader(
+    time: number,
+    date: number,
+    crc: number,
+    size: number,
+    fileName: Uint8Array,
+    extraField = new Uint8Array()
+  ) {
+    const HEADER_SIZE = 30;
+    const data = new Uint8Array(HEADER_SIZE + fileName.byteLength + extraField.byteLength);
+
+    const view = new DataView(data.buffer, data.byteOffset, data.byteLength);
+    view.setUint32(0, 0x04034b50, true); // Magic number. Must be 50 4B 03 04.
+    view.setUint16(4, 20, true); // Version needed to extract (minimum).
+    view.setUint16(6, 0, true); // General purpose bit flag.
+    view.setUint16(8, 0, true); // Compression method; e.g. none = 0
+    view.setUint16(10, time, true); // File last modification time.
+    view.setUint16(12, date, true); //File last modification date.
+    view.setUint32(14, crc, true); // CRC-32 of uncompressed data.
+    view.setUint32(18, size, true); // Compressed size (or FF FF FF FF for ZIP64).
+    view.setUint32(22, size, true); // Uncompressed size (or FF FF FF FF for ZIP64).
+    view.setUint16(26, fileName.byteLength, true); // File name length (n).
+    view.setUint16(28, extraField.byteLength, true); // Extra field length (m).
+
+    let offset = HEADER_SIZE;
+    data.set(fileName, offset); // (n) File name.
+    offset += fileName.byteLength;
+    data.set(extraField, offset); // (m) Extra field.
+
+    return data;
+  }
+
+  private createCentralDirectoryFileHeader(
+    time: number,
+    date: number,
+    crc: number,
+    size: number,
+    localHeaderOffset: number,
+    fileName: Uint8Array,
+    extraField = new Uint8Array(),
+    fileComment = new Uint8Array()
+  ) {
+    const HEADER_SIZE = 46;
+    const data = new Uint8Array(HEADER_SIZE + fileName.byteLength + extraField.byteLength + fileComment.byteLength);
+
+    const view = new DataView(data.buffer, data.byteOffset, data.byteLength);
+    view.setUint32(0, 0x02014b50, true); // Magic number. Must be 50 4B 01 02.
+    view.setUint16(4, 20, true); // Version made by.
+    view.setUint16(6, 20, true); // Version needed to extract (minimum).
+    view.setUint16(8, 0, true); // General purpose bit flag.
+    view.setUint16(10, 0, true); // Compression method. 0 = none
+    view.setUint16(12, time, true); // File last modification time.
+    view.setUint16(14, date, true); // File last modification date.
+    view.setUint32(16, crc, true); // CRC-32 of uncompressed data.
+    view.setUint32(20, size, true); // Compressed size (or FF FF FF FF for ZIP64).
+    view.setUint32(24, size, true); // Uncompressed size (or FF FF FF FF for ZIP64).
+    view.setUint16(28, fileName.byteLength, true); // File name length (n).
+    view.setUint16(30, extraField.byteLength, true); // Extra field length (m).
+    view.setUint16(32, fileComment.byteLength, true); // File comment length (k).
+    view.setUint16(34, 0, true); // Disk number where file starts (or FF FF for ZIP64).
+    view.setUint16(36, 1, true); // Internal file attributes.
+    view.setUint32(38, 32, true); // External file attributes.
+    view.setUint32(42, localHeaderOffset, true); // Relative offset of local file header (or FF FF FF FF for ZIP64). This is the number of bytes between the start of the first disk on which the file occurs, and the start of the local file header. This allows software reading the central directory to locate the position of the file inside the ZIP file.
+
+    let offset = HEADER_SIZE;
+    data.set(fileName, offset); // (n) File name.
+    offset += fileName.byteLength;
+    data.set(extraField, offset); // (m) Extra field.
+    offset += extraField.byteLength;
+    data.set(fileComment, offset); // (k) File comment.
+
+    return data;
+  }
+
+  private createEndOfCentralDirectoryRecord(
+    records: number,
+    directorySize: number,
+    directoryOffset: number,
+    fileComment = new Uint8Array()
+  ) {
+    const HEADER_SIZE = 22;
+    const data = new Uint8Array(HEADER_SIZE + fileComment.byteLength);
+
+    const view = new DataView(data.buffer, data.byteOffset, data.byteLength);
+    view.setUint32(0, 0x06054b50, true); // Magic number. Must be 50 4B 05 06.
+    view.setUint16(4, 0, true); // Number of this disk (or FF FF for ZIP64).
+    view.setUint16(6, 0, true); // Disk where central directory starts (or FF FF for ZIP64).
+    view.setUint16(8, records, true); // Number of central directory records on this disk (or FF FF for ZIP64).
+    view.setUint16(10, records, true); // Total number of central directory records (or FF FF for ZIP64).
+    view.setUint32(12, directorySize, true); // Size of central directory in bytes (or FF FF FF FF for ZIP64).
+    view.setUint32(16, directoryOffset, true); // Offset of start of central directory, relative to start of archive (or FF FF FF FF for ZIP64).
+    view.setUint16(20, fileComment.byteLength, true); // Comment length (n).
+
+    let offset = HEADER_SIZE;
+    data.set(fileComment, offset); // (n) Comment.
+
+    return data;
+  }
+
+  private encoder = new TextEncoder();
+  private records: {
     lastModified: Date;
-    fileUrl: string;
-    uint: number[];
+    fileUrl: Uint8Array;
+    data: BufferSource;
   }[] = [];
 
-  constructor(public name: string) {}
-
-  private dec2bin = (dec, size) => dec.toString(2).padStart(size, "0");
-  private str2dec = (str: string) => Array.from(new TextEncoder().encode(str));
-  private str2hex = (str: string) => [...new TextEncoder().encode(str)].map((x) => x.toString(16).padStart(2, "0"));
-  private hex2buf = (hex) => new Uint8Array(hex.split(" ").map((x) => parseInt(x, 16)));
-  private bin2hex = (bin) =>
-    parseInt(bin.slice(8), 2).toString(16).padStart(2, "0") +
-    " " +
-    parseInt(bin.slice(0, 8), 2).toString(16).padStart(2, "0");
-
-  private reverse = (hex) => {
-    let hexArray = new Array();
-    for (let i = 0; i < hex.length; i = i + 2) hexArray[i] = hex[i] + "" + hex[i + 1];
-    return hexArray
-      .filter((a) => a)
-      .reverse()
-      .join(" ");
-  };
-
-  private crc32 = (r) => {
-    for (var a, o = [], c = 0; c < 256; c++) {
-      a = c;
-      for (var f = 0; f < 8; f++) a = 1 & a ? 3988292384 ^ (a >>> 1) : a >>> 1;
-      o[c] = a;
-    }
-    for (var n = -1, t = 0; t < r.length; t++) n = (n >>> 8) ^ o[255 & (n ^ r[t])];
-    return this.reverse(((-1 ^ n) >>> 0).toString(16).padStart(8, "0"));
-  };
-
   addStr(fileUrl: string, lastModified: Date, data: string) {
-    this.add(fileUrl, lastModified, this.str2dec(data));
+    this.records.push({ lastModified, fileUrl: this.encoder.encode(fileUrl), data: this.encoder.encode(data) });
   }
 
   add(fileUrl: string, lastModified: Date, data: number[]) {
-    this.zip.push({ fileUrl, lastModified, uint: [...new Uint8Array(data)] });
+    this.records.push({ lastModified, fileUrl: this.encoder.encode(fileUrl), data: new Uint8Array(data) });
   }
 
-  makeZip() {
-    let count = 0;
-    let centralDirectoryFileHeader = "";
-    let directoryInit = 0;
-    let offSetLocalHeader = "00 00 00 00";
-    const file = [];
+  makeZip(): Blob {
+    const directoryHeaders: BufferSource[] = [];
+    const result: BufferSource[] = [];
 
-    for (const { lastModified, fileUrl, uint } of this.zip) {
-      const hour = this.dec2bin(lastModified.getHours(), 5);
-      const minutes = this.dec2bin(lastModified.getMinutes(), 6);
-      const seconds = this.dec2bin(Math.round(lastModified.getSeconds() / 2), 5);
-      const time = this.bin2hex(`${hour}${minutes}${seconds}`);
+    let localHeaderOffset = 0;
+    for (const { lastModified, fileUrl, data } of this.records) {
+      const { time, date } = this.convertToDosDate(lastModified);
+      const crc = this.crc32(data);
+      const localHeader = this.createLocalFileHeader(time, date, crc, data.byteLength, fileUrl);
+      result.push(localHeader, data);
 
-      const year = this.dec2bin(lastModified.getFullYear() - 1980, 7);
-      const month = this.dec2bin(lastModified.getMonth() + 1, 4);
-      const day = this.dec2bin(lastModified.getDate(), 5);
-      const date = this.bin2hex(`${year}${month}${day}`);
+      const directoryHeader = this.createCentralDirectoryFileHeader(
+        time,
+        date,
+        crc,
+        data.byteLength,
+        localHeaderOffset,
+        fileUrl
+      );
+      directoryHeaders.push(directoryHeader);
 
-      const crc = this.crc32(uint);
-      const size = this.reverse(uint.length.toString(16).padStart(8, "0"));
-      const nameFile = this.str2hex(fileUrl).join(" ");
-      const nameBytes = new TextEncoder().encode(fileUrl);
-      const nameSize = this.reverse(nameBytes.length.toString(16).padStart(4, "0"));
-      const fileHeader = `50 4B 03 04 14 00 00 00 00 00 ${time} ${date} ${crc} ${size} ${size} ${nameSize} 00 00 ${nameFile}`;
-      const fileHeaderBuffer = this.hex2buf(fileHeader);
-      directoryInit = directoryInit + fileHeaderBuffer.length + uint.length;
-      centralDirectoryFileHeader = `${centralDirectoryFileHeader}50 4B 01 02 14 00 14 00 00 00 00 00 ${time} ${date} ${crc} ${size} ${size} ${nameSize} 00 00 00 00 00 00 01 00 20 00 00 00 ${offSetLocalHeader} ${nameFile} `;
-      offSetLocalHeader = this.reverse(directoryInit.toString(16).padStart(8, "0"));
-      file.push(fileHeaderBuffer, new Uint8Array(uint));
-      count++;
+      localHeaderOffset += localHeader.byteLength + data.byteLength;
     }
-    centralDirectoryFileHeader = centralDirectoryFileHeader.trim();
-    const entries = this.reverse(count.toString(16).padStart(4, "0"));
-    const dirSize = this.reverse(centralDirectoryFileHeader.split(" ").length.toString(16).padStart(8, "0"));
-    const dirInit = this.reverse(directoryInit.toString(16).padStart(8, "0"));
-    const centralDirectory = `50 4b 05 06 00 00 00 00 ${entries} ${entries} ${dirSize} ${dirInit} 00 00`;
 
-    file.push(this.hex2buf(centralDirectoryFileHeader), this.hex2buf(centralDirectory));
+    result.push(
+      ...directoryHeaders,
+      this.createEndOfCentralDirectoryRecord(
+        this.records.length,
+        directoryHeaders.reduce((a, c) => a + c.byteLength, 0),
+        localHeaderOffset
+      )
+    );
 
-    let a = document.createElement("a");
-    a.href = URL.createObjectURL(new Blob([...file], { type: "application/octet-stream" }));
-    console.log(a.href);
-    a.download = `${this.name}.zip`;
-    a.click();
+    return new Blob(result, { type: "application/zip" });
   }
 }

@@ -204,12 +204,13 @@
           css.push(`[sprite="${id}"] { background-position: -${x}px -${y}px; }`);
         }
 
-        const zip = new Zip("result");
+        const zip = new Zip();
         zip.addStr("icons.css", new Date(), css.join("\n"));
         zip.addStr("icons.json", new Date(), JSON.stringify(sprites));
-        const blob = await new Promise((resolve) => resultCanvas.toBlob(resolve, "image/webp", 1));
-        zip.add("icons.webp", new Date(), await blob.arrayBuffer());
-        zip.makeZip();
+        const imageBlob = await new Promise((resolve) => resultCanvas.toBlob(resolve, "image/webp", 1));
+        zip.add("icons.webp", new Date(), await imageBlob.arrayBuffer());
+        const zipBlob = zip.makeZip();
+        saveBlob(zipBlob, "result.zip");
       };
     </script>
   </body>

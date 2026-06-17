@@ -1,903 +1,1904 @@
 [
-  { "id": "normal", "x": 0, "y": 0, "color": "#7d7d7d" },
-  { "id": "uncommon", "x": 66, "y": 0, "color": "#369a45" },
-  { "id": "rare", "x": 0, "y": 66, "color": "#2264a2" },
-  { "id": "epic", "x": 66, "y": 66, "color": "#800ba2" },
-  { "id": "legendary", "x": 132, "y": 0, "color": "#a26717" },
-  { "id": "wooden-chest", "x": 132, "y": 66, "color": "#91713d" },
-  { "id": "iron-chest", "x": 0, "y": 132, "color": "#7b6c5f" },
-  { "id": "steel-chest", "x": 66, "y": 132, "color": "#85787a" },
-  { "id": "storage-tank", "x": 132, "y": 132, "color": "#7c715e" },
-  { "id": "transport-belt", "x": 198, "y": 0, "color": "#716357" },
-  { "id": "fast-transport-belt", "x": 198, "y": 66, "color": "#725a56" },
-  { "id": "express-transport-belt", "x": 198, "y": 132, "color": "#616468" },
-  { "id": "turbo-transport-belt", "x": 0, "y": 198, "color": "#686757" },
-  { "id": "underground-belt", "x": 66, "y": 198, "color": "#78684a" },
-  { "id": "fast-underground-belt", "x": 132, "y": 198, "color": "#744a46" },
-  { "id": "express-underground-belt", "x": 198, "y": 198, "color": "#56666f" },
-  { "id": "turbo-underground-belt", "x": 264, "y": 0, "color": "#5f6947" },
-  { "id": "splitter", "x": 264, "y": 66, "color": "#756b54" },
-  { "id": "fast-splitter", "x": 264, "y": 132, "color": "#7d615f" },
-  { "id": "express-splitter", "x": 264, "y": 198, "color": "#6a787d" },
-  { "id": "turbo-splitter", "x": 0, "y": 264, "color": "#737963" },
-  { "id": "burner-inserter", "x": 66, "y": 264, "color": "#6e6b69" },
-  { "id": "inserter", "x": 132, "y": 264, "color": "#9d845a" },
-  { "id": "long-handed-inserter", "x": 198, "y": 264, "color": "#9a605b" },
-  { "id": "fast-inserter", "x": 264, "y": 264, "color": "#5d8999" },
-  { "id": "bulk-inserter", "x": 330, "y": 0, "color": "#81975e" },
-  { "id": "stack-inserter", "x": 330, "y": 66, "color": "#928e82" },
-  { "id": "small-electric-pole", "x": 330, "y": 132, "color": "#6e6157" },
-  { "id": "medium-electric-pole", "x": 330, "y": 198, "color": "#837163" },
-  { "id": "big-electric-pole", "x": 330, "y": 264, "color": "#6e7578" },
-  { "id": "substation", "x": 0, "y": 330, "color": "#5a5e64" },
-  { "id": "pipe", "x": 66, "y": 330, "color": "#6c634f" },
-  { "id": "pipe-to-ground", "x": 132, "y": 330, "color": "#7f735b" },
-  { "id": "pump", "x": 198, "y": 330, "color": "#6a5b50" },
-  { "id": "rail", "x": 264, "y": 330, "color": "#7a6f5b" },
-  { "id": "rail-ramp", "x": 330, "y": 330, "color": "#857160" },
-  { "id": "rail-support", "x": 396, "y": 0, "color": "#897464" },
-  { "id": "train-stop", "x": 396, "y": 66, "color": "#8e6558" },
-  { "id": "rail-signal", "x": 396, "y": 132, "color": "#6d7156" },
-  { "id": "rail-chain-signal", "x": 396, "y": 198, "color": "#5b7b85" },
-  { "id": "locomotive", "x": 396, "y": 264, "color": "#714d49" },
-  { "id": "cargo-wagon", "x": 396, "y": 330, "color": "#6b6868" },
-  { "id": "fluid-wagon", "x": 0, "y": 396, "color": "#7d7b79" },
-  { "id": "artillery-wagon", "x": 66, "y": 396, "color": "#736e59" },
-  { "id": "car", "x": 132, "y": 396, "color": "#735a41" },
-  { "id": "tank", "x": 198, "y": 396, "color": "#6e5842" },
-  { "id": "spidertron", "x": 264, "y": 396, "color": "#735232" },
-  { "id": "logistic-robot", "x": 330, "y": 396, "color": "#7c7166" },
-  { "id": "construction-robot", "x": 396, "y": 396, "color": "#857a68" },
-  { "id": "active-provider-chest", "x": 462, "y": 0, "color": "#6c556f" },
-  { "id": "passive-provider-chest", "x": 462, "y": 66, "color": "#81574c" },
-  { "id": "storage-chest", "x": 462, "y": 132, "color": "#7d7047" },
-  { "id": "buffer-chest", "x": 462, "y": 198, "color": "#597a54" },
-  { "id": "requester-chest", "x": 462, "y": 264, "color": "#5d7071" },
-  { "id": "roboport", "x": 462, "y": 330, "color": "#736d67" },
-  { "id": "small-lamp", "x": 462, "y": 396, "color": "#aaa8a7" },
-  { "id": "arithmetic-combinator", "x": 0, "y": 462, "color": "#686c5c" },
-  { "id": "decider-combinator", "x": 66, "y": 462, "color": "#7b6f4c" },
-  { "id": "selector-combinator", "x": 132, "y": 462, "color": "#716f54" },
-  { "id": "constant-combinator", "x": 198, "y": 462, "color": "#784f4c" },
-  { "id": "power-switch", "x": 264, "y": 462, "color": "#676265" },
-  { "id": "programmable-speaker", "x": 330, "y": 462, "color": "#727066" },
-  { "id": "display-panel", "x": 396, "y": 462, "color": "#58554d" },
-  { "id": "stone-brick", "x": 462, "y": 462, "color": "#7b7c77" },
-  { "id": "concrete", "x": 528, "y": 0, "color": "#828486" },
-  { "id": "hazard-concrete", "x": 528, "y": 66, "color": "#7f7a60" },
-  { "id": "refined-concrete", "x": 528, "y": 132, "color": "#7d7f7f" },
-  { "id": "refined-hazard-concrete", "x": 528, "y": 198, "color": "#85795c" },
-  { "id": "landfill", "x": 528, "y": 264, "color": "#6b5240" },
-  { "id": "artificial-yumako-soil", "x": 528, "y": 330, "color": "#686c36" },
-  { "id": "overgrowth-yumako-soil", "x": 528, "y": 396, "color": "#806f29" },
-  { "id": "artificial-jellynut-soil", "x": 528, "y": 462, "color": "#825a74" },
-  { "id": "overgrowth-jellynut-soil", "x": 0, "y": 528, "color": "#9a5976" },
-  { "id": "ice-platform", "x": 66, "y": 528, "color": "#8294a0" },
-  { "id": "foundation", "x": 132, "y": 528, "color": "#575450" },
-  { "id": "cliff-explosives", "x": 198, "y": 528, "color": "#597c93" },
-  { "id": "repair-pack", "x": 264, "y": 528, "color": "#a69e91" },
-  { "id": "boiler", "x": 330, "y": 528, "color": "#6d6a57" },
-  { "id": "steam-engine", "x": 396, "y": 528, "color": "#716a5c" },
-  { "id": "solar-panel", "x": 462, "y": 528, "color": "#5e8894" },
-  { "id": "accumulator", "x": 528, "y": 528, "color": "#809696" },
-  { "id": "nuclear-reactor", "x": 594, "y": 0, "color": "#82866b" },
-  { "id": "heat-pipe", "x": 594, "y": 66, "color": "#ae7160" },
-  { "id": "heat-exchanger", "x": 594, "y": 132, "color": "#865645" },
-  { "id": "steam-turbine", "x": 594, "y": 198, "color": "#666662" },
-  { "id": "fusion-reactor", "x": 594, "y": 264, "color": "#81717f" },
-  { "id": "fusion-generator", "x": 594, "y": 330, "color": "#7e7582" },
-  { "id": "burner-mining-drill", "x": 594, "y": 396, "color": "#68615f" },
-  { "id": "electric-mining-drill", "x": 594, "y": 462, "color": "#6a6a62" },
-  { "id": "big-mining-drill", "x": 594, "y": 528, "color": "#815b53" },
-  { "id": "offshore-pump", "x": 0, "y": 594, "color": "#6c5f4e" },
-  { "id": "pumpjack", "x": 66, "y": 594, "color": "#677a4f" },
-  { "id": "stone-furnace", "x": 132, "y": 594, "color": "#7a6c4b" },
-  { "id": "steel-furnace", "x": 198, "y": 594, "color": "#706652" },
-  { "id": "electric-furnace", "x": 264, "y": 594, "color": "#65615d" },
-  { "id": "foundry", "x": 330, "y": 594, "color": "#8d5e3c" },
-  { "id": "recycler", "x": 396, "y": 594, "color": "#6a6049" },
-  { "id": "agricultural-tower", "x": 462, "y": 594, "color": "#7c7b52" },
-  { "id": "biochamber", "x": 528, "y": 594, "color": "#737146" },
-  { "id": "captive-biter-spawner", "x": 594, "y": 594, "color": "#99745a" },
-  { "id": "assembling-machine-1", "x": 660, "y": 0, "color": "#72635c" },
-  { "id": "assembling-machine-2", "x": 660, "y": 66, "color": "#65656e" },
-  { "id": "assembling-machine-3", "x": 660, "y": 132, "color": "#707461" },
-  { "id": "oil-refinery", "x": 660, "y": 198, "color": "#7d644a" },
-  { "id": "chemical-plant", "x": 660, "y": 264, "color": "#726a5d" },
-  { "id": "centrifuge", "x": 660, "y": 330, "color": "#798970" },
-  { "id": "electromagnetic-plant", "x": 660, "y": 396, "color": "#6f7482" },
-  { "id": "cryogenic-plant", "x": 660, "y": 462, "color": "#7e837e" },
-  { "id": "lab", "x": 660, "y": 528, "color": "#677c9a" },
-  { "id": "biolab", "x": 660, "y": 594, "color": "#73686c" },
-  { "id": "lightning-rod", "x": 0, "y": 660, "color": "#767275" },
-  { "id": "lightning-collector", "x": 66, "y": 660, "color": "#757571" },
-  { "id": "heating-tower", "x": 132, "y": 660, "color": "#916348" },
-  { "id": "beacon", "x": 198, "y": 660, "color": "#69635e" },
-  { "id": "speed-module", "x": 264, "y": 660, "color": "#5d8290" },
-  { "id": "speed-module-2", "x": 330, "y": 660, "color": "#5d8998" },
-  { "id": "speed-module-3", "x": 396, "y": 660, "color": "#5c919f" },
-  { "id": "efficiency-module", "x": 462, "y": 660, "color": "#6b8b58" },
-  { "id": "efficiency-module-2", "x": 528, "y": 660, "color": "#76955f" },
-  { "id": "efficiency-module-3", "x": 594, "y": 660, "color": "#7e9e61" },
-  { "id": "productivity-module", "x": 660, "y": 660, "color": "#976f52" },
-  { "id": "productivity-module-2", "x": 726, "y": 0, "color": "#9e7959" },
-  { "id": "productivity-module-3", "x": 726, "y": 66, "color": "#a48157" },
-  { "id": "quality-module", "x": 726, "y": 132, "color": "#8e847b" },
-  { "id": "quality-module-2", "x": 726, "y": 198, "color": "#97877d" },
-  { "id": "quality-module-3", "x": 726, "y": 264, "color": "#9d887d" },
-  { "id": "wood", "x": 726, "y": 330, "color": "#906636" },
-  { "id": "coal", "x": 726, "y": 396, "color": "#312f2b" },
-  { "id": "stone", "x": 726, "y": 462, "color": "#8a7856" },
-  { "id": "iron-ore", "x": 726, "y": 528, "color": "#5e7580" },
-  { "id": "copper-ore", "x": 726, "y": 594, "color": "#a76847" },
-  { "id": "uranium-ore", "x": 726, "y": 660, "color": "#649b29" },
-  { "id": "raw-fish", "x": 0, "y": 726, "color": "#9b9a72" },
-  { "id": "ice", "x": 66, "y": 726, "color": "#859ba6" },
-  { "id": "iron-plate", "x": 132, "y": 726, "color": "#8f8f8f" },
-  { "id": "copper-plate", "x": 198, "y": 726, "color": "#bb7761" },
-  { "id": "steel-plate", "x": 264, "y": 726, "color": "#848581" },
-  { "id": "solid-fuel", "x": 330, "y": 726, "color": "#525252" },
-  { "id": "plastic-bar", "x": 396, "y": 726, "color": "#cccccc" },
-  { "id": "sulfur", "x": 462, "y": 726, "color": "#ada441" },
-  { "id": "battery", "x": 528, "y": 726, "color": "#615c5a" },
-  { "id": "explosives", "x": 594, "y": 726, "color": "#925e59" },
-  { "id": "carbon", "x": 660, "y": 726, "color": "#494947" },
-  { "id": "water-barrel", "x": 726, "y": 726, "color": "#6c737a" },
-  { "id": "crude-oil-barrel", "x": 792, "y": 0, "color": "#626262" },
-  { "id": "petroleum-gas-barrel", "x": 792, "y": 66, "color": "#787477" },
-  { "id": "light-oil-barrel", "x": 792, "y": 132, "color": "#8a7550" },
-  { "id": "heavy-oil-barrel", "x": 792, "y": 198, "color": "#806959" },
-  { "id": "lubricant-barrel", "x": 792, "y": 264, "color": "#617559" },
-  { "id": "sulfuric-acid-barrel", "x": 792, "y": 330, "color": "#818d53" },
-  { "id": "fluoroketone-hot-barrel", "x": 792, "y": 396, "color": "#64725c" },
-  { "id": "fluoroketone-cold-barrel", "x": 792, "y": 462, "color": "#527260" },
-  { "id": "iron-gear-wheel", "x": 792, "y": 528, "color": "#6e6f6b" },
-  { "id": "iron-stick", "x": 792, "y": 594, "color": "#868786" },
-  { "id": "copper-cable", "x": 792, "y": 660, "color": "#b57c66" },
-  { "id": "barrel", "x": 792, "y": 726, "color": "#777776" },
-  { "id": "electronic-circuit", "x": 0, "y": 792, "color": "#7c9548" },
-  { "id": "advanced-circuit", "x": 66, "y": 792, "color": "#af6b4b" },
-  { "id": "processing-unit", "x": 132, "y": 792, "color": "#787cad" },
-  { "id": "engine-unit", "x": 198, "y": 792, "color": "#6b6453" },
-  { "id": "electric-engine-unit", "x": 264, "y": 792, "color": "#7f6b65" },
-  { "id": "flying-robot-frame", "x": 330, "y": 792, "color": "#6c716d" },
-  { "id": "low-density-structure", "x": 396, "y": 792, "color": "#8e7d64" },
-  { "id": "rocket-fuel", "x": 462, "y": 792, "color": "#6f6352" },
-  { "id": "uranium-235", "x": 528, "y": 792, "color": "#5fa23f" },
-  { "id": "uranium-238", "x": 594, "y": 792, "color": "#3d683d" },
-  { "id": "uranium-fuel-cell", "x": 660, "y": 792, "color": "#588d55" },
-  { "id": "depleted-uranium-fuel-cell", "x": 726, "y": 792, "color": "#535852" },
-  { "id": "nuclear-fuel", "x": 792, "y": 792, "color": "#628353" },
-  { "id": "calcite", "x": 858, "y": 0, "color": "#848383" },
-  { "id": "tungsten-ore", "x": 858, "y": 66, "color": "#584e74" },
-  { "id": "tungsten-carbide", "x": 858, "y": 132, "color": "#625a6d" },
-  { "id": "tungsten-plate", "x": 858, "y": 198, "color": "#72687c" },
-  { "id": "scrap", "x": 858, "y": 264, "color": "#5d4b4a" },
-  { "id": "holmium-ore", "x": 858, "y": 330, "color": "#95676f" },
-  { "id": "holmium-plate", "x": 858, "y": 396, "color": "#be9299" },
-  { "id": "superconductor", "x": 858, "y": 462, "color": "#58759e" },
-  { "id": "supercapacitor", "x": 858, "y": 528, "color": "#64667a" },
-  { "id": "yumako-seed", "x": 858, "y": 594, "color": "#a85050" },
-  { "id": "jellynut-seed", "x": 858, "y": 660, "color": "#9c9690" },
-  { "id": "yumako", "x": 858, "y": 726, "color": "#b7494c" },
-  { "id": "jellynut", "x": 858, "y": 792, "color": "#b98eb5" },
-  { "id": "iron-bacteria", "x": 0, "y": 858, "color": "#577795" },
-  { "id": "copper-bacteria", "x": 66, "y": 858, "color": "#ae7a54" },
-  { "id": "spoilage", "x": 132, "y": 858, "color": "#70684d" },
-  { "id": "nutrients", "x": 198, "y": 858, "color": "#ada9a2" },
-  { "id": "bioflux", "x": 264, "y": 858, "color": "#a85b49" },
-  { "id": "yumako-mash", "x": 330, "y": 858, "color": "#b37b4c" },
-  { "id": "jelly", "x": 396, "y": 858, "color": "#6aa84e" },
-  { "id": "carbon-fiber", "x": 462, "y": 858, "color": "#767676" },
-  { "id": "biter-egg", "x": 528, "y": 858, "color": "#b18b59" },
-  { "id": "pentapod-egg", "x": 594, "y": 858, "color": "#687327" },
-  { "id": "tree-seed", "x": 660, "y": 858, "color": "#a38055" },
-  { "id": "lithium", "x": 726, "y": 858, "color": "#7f8070" },
-  { "id": "lithium-plate", "x": 792, "y": 858, "color": "#7c837c" },
-  { "id": "quantum-processor", "x": 858, "y": 858, "color": "#99817b" },
-  { "id": "fusion-power-cell", "x": 924, "y": 0, "color": "#55808d" },
-  { "id": "automation-science-pack", "x": 924, "y": 66, "color": "#ae6e6e" },
-  { "id": "logistic-science-pack", "x": 924, "y": 132, "color": "#71b073" },
-  { "id": "military-science-pack", "x": 924, "y": 198, "color": "#7f8087" },
-  { "id": "chemical-science-pack", "x": 924, "y": 264, "color": "#6fa5b6" },
-  { "id": "production-science-pack", "x": 924, "y": 330, "color": "#9a6ab3" },
-  { "id": "utility-science-pack", "x": 924, "y": 396, "color": "#b8a573" },
-  { "id": "space-science-pack", "x": 924, "y": 462, "color": "#bcbbbc" },
-  { "id": "metallurgic-science-pack", "x": 924, "y": 528, "color": "#be814b" },
-  { "id": "agricultural-science-pack", "x": 924, "y": 594, "color": "#8e9641" },
-  { "id": "electromagnetic-science-pack", "x": 924, "y": 660, "color": "#bc5d8c" },
-  { "id": "cryogenic-science-pack", "x": 924, "y": 726, "color": "#545d9e" },
-  { "id": "promethium-science-pack", "x": 924, "y": 792, "color": "#545764" },
-  { "id": "rocket-silo", "x": 924, "y": 858, "color": "#7a7463" },
-  { "id": "rocket-part", "x": 0, "y": 924, "color": "#847b5f" },
-  { "id": "cargo-landing-pad", "x": 66, "y": 924, "color": "#6b665e" },
-  { "id": "space-platform-foundation", "x": 132, "y": 924, "color": "#4f4d4c" },
-  { "id": "cargo-bay", "x": 198, "y": 924, "color": "#867965" },
-  { "id": "asteroid-collector", "x": 264, "y": 924, "color": "#7b726d" },
-  { "id": "crusher", "x": 330, "y": 924, "color": "#5d5e5a" },
-  { "id": "thruster", "x": 396, "y": 924, "color": "#a28f79" },
-  { "id": "space-platform-starter-pack", "x": 462, "y": 924, "color": "#74706b" },
-  { "id": "metallic-asteroid-chunk", "x": 528, "y": 924, "color": "#716a77" },
-  { "id": "carbonic-asteroid-chunk", "x": 594, "y": 924, "color": "#6c6955" },
-  { "id": "oxide-asteroid-chunk", "x": 660, "y": 924, "color": "#85a2a4" },
-  { "id": "promethium-asteroid-chunk", "x": 726, "y": 924, "color": "#9e5763" },
-  { "id": "submachine-gun", "x": 792, "y": 924, "color": "#625f5e" },
-  { "id": "railgun", "x": 858, "y": 924, "color": "#4e5c6a" },
-  { "id": "teslagun", "x": 924, "y": 924, "color": "#769087" },
-  { "id": "shotgun", "x": 990, "y": 0, "color": "#846257" },
-  { "id": "combat-shotgun", "x": 990, "y": 66, "color": "#836558" },
-  { "id": "rocket-launcher", "x": 990, "y": 132, "color": "#6a6a60" },
-  { "id": "flamethrower", "x": 990, "y": 198, "color": "#675e59" },
-  { "id": "firearm-magazine", "x": 990, "y": 264, "color": "#645f40" },
-  { "id": "piercing-rounds-magazine", "x": 990, "y": 330, "color": "#694040" },
-  { "id": "uranium-rounds-magazine", "x": 990, "y": 396, "color": "#3b793b" },
-  { "id": "shotgun-shell", "x": 990, "y": 462, "color": "#9f523a" },
-  { "id": "piercing-shotgun-shell", "x": 990, "y": 528, "color": "#6d8168" },
-  { "id": "cannon-shell", "x": 990, "y": 594, "color": "#6d5d46" },
-  { "id": "explosive-cannon-shell", "x": 990, "y": 660, "color": "#8c5d45" },
-  { "id": "uranium-cannon-shell", "x": 990, "y": 726, "color": "#646f41" },
-  { "id": "explosive-uranium-cannon-shell", "x": 990, "y": 792, "color": "#846f40" },
-  { "id": "artillery-shell", "x": 990, "y": 858, "color": "#9e7f62" },
-  { "id": "rocket", "x": 990, "y": 924, "color": "#827b68" },
-  { "id": "explosive-rocket", "x": 0, "y": 990, "color": "#836c6b" },
-  { "id": "atomic-bomb", "x": 66, "y": 990, "color": "#6c8c67" },
-  { "id": "capture-robot-rocket", "x": 132, "y": 990, "color": "#726353" },
-  { "id": "flamethrower-ammo", "x": 198, "y": 990, "color": "#8b7771" },
-  { "id": "railgun-ammo", "x": 264, "y": 990, "color": "#3b5b74" },
-  { "id": "tesla-ammo", "x": 330, "y": 990, "color": "#7b7c6c" },
-  { "id": "grenade", "x": 396, "y": 990, "color": "#656b5b" },
-  { "id": "cluster-grenade", "x": 462, "y": 990, "color": "#755d53" },
-  { "id": "poison-capsule", "x": 528, "y": 990, "color": "#5f8a98" },
-  { "id": "slowdown-capsule", "x": 594, "y": 990, "color": "#97835e" },
-  { "id": "defender-capsule", "x": 660, "y": 990, "color": "#67889f" },
-  { "id": "distractor-capsule", "x": 726, "y": 990, "color": "#8b8a58" },
-  { "id": "destroyer-capsule", "x": 792, "y": 990, "color": "#946456" },
-  { "id": "light-armor", "x": 858, "y": 990, "color": "#6f593e" },
-  { "id": "heavy-armor", "x": 924, "y": 990, "color": "#84603d" },
-  { "id": "modular-armor", "x": 990, "y": 990, "color": "#866743" },
-  { "id": "power-armor", "x": 1056, "y": 0, "color": "#77502a" },
-  { "id": "power-armor-mk2", "x": 1056, "y": 66, "color": "#795533" },
-  { "id": "mech-armor", "x": 1056, "y": 132, "color": "#9f7452" },
-  { "id": "solar-panel-equipment", "x": 1056, "y": 198, "color": "#537a8d" },
-  { "id": "fission-reactor-equipment", "x": 1056, "y": 264, "color": "#857a5c" },
-  { "id": "fusion-reactor-equipment", "x": 1056, "y": 330, "color": "#7c7b78" },
-  { "id": "battery-equipment", "x": 1056, "y": 396, "color": "#747664" },
-  { "id": "battery-mk2-equipment", "x": 1056, "y": 462, "color": "#6d6e5e" },
-  { "id": "battery-mk3-equipment", "x": 1056, "y": 528, "color": "#67706a" },
-  { "id": "belt-immunity-equipment", "x": 1056, "y": 594, "color": "#6e7173" },
-  { "id": "exoskeleton-equipment", "x": 1056, "y": 660, "color": "#797270" },
-  { "id": "personal-roboport-equipment", "x": 1056, "y": 726, "color": "#78705c" },
-  { "id": "personal-roboport-mk2-equipment", "x": 1056, "y": 792, "color": "#6a7378" },
-  { "id": "night-vision-equipment", "x": 1056, "y": 858, "color": "#697660" },
-  { "id": "toolbelt-equipment", "x": 1056, "y": 924, "color": "#725638" },
-  { "id": "energy-shield-equipment", "x": 1056, "y": 990, "color": "#627f83" },
-  { "id": "energy-shield-mk2-equipment", "x": 0, "y": 1056, "color": "#9d6e52" },
-  { "id": "personal-laser-defense-equipment", "x": 66, "y": 1056, "color": "#735f44" },
-  { "id": "discharge-defense-equipment", "x": 132, "y": 1056, "color": "#789284" },
-  { "id": "stone-wall", "x": 198, "y": 1056, "color": "#625a49" },
-  { "id": "gate", "x": 264, "y": 1056, "color": "#665f41" },
-  { "id": "radar", "x": 330, "y": 1056, "color": "#7e7a66" },
-  { "id": "land-mine", "x": 396, "y": 1056, "color": "#726555" },
-  { "id": "gun-turret", "x": 462, "y": 1056, "color": "#816745" },
-  { "id": "laser-turret", "x": 528, "y": 1056, "color": "#826f3f" },
-  { "id": "flamethrower-turret", "x": 594, "y": 1056, "color": "#756551" },
-  { "id": "artillery-turret", "x": 660, "y": 1056, "color": "#7e7769" },
-  { "id": "rocket-turret", "x": 726, "y": 1056, "color": "#746148" },
-  { "id": "tesla-turret", "x": 792, "y": 1056, "color": "#7f7760" },
-  { "id": "railgun-turret", "x": 858, "y": 1056, "color": "#675e4f" },
-  { "id": "water", "x": 924, "y": 1056, "color": "#3e7c8d" },
-  { "id": "steam", "x": 990, "y": 1056, "color": "#787878" },
-  { "id": "crude-oil", "x": 1056, "y": 1056, "color": "#4e4e4e" },
-  { "id": "petroleum-gas", "x": 1122, "y": 0, "color": "#7a7a7a" },
-  { "id": "light-oil", "x": 1122, "y": 66, "color": "#947734" },
-  { "id": "heavy-oil", "x": 1122, "y": 132, "color": "#97502a" },
-  { "id": "lubricant", "x": 1122, "y": 198, "color": "#428230" },
-  { "id": "sulfuric-acid", "x": 1122, "y": 264, "color": "#a4684b" },
-  { "id": "thruster-fuel", "x": 1122, "y": 330, "color": "#f0ac69" },
-  { "id": "thruster-oxidizer", "x": 1122, "y": 396, "color": "#69c7ee" },
-  { "id": "lava", "x": 1122, "y": 462, "color": "#d57828" },
-  { "id": "molten-iron", "x": 1122, "y": 528, "color": "#9f886d" },
-  { "id": "molten-copper", "x": 1122, "y": 594, "color": "#bb8233" },
-  { "id": "holmium-solution", "x": 1122, "y": 660, "color": "#9c747b" },
-  { "id": "electrolyte", "x": 1122, "y": 726, "color": "#972954" },
-  { "id": "ammoniacal-solution", "x": 1122, "y": 792, "color": "#26315c" },
-  { "id": "ammonia", "x": 1122, "y": 858, "color": "#9e9dc2" },
-  { "id": "fluorine", "x": 1122, "y": 924, "color": "#59bf91" },
-  { "id": "fluoroketone-hot", "x": 1122, "y": 990, "color": "#936d57" },
-  { "id": "fluoroketone-cold", "x": 1122, "y": 1056, "color": "#59b99b" },
-  { "id": "lithium-brine", "x": 0, "y": 1122, "color": "#bec6b3" },
-  { "id": "casting-pipe", "x": 66, "y": 1122, "color": "#86775f" },
-  { "id": "casting-pipe-to-ground", "x": 132, "y": 1122, "color": "#8f7e65" },
-  { "id": "stone-brick-recycling", "x": 198, "y": 1122, "color": "#5c714d" },
-  { "id": "stone-wall-recycling", "x": 264, "y": 1122, "color": "#545e3d" },
-  { "id": "hazard-concrete-recycling", "x": 330, "y": 1122, "color": "#607147" },
-  { "id": "refined-hazard-concrete-recycling", "x": 396, "y": 1122, "color": "#646e44" },
-  { "id": "landfill-recycling", "x": 462, "y": 1122, "color": "#595e36" },
-  { "id": "captive-biter-spawner-recycling", "x": 528, "y": 1122, "color": "#797048" },
-  { "id": "biolab-recycling", "x": 594, "y": 1122, "color": "#616652" },
-  { "id": "basic-oil-processing", "x": 660, "y": 1122, "color": "#6a6a6a" },
-  { "id": "advanced-oil-processing", "x": 726, "y": 1122, "color": "#70695f" },
-  { "id": "simple-coal-liquefaction", "x": 792, "y": 1122, "color": "#875f47" },
-  { "id": "coal-liquefaction", "x": 858, "y": 1122, "color": "#5c4139" },
-  { "id": "heavy-oil-cracking", "x": 924, "y": 1122, "color": "#936530" },
-  { "id": "light-oil-cracking", "x": 990, "y": 1122, "color": "#847762" },
-  { "id": "solid-fuel-from-petroleum-gas", "x": 1056, "y": 1122, "color": "#545454" },
-  { "id": "solid-fuel-from-light-oil", "x": 1122, "y": 1122, "color": "#595247" },
-  { "id": "solid-fuel-from-heavy-oil", "x": 1188, "y": 0, "color": "#5a4a45" },
-  { "id": "acid-neutralisation", "x": 1188, "y": 66, "color": "#998275" },
-  { "id": "steam-condensation", "x": 1188, "y": 132, "color": "#6f858c" },
-  { "id": "ice-melting", "x": 1188, "y": 198, "color": "#7194a4" },
-  { "id": "wood-recycling", "x": 1188, "y": 264, "color": "#6a6e32" },
-  { "id": "wooden-chest-recycling", "x": 1188, "y": 330, "color": "#6c6833" },
-  { "id": "coal-recycling", "x": 1188, "y": 396, "color": "#3d562a" },
-  { "id": "stone-furnace-recycling", "x": 1188, "y": 462, "color": "#646d3d" },
-  { "id": "stone-recycling", "x": 1188, "y": 528, "color": "#636b3d" },
-  { "id": "iron-ore-recycling", "x": 1188, "y": 594, "color": "#516d5a" },
-  { "id": "copper-ore-recycling", "x": 1188, "y": 660, "color": "#746437" },
-  { "id": "uranium-ore-recycling", "x": 1188, "y": 726, "color": "#4e782b" },
-  { "id": "raw-fish-recycling", "x": 1188, "y": 792, "color": "#687d4c" },
-  { "id": "ice-platform-recycling", "x": 1188, "y": 858, "color": "#688073" },
-  { "id": "ice-recycling", "x": 1188, "y": 924, "color": "#678372" },
-  { "id": "firearm-magazine-recycling", "x": 1188, "y": 990, "color": "#4c6533" },
-  { "id": "iron-chest-recycling", "x": 1188, "y": 1056, "color": "#606646" },
-  { "id": "iron-gear-wheel-recycling", "x": 1188, "y": 1122, "color": "#556c47" },
-  { "id": "iron-plate-recycling", "x": 0, "y": 1188, "color": "#667c5a" },
-  { "id": "iron-stick-recycling", "x": 66, "y": 1188, "color": "#567048" },
-  { "id": "light-armor-recycling", "x": 132, "y": 1188, "color": "#566533" },
-  { "id": "pipe-recycling", "x": 198, "y": 1188, "color": "#5a683f" },
-  { "id": "copper-cable-recycling", "x": 264, "y": 1188, "color": "#6c6f3f" },
-  { "id": "copper-plate-recycling", "x": 330, "y": 1188, "color": "#787343" },
-  { "id": "steel-chest-recycling", "x": 396, "y": 1188, "color": "#656a55" },
-  { "id": "steel-plate-recycling", "x": 462, "y": 1188, "color": "#607652" },
-  { "id": "rocket-fuel-recycling", "x": 528, "y": 1188, "color": "#53673d" },
-  { "id": "solid-fuel-recycling", "x": 594, "y": 1188, "color": "#4b613e" },
-  { "id": "plastic-bar-recycling", "x": 660, "y": 1188, "color": "#788c6e" },
-  { "id": "sulfur-recycling", "x": 726, "y": 1188, "color": "#6f7d31" },
-  { "id": "explosives-recycling", "x": 792, "y": 1188, "color": "#62673a" },
-  { "id": "carbon-recycling", "x": 858, "y": 1188, "color": "#475d39" },
-  { "id": "coal-synthesis", "x": 924, "y": 1188, "color": "#666564" },
-  { "id": "crude-oil-barrel-recycling", "x": 990, "y": 1188, "color": "#4f6443" },
-  { "id": "fluoroketone-cold-barrel-recycling", "x": 1056, "y": 1188, "color": "#486b42" },
-  { "id": "fluoroketone-hot-barrel-recycling", "x": 1122, "y": 1188, "color": "#516b40" },
-  { "id": "heavy-oil-barrel-recycling", "x": 1188, "y": 1188, "color": "#5f673e" },
-  { "id": "light-oil-barrel-recycling", "x": 1254, "y": 0, "color": "#646c39" },
-  { "id": "lubricant-barrel-recycling", "x": 1254, "y": 66, "color": "#4f6c3e" },
-  { "id": "petroleum-gas-barrel-recycling", "x": 1254, "y": 132, "color": "#5a6b4f" },
-  { "id": "sulfuric-acid-barrel-recycling", "x": 1254, "y": 198, "color": "#60773a" },
-  { "id": "water-barrel-recycling", "x": 1254, "y": 264, "color": "#546c52" },
-  { "id": "water-barrel-0", "x": 1254, "y": 330, "color": "#586974" },
-  { "id": "crude-oil-barrel-0", "x": 1254, "y": 396, "color": "#555555" },
-  { "id": "petroleum-gas-barrel-0", "x": 1254, "y": 462, "color": "#6a6569" },
-  { "id": "light-oil-barrel-0", "x": 1254, "y": 528, "color": "#7d6946" },
-  { "id": "heavy-oil-barrel-0", "x": 1254, "y": 594, "color": "#775a4a" },
-  { "id": "lubricant-barrel-0", "x": 1254, "y": 660, "color": "#546b4c" },
-  { "id": "sulfuric-acid-barrel-0", "x": 1254, "y": 726, "color": "#7f764b" },
-  { "id": "fluoroketone-hot-barrel-0", "x": 1254, "y": 792, "color": "#656553" },
-  { "id": "fluoroketone-cold-barrel-0", "x": 1254, "y": 858, "color": "#4e7664" },
-  { "id": "empty-water-barrel", "x": 1254, "y": 924, "color": "#556f7f" },
-  { "id": "empty-crude-oil-barrel", "x": 1254, "y": 990, "color": "#575757" },
-  { "id": "empty-petroleum-gas-barrel", "x": 1254, "y": 1056, "color": "#6f686e" },
-  { "id": "empty-light-oil-barrel", "x": 1254, "y": 1122, "color": "#826e4f" },
-  { "id": "empty-heavy-oil-barrel", "x": 1254, "y": 1188, "color": "#7e5c4f" },
-  { "id": "empty-lubricant-barrel", "x": 0, "y": 1254, "color": "#597051" },
-  { "id": "empty-sulfuric-acid-barrel", "x": 66, "y": 1254, "color": "#8f7d55" },
-  { "id": "empty-fluoroketone-hot-barrel", "x": 132, "y": 1254, "color": "#706a5a" },
-  { "id": "empty-fluoroketone-cold-barrel", "x": 198, "y": 1254, "color": "#577e6d" },
-  { "id": "barrel-recycling", "x": 264, "y": 1254, "color": "#5a6e4f" },
-  { "id": "nuclear-fuel-recycling", "x": 330, "y": 1254, "color": "#50703c" },
-  { "id": "uranium-processing", "x": 396, "y": 1254, "color": "#53893a" },
-  { "id": "uranium-235-recycling", "x": 462, "y": 1254, "color": "#508234" },
-  { "id": "uranium-238-recycling", "x": 528, "y": 1254, "color": "#466d34" },
-  { "id": "uranium-fuel-cell-recycling", "x": 594, "y": 1254, "color": "#4f7b42" },
-  { "id": "depleted-uranium-fuel-cell-recycling", "x": 660, "y": 1254, "color": "#4c6340" },
-  { "id": "nuclear-fuel-reprocessing", "x": 726, "y": 1254, "color": "#746a43" },
-  { "id": "kovarex-enrichment-process", "x": 792, "y": 1254, "color": "#497d3a" },
-  { "id": "calcite-recycling", "x": 858, "y": 1254, "color": "#5f7453" },
-  { "id": "molten-iron-from-lava", "x": 924, "y": 1254, "color": "#b78153" },
-  { "id": "molten-copper-from-lava", "x": 990, "y": 1254, "color": "#bf7f3b" },
-  { "id": "molten-iron-0", "x": 1056, "y": 1254, "color": "#948572" },
-  { "id": "molten-copper-0", "x": 1122, "y": 1254, "color": "#b27d40" },
-  { "id": "casting-iron", "x": 1188, "y": 1254, "color": "#8d8174" },
-  { "id": "casting-copper", "x": 1254, "y": 1254, "color": "#ac7442" },
-  { "id": "casting-steel", "x": 1320, "y": 0, "color": "#938676" },
-  { "id": "casting-iron-gear-wheel", "x": 1320, "y": 66, "color": "#877a6a" },
-  { "id": "casting-iron-stick", "x": 1320, "y": 132, "color": "#978775" },
-  { "id": "casting-low-density-structure", "x": 1320, "y": 198, "color": "#a3845c" },
-  { "id": "concrete-from-molten-iron", "x": 1320, "y": 264, "color": "#8f8579" },
-  { "id": "casting-copper-cable", "x": 1320, "y": 330, "color": "#b37c4a" },
-  { "id": "tungsten-ore-recycling", "x": 1320, "y": 396, "color": "#4b5e4e" },
-  { "id": "tungsten-carbide-recycling", "x": 1320, "y": 462, "color": "#516846" },
-  { "id": "tungsten-plate-recycling", "x": 1320, "y": 528, "color": "#586751" },
-  { "id": "supercapacitor-recycling", "x": 1320, "y": 594, "color": "#526852" },
-  { "id": "scrap-recycling", "x": 1320, "y": 660, "color": "#4f5f3f" },
-  { "id": "holmium-ore-recycling", "x": 1320, "y": 726, "color": "#69664a" },
-  { "id": "holmium-plate-recycling", "x": 1320, "y": 792, "color": "#77795b" },
-  { "id": "superconductor-recycling", "x": 1320, "y": 858, "color": "#506f5a" },
-  { "id": "yumako-processing", "x": 1320, "y": 924, "color": "#cd7456" },
-  { "id": "yumako-tree", "x": 1320, "y": 990, "color": "#6f4739" },
-  { "id": "yumako-seed-recycling", "x": 1320, "y": 1056, "color": "#656537" },
-  { "id": "jellynut-processing", "x": 1320, "y": 1122, "color": "#819e7f" },
-  { "id": "jellystem", "x": 1320, "y": 1188, "color": "#916971" },
-  { "id": "jellynut-seed-recycling", "x": 1320, "y": 1254, "color": "#5c7548" },
-  { "id": "yumako-recycling", "x": 0, "y": 1320, "color": "#81623e" },
-  { "id": "jellynut-recycling", "x": 66, "y": 1320, "color": "#757a6a" },
-  { "id": "iron-bacteria-recycling", "x": 132, "y": 1320, "color": "#4f7360" },
-  { "id": "iron-bacteria-cultivation", "x": 198, "y": 1320, "color": "#6f7981" },
-  { "id": "copper-bacteria-recycling", "x": 264, "y": 1320, "color": "#75713d" },
-  { "id": "copper-bacteria-cultivation", "x": 330, "y": 1320, "color": "#ac7c4e" },
-  { "id": "nutrients-recycling", "x": 396, "y": 1320, "color": "#7f8d6f" },
-  { "id": "spoilage-recycling", "x": 462, "y": 1320, "color": "#5c6b3b" },
-  { "id": "nutrients-from-spoilage", "x": 528, "y": 1320, "color": "#979286" },
-  { "id": "nutrients-from-yumako-mash", "x": 594, "y": 1320, "color": "#b79c85" },
-  { "id": "nutrients-from-bioflux", "x": 660, "y": 1320, "color": "#ac8a80" },
-  { "id": "pentapod-egg-0", "x": 726, "y": 1320, "color": "#5e6920" },
-  { "id": "bioflux-recycling", "x": 792, "y": 1320, "color": "#79623a" },
-  { "id": "yumako-mash-recycling", "x": 858, "y": 1320, "color": "#78753c" },
-  { "id": "jelly-recycling", "x": 924, "y": 1320, "color": "#59873d" },
-  { "id": "rocket-fuel-from-jelly", "x": 990, "y": 1320, "color": "#7e7c48" },
-  { "id": "biolubricant", "x": 1056, "y": 1320, "color": "#549a36" },
-  { "id": "bioplastic", "x": 1122, "y": 1320, "color": "#b49b8d" },
-  { "id": "biosulfur", "x": 1188, "y": 1320, "color": "#9f893d" },
-  { "id": "carbon-fiber-recycling", "x": 1254, "y": 1320, "color": "#586e4b" },
-  { "id": "burnt-spoilage", "x": 1320, "y": 1320, "color": "#47453b" },
-  { "id": "biter-egg-recycling", "x": 1386, "y": 0, "color": "#6b753a" },
-  { "id": "pentapod-egg-recycling", "x": 1386, "y": 66, "color": "#546e2c" },
-  { "id": "wood-processing", "x": 1386, "y": 132, "color": "#87653e" },
-  { "id": "tree-plant", "x": 1386, "y": 198, "color": "#5f672f" },
-  { "id": "tree-seed-recycling", "x": 1386, "y": 264, "color": "#626f38" },
-  { "id": "fish-breeding", "x": 1386, "y": 330, "color": "#848861" },
-  { "id": "nutrients-from-fish", "x": 1386, "y": 396, "color": "#a5a391" },
-  { "id": "nutrients-from-biter-egg", "x": 1386, "y": 462, "color": "#ae9d89" },
-  { "id": "quantum-processor-recycling", "x": 1386, "y": 528, "color": "#616f46" },
-  { "id": "ammoniacal-solution-separation", "x": 1386, "y": 594, "color": "#818ba5" },
-  { "id": "solid-fuel-from-ammonia", "x": 1386, "y": 660, "color": "#6d6d7b" },
-  { "id": "ammonia-rocket-fuel", "x": 1386, "y": 726, "color": "#77737e" },
-  { "id": "fluoroketone-cooling", "x": 1386, "y": 792, "color": "#3e9270" },
-  { "id": "lithium-recycling", "x": 1386, "y": 858, "color": "#5e734c" },
-  { "id": "lithium-plate-recycling", "x": 1386, "y": 924, "color": "#617956" },
-  { "id": "fusion-power-cell-recycling", "x": 1386, "y": 990, "color": "#4e7563" },
-  { "id": "automation-science-pack-recycling", "x": 1386, "y": 1056, "color": "#746c48" },
-  { "id": "logistic-science-pack-recycling", "x": 1386, "y": 1122, "color": "#56874b" },
-  { "id": "military-science-pack-recycling", "x": 1386, "y": 1188, "color": "#5d7356" },
-  { "id": "chemical-science-pack-recycling", "x": 1386, "y": 1254, "color": "#56836f" },
-  { "id": "production-science-pack-recycling", "x": 1386, "y": 1320, "color": "#6b6b6e" },
-  { "id": "utility-science-pack-recycling", "x": 0, "y": 1386, "color": "#79824b" },
-  { "id": "space-science-pack-recycling", "x": 66, "y": 1386, "color": "#7b8c72" },
-  { "id": "metallurgic-science-pack-recycling", "x": 132, "y": 1386, "color": "#777035" },
-  { "id": "agricultural-science-pack-recycling", "x": 198, "y": 1386, "color": "#627932" },
-  { "id": "electromagnetic-science-pack-recycling", "x": 264, "y": 1386, "color": "#756554" },
-  { "id": "cryogenic-science-pack-recycling", "x": 330, "y": 1386, "color": "#49655d" },
-  { "id": "promethium-science-pack-recycling", "x": 396, "y": 1386, "color": "#496442" },
-  { "id": "metallic-asteroid-chunk-recycling", "x": 462, "y": 1386, "color": "#5e6c57" },
-  { "id": "carbonic-asteroid-chunk-recycling", "x": 528, "y": 1386, "color": "#576c40" },
-  { "id": "oxide-asteroid-chunk-recycling", "x": 594, "y": 1386, "color": "#688672" },
-  { "id": "promethium-asteroid-chunk-recycling", "x": 660, "y": 1386, "color": "#7a634f" },
-  { "id": "metallic-asteroid-crushing", "x": 726, "y": 1386, "color": "#a18763" },
-  { "id": "carbonic-asteroid-crushing", "x": 792, "y": 1386, "color": "#9f8448" },
-  { "id": "oxide-asteroid-crushing", "x": 858, "y": 1386, "color": "#ada27c" },
-  { "id": "metallic-asteroid-reprocessing", "x": 924, "y": 1386, "color": "#82726a" },
-  { "id": "carbonic-asteroid-reprocessing", "x": 990, "y": 1386, "color": "#80714e" },
-  { "id": "oxide-asteroid-reprocessing", "x": 1056, "y": 1386, "color": "#909a8d" },
-  { "id": "advanced-metallic-asteroid-crushing", "x": 1122, "y": 1386, "color": "#796d73" },
-  { "id": "advanced-carbonic-asteroid-crushing", "x": 1188, "y": 1386, "color": "#746f4e" },
-  { "id": "advanced-oxide-asteroid-crushing", "x": 1254, "y": 1386, "color": "#8da0a4" },
-  { "id": "advanced-thruster-fuel", "x": 1320, "y": 1386, "color": "#aa8667" },
-  { "id": "advanced-thruster-oxidizer", "x": 1386, "y": 1386, "color": "#6f9fb4" },
-  { "id": "flamethrower-ammo-recycling", "x": 1452, "y": 0, "color": "#626e48" },
-  { "id": "accumulator-recycling", "x": 1452, "y": 66, "color": "#5e7b5f" },
-  { "id": "active-provider-chest-recycling", "x": 1452, "y": 132, "color": "#575c4f" },
-  { "id": "advanced-circuit-recycling", "x": 1452, "y": 198, "color": "#7d6437" },
-  { "id": "agricultural-tower-recycling", "x": 1452, "y": 264, "color": "#5a6e3d" },
-  { "id": "arithmetic-combinator-recycling", "x": 1452, "y": 330, "color": "#566846" },
-  { "id": "artificial-jellynut-soil-recycling", "x": 1452, "y": 396, "color": "#626350" },
-  { "id": "artificial-yumako-soil-recycling", "x": 1452, "y": 462, "color": "#556930" },
-  { "id": "artillery-shell-recycling", "x": 1452, "y": 528, "color": "#677140" },
-  { "id": "artillery-turret-recycling", "x": 1452, "y": 594, "color": "#5b6c43" },
-  { "id": "artillery-wagon-recycling", "x": 1452, "y": 660, "color": "#5e6d3f" },
-  { "id": "assembling-machine-1-recycling", "x": 1452, "y": 726, "color": "#5d634a" },
-  { "id": "assembling-machine-2-recycling", "x": 1452, "y": 792, "color": "#515f4f" },
-  { "id": "assembling-machine-3-recycling", "x": 1452, "y": 858, "color": "#596949" },
-  { "id": "asteroid-collector-recycling", "x": 1452, "y": 924, "color": "#5c6e48" },
-  { "id": "atomic-bomb-recycling", "x": 1452, "y": 990, "color": "#537542" },
-  { "id": "battery-equipment-recycling", "x": 1452, "y": 1056, "color": "#5f6e49" },
-  { "id": "battery-mk2-equipment-recycling", "x": 1452, "y": 1122, "color": "#5a6b45" },
-  { "id": "battery-mk3-equipment-recycling", "x": 1452, "y": 1188, "color": "#556c4b" },
-  { "id": "battery-recycling", "x": 1452, "y": 1254, "color": "#53643e" },
-  { "id": "beacon-recycling", "x": 1452, "y": 1320, "color": "#586846" },
-  { "id": "belt-immunity-equipment-recycling", "x": 1452, "y": 1386, "color": "#537048" },
-  { "id": "big-electric-pole-recycling", "x": 0, "y": 1452, "color": "#516d44" },
-  { "id": "big-mining-drill-recycling", "x": 66, "y": 1452, "color": "#656240" },
-  { "id": "biochamber-recycling", "x": 132, "y": 1452, "color": "#626f3b" },
-  { "id": "boiler-recycling", "x": 198, "y": 1452, "color": "#5a6745" },
-  { "id": "buffer-chest-recycling", "x": 264, "y": 1452, "color": "#4d6d40" },
-  { "id": "bulk-inserter-recycling", "x": 330, "y": 1452, "color": "#5a793f" },
-  { "id": "burner-inserter-recycling", "x": 396, "y": 1452, "color": "#536c42" },
-  { "id": "burner-mining-drill-recycling", "x": 462, "y": 1452, "color": "#536644" },
-  { "id": "cannon-shell-recycling", "x": 528, "y": 1452, "color": "#546a36" },
-  { "id": "capture-robot-rocket-recycling", "x": 594, "y": 1452, "color": "#606c43" },
-  { "id": "car-recycling", "x": 660, "y": 1452, "color": "#586535" },
-  { "id": "cargo-bay-recycling", "x": 726, "y": 1452, "color": "#696c50" },
-  { "id": "cargo-landing-pad-recycling", "x": 792, "y": 1452, "color": "#5a6549" },
-  { "id": "cargo-wagon-recycling", "x": 858, "y": 1452, "color": "#566a47" },
-  { "id": "centrifuge-recycling", "x": 924, "y": 1452, "color": "#5f7451" },
-  { "id": "chemical-plant-recycling", "x": 990, "y": 1452, "color": "#5d684b" },
-  { "id": "cliff-explosives-recycling", "x": 1056, "y": 1452, "color": "#4b7156" },
-  { "id": "cluster-grenade-recycling", "x": 1122, "y": 1452, "color": "#5d663c" },
-  { "id": "combat-shotgun-recycling", "x": 1188, "y": 1452, "color": "#5d683e" },
-  { "id": "concrete-recycling", "x": 1254, "y": 1452, "color": "#61745a" },
-  { "id": "constant-combinator-recycling", "x": 1320, "y": 1452, "color": "#665b3e" },
-  { "id": "construction-robot-recycling", "x": 1386, "y": 1452, "color": "#66744b" },
-  { "id": "crusher-recycling", "x": 1452, "y": 1452, "color": "#4f6242" },
-  { "id": "cryogenic-plant-recycling", "x": 1518, "y": 0, "color": "#69795e" },
-  { "id": "decider-combinator-recycling", "x": 1518, "y": 66, "color": "#696c3c" },
-  { "id": "defender-capsule-recycling", "x": 1518, "y": 132, "color": "#57796b" },
-  { "id": "destroyer-capsule-recycling", "x": 1518, "y": 198, "color": "#6f6942" },
-  { "id": "discharge-defense-equipment-recycling", "x": 1518, "y": 264, "color": "#597651" },
-  { "id": "display-panel-recycling", "x": 1518, "y": 330, "color": "#4d5a3c" },
-  { "id": "distractor-capsule-recycling", "x": 1518, "y": 396, "color": "#6a7943" },
-  { "id": "efficiency-module-2-recycling", "x": 1518, "y": 462, "color": "#607f48" },
-  { "id": "efficiency-module-3-recycling", "x": 1518, "y": 528, "color": "#618148" },
-  { "id": "efficiency-module-recycling", "x": 1518, "y": 594, "color": "#597b42" },
-  { "id": "electric-engine-unit-recycling", "x": 1518, "y": 660, "color": "#5d6a42" },
-  { "id": "electric-furnace-recycling", "x": 1518, "y": 726, "color": "#545f42" },
-  { "id": "electric-mining-drill-recycling", "x": 1518, "y": 792, "color": "#596c4a" },
-  { "id": "electromagnetic-plant-recycling", "x": 1518, "y": 858, "color": "#5a6b58" },
-  { "id": "electronic-circuit-recycling", "x": 1518, "y": 924, "color": "#5c7b34" },
-  { "id": "energy-shield-equipment-recycling", "x": 1518, "y": 990, "color": "#4f745a" },
-  { "id": "energy-shield-mk2-equipment-recycling", "x": 1518, "y": 1056, "color": "#736b3b" },
-  { "id": "engine-unit-recycling", "x": 1518, "y": 1122, "color": "#586640" },
-  { "id": "exoskeleton-equipment-recycling", "x": 1518, "y": 1188, "color": "#526c3d" },
-  { "id": "explosive-cannon-shell-recycling", "x": 1518, "y": 1254, "color": "#5c6a35" },
-  { "id": "explosive-rocket-recycling", "x": 1518, "y": 1320, "color": "#596d43" },
-  { "id": "explosive-uranium-cannon-shell-recycling", "x": 1518, "y": 1386, "color": "#596f34" },
-  { "id": "express-splitter-recycling", "x": 1518, "y": 1452, "color": "#516d55" },
-  { "id": "express-transport-belt-recycling", "x": 0, "y": 1518, "color": "#54614e" },
-  { "id": "express-underground-belt-recycling", "x": 66, "y": 1518, "color": "#4f6955" },
-  { "id": "fast-inserter-recycling", "x": 132, "y": 1518, "color": "#4e7558" },
-  { "id": "fast-splitter-recycling", "x": 198, "y": 1518, "color": "#5e603e" },
-  { "id": "fast-transport-belt-recycling", "x": 264, "y": 1518, "color": "#5c5c46" },
-  { "id": "fast-underground-belt-recycling", "x": 330, "y": 1518, "color": "#605c3c" },
-  { "id": "fission-reactor-equipment-recycling", "x": 396, "y": 1518, "color": "#687345" },
-  { "id": "flamethrower-recycling", "x": 462, "y": 1518, "color": "#4c6737" },
-  { "id": "flamethrower-turret-recycling", "x": 528, "y": 1518, "color": "#5d653d" },
-  { "id": "fluid-wagon-recycling", "x": 594, "y": 1518, "color": "#5f7251" },
-  { "id": "flying-robot-frame-recycling", "x": 660, "y": 1518, "color": "#516946" },
-  { "id": "foundation-recycling", "x": 726, "y": 1518, "color": "#4f5e41" },
-  { "id": "foundry-recycling", "x": 792, "y": 1518, "color": "#6b6231" },
-  { "id": "fusion-generator-recycling", "x": 858, "y": 1518, "color": "#5d6a56" },
-  { "id": "fusion-reactor-equipment-recycling", "x": 924, "y": 1518, "color": "#5c714e" },
-  { "id": "fusion-reactor-recycling", "x": 990, "y": 1518, "color": "#666b60" },
-  { "id": "gate-recycling", "x": 1056, "y": 1518, "color": "#566236" },
-  { "id": "grenade-recycling", "x": 1122, "y": 1518, "color": "#556c40" },
-  { "id": "gun-turret-recycling", "x": 1188, "y": 1518, "color": "#616537" },
-  { "id": "heat-exchanger-recycling", "x": 1254, "y": 1518, "color": "#685e3a" },
-  { "id": "heat-pipe-recycling", "x": 1320, "y": 1518, "color": "#656a39" },
-  { "id": "heating-tower-recycling", "x": 1386, "y": 1518, "color": "#6f6637" },
-  { "id": "heavy-armor-recycling", "x": 1452, "y": 1518, "color": "#5e6734" },
-  { "id": "inserter-recycling", "x": 1518, "y": 1518, "color": "#66733d" },
-  { "id": "lab-recycling", "x": 1584, "y": 0, "color": "#55736e" },
-  { "id": "land-mine-recycling", "x": 1584, "y": 66, "color": "#5a6b3e" },
-  { "id": "laser-turret-recycling", "x": 1584, "y": 132, "color": "#606a34" },
-  { "id": "lightning-collector-recycling", "x": 1584, "y": 198, "color": "#546d44" },
-  { "id": "lightning-rod-recycling", "x": 1584, "y": 264, "color": "#506d3f" },
-  { "id": "locomotive-recycling", "x": 1584, "y": 330, "color": "#5a603b" },
-  { "id": "logistic-robot-recycling", "x": 1584, "y": 396, "color": "#5d6f45" },
-  { "id": "long-handed-inserter-recycling", "x": 1584, "y": 462, "color": "#64693d" },
-  { "id": "low-density-structure-recycling", "x": 1584, "y": 528, "color": "#5e6f3f" },
-  { "id": "mech-armor-recycling", "x": 1584, "y": 594, "color": "#7a7041" },
-  { "id": "medium-electric-pole-recycling", "x": 1584, "y": 660, "color": "#506935" },
-  { "id": "modular-armor-recycling", "x": 1584, "y": 726, "color": "#5f6936" },
-  { "id": "night-vision-equipment-recycling", "x": 1584, "y": 792, "color": "#516f3e" },
-  { "id": "nuclear-reactor-recycling", "x": 1584, "y": 858, "color": "#63794e" },
-  { "id": "offshore-pump-recycling", "x": 1584, "y": 924, "color": "#5b643e" },
-  { "id": "oil-refinery-recycling", "x": 1584, "y": 990, "color": "#656439" },
-  { "id": "overgrowth-jellynut-soil-recycling", "x": 1584, "y": 1056, "color": "#6f6251" },
-  { "id": "overgrowth-yumako-soil-recycling", "x": 1584, "y": 1122, "color": "#646b2b" },
-  { "id": "passive-provider-chest-recycling", "x": 1584, "y": 1188, "color": "#635d3b" },
-  { "id": "personal-laser-defense-equipment-recycling", "x": 1584, "y": 1254, "color": "#576336" },
-  { "id": "personal-roboport-equipment-recycling", "x": 1584, "y": 1320, "color": "#5d6d41" },
-  { "id": "personal-roboport-mk2-equipment-recycling", "x": 1584, "y": 1386, "color": "#576e50" },
-  { "id": "piercing-rounds-magazine-recycling", "x": 1584, "y": 1452, "color": "#4d6133" },
-  { "id": "piercing-shotgun-shell-recycling", "x": 1584, "y": 1518, "color": "#5b6f3d" },
-  { "id": "pipe-to-ground-recycling", "x": 0, "y": 1584, "color": "#5e6e41" },
-  { "id": "poison-capsule-recycling", "x": 66, "y": 1584, "color": "#4e7a65" },
-  { "id": "power-armor-mk2-recycling", "x": 132, "y": 1584, "color": "#626231" },
-  { "id": "power-armor-recycling", "x": 198, "y": 1584, "color": "#5a622d" },
-  { "id": "power-switch-recycling", "x": 264, "y": 1584, "color": "#546249" },
-  { "id": "processing-unit-recycling", "x": 330, "y": 1584, "color": "#5a6e72" },
-  { "id": "productivity-module-2-recycling", "x": 396, "y": 1584, "color": "#787144" },
-  { "id": "productivity-module-3-recycling", "x": 462, "y": 1584, "color": "#7a7242" },
-  { "id": "productivity-module-recycling", "x": 528, "y": 1584, "color": "#746b3f" },
-  { "id": "programmable-speaker-recycling", "x": 594, "y": 1584, "color": "#586b46" },
-  { "id": "pump-recycling", "x": 660, "y": 1584, "color": "#55643b" },
-  { "id": "pumpjack-recycling", "x": 726, "y": 1584, "color": "#526e39" },
-  { "id": "quality-module-2-recycling", "x": 792, "y": 1584, "color": "#74765a" },
-  { "id": "quality-module-3-recycling", "x": 858, "y": 1584, "color": "#76785b" },
-  { "id": "quality-module-recycling", "x": 924, "y": 1584, "color": "#6f7559" },
-  { "id": "radar-recycling", "x": 990, "y": 1584, "color": "#5f6e47" },
-  { "id": "rail-chain-signal-recycling", "x": 1056, "y": 1584, "color": "#4c7253" },
-  { "id": "rail-ramp-recycling", "x": 1122, "y": 1584, "color": "#626943" },
-  { "id": "rail-recycling", "x": 1188, "y": 1584, "color": "#5d6642" },
-  { "id": "rail-signal-recycling", "x": 1254, "y": 1584, "color": "#586b41" },
-  { "id": "rail-support-recycling", "x": 1320, "y": 1584, "color": "#686b47" },
-  { "id": "railgun-ammo-recycling", "x": 1386, "y": 1584, "color": "#476a44" },
-  { "id": "railgun-recycling", "x": 1452, "y": 1584, "color": "#46663a" },
-  { "id": "railgun-turret-recycling", "x": 1518, "y": 1584, "color": "#4e623b" },
-  { "id": "recycler-recycling", "x": 1584, "y": 1584, "color": "#545e37" },
-  { "id": "refined-concrete-recycling", "x": 1650, "y": 0, "color": "#617359" },
-  { "id": "repair-pack-recycling", "x": 1650, "y": 66, "color": "#6a7950" },
-  { "id": "requester-chest-recycling", "x": 1650, "y": 132, "color": "#4f6851" },
-  { "id": "roboport-recycling", "x": 1650, "y": 198, "color": "#5e694e" },
-  { "id": "rocket-launcher-recycling", "x": 1650, "y": 264, "color": "#516a3e" },
-  { "id": "rocket-recycling", "x": 1650, "y": 330, "color": "#597041" },
-  { "id": "rocket-silo-recycling", "x": 1650, "y": 396, "color": "#5f6a49" },
-  { "id": "rocket-turret-recycling", "x": 1650, "y": 462, "color": "#606335" },
-  { "id": "selector-combinator-recycling", "x": 1650, "y": 528, "color": "#5b6b3f" },
-  { "id": "shotgun-recycling", "x": 1650, "y": 594, "color": "#566936" },
-  { "id": "shotgun-shell-recycling", "x": 1650, "y": 660, "color": "#676732" },
-  { "id": "slowdown-capsule-recycling", "x": 1650, "y": 726, "color": "#6d773f" },
-  { "id": "small-electric-pole-recycling", "x": 1650, "y": 792, "color": "#4d6934" },
-  { "id": "small-lamp-recycling", "x": 1650, "y": 858, "color": "#7d8974" },
-  { "id": "solar-panel-equipment-recycling", "x": 1650, "y": 924, "color": "#4c7160" },
-  { "id": "solar-panel-recycling", "x": 1650, "y": 990, "color": "#50786a" },
-  { "id": "space-platform-foundation-recycling", "x": 1650, "y": 1056, "color": "#475a3a" },
-  { "id": "space-platform-starter-pack-recycling", "x": 1650, "y": 1122, "color": "#5d6550" },
-  { "id": "speed-module-2-recycling", "x": 1650, "y": 1188, "color": "#50786d" },
-  { "id": "speed-module-3-recycling", "x": 1650, "y": 1254, "color": "#4f7a6f" },
-  { "id": "speed-module-recycling", "x": 1650, "y": 1320, "color": "#4f7569" },
-  { "id": "spidertron-recycling", "x": 1650, "y": 1386, "color": "#5b6530" },
-  { "id": "splitter-recycling", "x": 1650, "y": 1452, "color": "#5c6839" },
-  { "id": "stack-inserter-recycling", "x": 1650, "y": 1518, "color": "#62774e" },
-  { "id": "steam-engine-recycling", "x": 1650, "y": 1584, "color": "#5e6948" },
-  { "id": "steam-turbine-recycling", "x": 0, "y": 1650, "color": "#506046" },
-  { "id": "steel-furnace-recycling", "x": 66, "y": 1650, "color": "#5f693f" },
-  { "id": "storage-chest-recycling", "x": 132, "y": 1650, "color": "#616938" },
-  { "id": "storage-tank-recycling", "x": 198, "y": 1650, "color": "#656d4a" },
-  { "id": "submachine-gun-recycling", "x": 264, "y": 1650, "color": "#4c673a" },
-  { "id": "substation-recycling", "x": 330, "y": 1650, "color": "#4b6740" },
-  { "id": "tank-recycling", "x": 396, "y": 1650, "color": "#5b6033" },
-  { "id": "tesla-ammo-recycling", "x": 462, "y": 1650, "color": "#526e3b" },
-  { "id": "tesla-turret-recycling", "x": 528, "y": 1650, "color": "#62744c" },
-  { "id": "teslagun-recycling", "x": 594, "y": 1650, "color": "#56754d" },
-  { "id": "thruster-recycling", "x": 660, "y": 1650, "color": "#7c815a" },
-  { "id": "toolbelt-equipment-recycling", "x": 726, "y": 1650, "color": "#56612f" },
-  { "id": "train-stop-recycling", "x": 792, "y": 1650, "color": "#64613f" },
-  { "id": "transport-belt-recycling", "x": 858, "y": 1650, "color": "#5c6146" },
-  { "id": "turbo-splitter-recycling", "x": 924, "y": 1650, "color": "#576e41" },
-  { "id": "turbo-transport-belt-recycling", "x": 990, "y": 1650, "color": "#586246" },
-  { "id": "turbo-underground-belt-recycling", "x": 1056, "y": 1650, "color": "#546a3b" },
-  { "id": "underground-belt-recycling", "x": 1122, "y": 1650, "color": "#626a3e" },
-  { "id": "uranium-cannon-shell-recycling", "x": 1188, "y": 1650, "color": "#506f34" },
-  { "id": "uranium-rounds-magazine-recycling", "x": 1254, "y": 1650, "color": "#446c31" },
-  { "id": "nauvis-vulcanus", "x": 1320, "y": 1650, "color": "#826d49" },
-  { "id": "nauvis-gleba", "x": 1386, "y": 1650, "color": "#92855b" },
-  { "id": "nauvis-fulgora", "x": 1452, "y": 1650, "color": "#8f7463" },
-  { "id": "vulcanus-gleba", "x": 1518, "y": 1650, "color": "#957346" },
-  { "id": "gleba-fulgora", "x": 1584, "y": 1650, "color": "#a17b60" },
-  { "id": "gleba-aquilo", "x": 1650, "y": 1650, "color": "#8d7e66" },
-  { "id": "fulgora-aquilo", "x": 1716, "y": 0, "color": "#8a6d6b" },
-  { "id": "aquilo-solar-system-edge", "x": 1716, "y": 66, "color": "#665e55" },
-  { "id": "solar-system-edge-shattered-planet", "x": 1716, "y": 132, "color": "#724620" },
-  { "id": "solar-system-edge", "x": 1716, "y": 198, "color": "#342a13" },
-  { "id": "shattered-planet", "x": 1716, "y": 264, "color": "#7f3426" },
-  { "id": "nauvis", "x": 1716, "y": 330, "color": "#757c63" },
-  { "id": "vulcanus", "x": 1716, "y": 396, "color": "#7f4e2e" },
-  { "id": "gleba", "x": 1716, "y": 462, "color": "#a08961" },
-  { "id": "fulgora", "x": 1716, "y": 528, "color": "#9a646f" },
-  { "id": "aquilo", "x": 1716, "y": 594, "color": "#6b717b" },
-  { "id": "steam-power", "x": 1716, "y": 660, "color": "#786f5f" },
-  { "id": "electronics", "x": 1716, "y": 726, "color": "#7b983f" },
-  { "id": "automation-science-pack-technology", "x": 1716, "y": 792, "color": "#9a514d" },
-  { "id": "steel-axe", "x": 1716, "y": 858, "color": "#918276" },
-  { "id": "space-science-pack-technology", "x": 1716, "y": 924, "color": "#9c9895" },
-  { "id": "oil-processing", "x": 1716, "y": 990, "color": "#6f5c4a" },
-  { "id": "uranium-processing-technology", "x": 1716, "y": 1056, "color": "#667a57" },
-  { "id": "recycling", "x": 1716, "y": 1122, "color": "#98856d" },
-  { "id": "space-platform", "x": 1716, "y": 1188, "color": "#63615c" },
-  { "id": "calcite-processing", "x": 1716, "y": 1254, "color": "#928c89" },
-  { "id": "tungsten-carbide-technology", "x": 1716, "y": 1320, "color": "#7e6f84" },
-  { "id": "big-mining-drill-technology", "x": 1716, "y": 1386, "color": "#7d5c50" },
-  { "id": "foundry-technology", "x": 1716, "y": 1452, "color": "#936643" },
-  { "id": "tungsten-steel", "x": 1716, "y": 1518, "color": "#80758c" },
-  { "id": "metallurgic-science-pack-technology", "x": 1716, "y": 1584, "color": "#bf804a" },
-  { "id": "agriculture", "x": 1716, "y": 1650, "color": "#737543" },
-  { "id": "yumako-technology", "x": 0, "y": 1716, "color": "#b46057" },
-  { "id": "biochamber-technology", "x": 66, "y": 1716, "color": "#726647" },
-  { "id": "jellynut-technology", "x": 132, "y": 1716, "color": "#b98da9" },
-  { "id": "bioflux-technology", "x": 198, "y": 1716, "color": "#a65c42" },
-  { "id": "artificial-soil", "x": 264, "y": 1716, "color": "#655c33" },
-  { "id": "bacteria-cultivation", "x": 330, "y": 1716, "color": "#a07a78" },
-  { "id": "bioflux-processing", "x": 396, "y": 1716, "color": "#ad7e5d" },
-  { "id": "agricultural-science-pack-technology", "x": 462, "y": 1716, "color": "#8d9640" },
-  { "id": "biter-egg-handling", "x": 528, "y": 1716, "color": "#9c774e" },
-  { "id": "holmium-processing", "x": 594, "y": 1716, "color": "#b5919a" },
-  { "id": "electromagnetic-plant-technology", "x": 660, "y": 1716, "color": "#747682" },
-  { "id": "electromagnetic-science-pack-technology", "x": 726, "y": 1716, "color": "#bc5d8c" },
-  { "id": "heating-tower-technology", "x": 792, "y": 1716, "color": "#866250" },
-  { "id": "lithium-processing", "x": 858, "y": 1716, "color": "#8d8f84" },
-  { "id": "cryogenic-plant-technology", "x": 924, "y": 1716, "color": "#828077" },
-  { "id": "cryogenic-science-pack-technology", "x": 990, "y": 1716, "color": "#545c9e" },
-  { "id": "electric-mining-drill-technology", "x": 1056, "y": 1716, "color": "#6e685e" },
-  { "id": "repair-pack-technology", "x": 1122, "y": 1716, "color": "#a89f93" },
-  { "id": "radar-technology", "x": 1188, "y": 1716, "color": "#998264" },
-  { "id": "physical-projectile-damage-1", "x": 1254, "y": 1716, "color": "#a6734b" },
-  { "id": "weapon-shooting-speed-1", "x": 1320, "y": 1716, "color": "#918077" },
-  { "id": "automation", "x": 1386, "y": 1716, "color": "#574c3d" },
-  { "id": "logistic-science-pack-technology", "x": 1452, "y": 1716, "color": "#56974e" },
-  { "id": "steel-processing", "x": 1518, "y": 1716, "color": "#5c5a53" },
-  { "id": "military", "x": 1584, "y": 1716, "color": "#656250" },
-  { "id": "fast-inserter-technology", "x": 1650, "y": 1716, "color": "#517086" },
-  { "id": "logistics-technology", "x": 1716, "y": 1716, "color": "#796e4f" },
-  { "id": "lamp", "x": 1782, "y": 0, "color": "#9c9891" },
-  { "id": "heavy-armor-technology", "x": 1782, "y": 66, "color": "#675439" },
-  { "id": "gun-turret-technology", "x": 1782, "y": 132, "color": "#735c45" },
-  { "id": "stone-wall-technology", "x": 1782, "y": 198, "color": "#6a655f" },
-  { "id": "stronger-explosives-1", "x": 1782, "y": 264, "color": "#b6904b" },
-  { "id": "bulk-inserter-technology", "x": 1782, "y": 330, "color": "#778259" },
-  { "id": "inserter-capacity-bonus-1", "x": 1782, "y": 396, "color": "#a27f62" },
-  { "id": "automation-2", "x": 1782, "y": 462, "color": "#54574e" },
-  { "id": "railway", "x": 1782, "y": 528, "color": "#776b5d" },
-  { "id": "automated-rail-transportation", "x": 1782, "y": 594, "color": "#7f6853" },
-  { "id": "automobilism", "x": 1782, "y": 660, "color": "#67553c" },
-  { "id": "solar-energy", "x": 1782, "y": 726, "color": "#548498" },
-  { "id": "research-speed-1", "x": 1782, "y": 792, "color": "#6a7d96" },
-  { "id": "electric-energy-distribution-1", "x": 1782, "y": 858, "color": "#796661" },
-  { "id": "advanced-material-processing", "x": 1782, "y": 924, "color": "#7a6a57" },
-  { "id": "concrete-technology", "x": 1782, "y": 990, "color": "#837f6f" },
-  { "id": "engine", "x": 1782, "y": 1056, "color": "#5d5648" },
-  { "id": "landfill-technology", "x": 1782, "y": 1122, "color": "#755f4a" },
-  { "id": "logistics-2", "x": 1782, "y": 1188, "color": "#76514d" },
-  { "id": "toolbelt", "x": 1782, "y": 1254, "color": "#7b6853" },
-  { "id": "gate-technology", "x": 1782, "y": 1320, "color": "#625e55" },
-  { "id": "chemical-science-pack-technology", "x": 1782, "y": 1386, "color": "#56899f" },
-  { "id": "military-science-pack-technology", "x": 1782, "y": 1452, "color": "#605d5f" },
-  { "id": "explosives-technology", "x": 1782, "y": 1518, "color": "#704a40" },
-  { "id": "flammables", "x": 1782, "y": 1584, "color": "#765a33" },
-  { "id": "advanced-circuit-technology", "x": 1782, "y": 1650, "color": "#b46452" },
-  { "id": "fluid-wagon-technology", "x": 1782, "y": 1716, "color": "#736d62" },
-  { "id": "modular-armor-technology", "x": 0, "y": 1782, "color": "#655136" },
-  { "id": "electric-energy-accumulators", "x": 66, "y": 1782, "color": "#767776" },
-  { "id": "battery-technology", "x": 132, "y": 1782, "color": "#645655" },
-  { "id": "night-vision-equipment-technology", "x": 198, "y": 1782, "color": "#716e63" },
-  { "id": "belt-immunity-equipment-technology", "x": 264, "y": 1782, "color": "#6f695e" },
-  { "id": "battery-equipment-technology", "x": 330, "y": 1782, "color": "#797266" },
-  { "id": "solar-panel-equipment-technology", "x": 396, "y": 1782, "color": "#727b80" },
-  { "id": "fluid-handling", "x": 462, "y": 1782, "color": "#797263" },
-  { "id": "oil-gathering", "x": 528, "y": 1782, "color": "#666543" },
-  { "id": "sulfur-processing", "x": 594, "y": 1782, "color": "#b0a932" },
-  { "id": "plastics", "x": 660, "y": 1782, "color": "#9f9986" },
-  { "id": "modules", "x": 726, "y": 1782, "color": "#596862" },
-  { "id": "speed-module-technology", "x": 792, "y": 1782, "color": "#4a7585" },
-  { "id": "productivity-module-technology", "x": 858, "y": 1782, "color": "#795b49" },
-  { "id": "efficiency-module-technology", "x": 924, "y": 1782, "color": "#537e4b" },
-  { "id": "mining-productivity-1", "x": 990, "y": 1782, "color": "#847269" },
-  { "id": "circuit-network", "x": 1056, "y": 1782, "color": "#706654" },
-  { "id": "quality-module-technology", "x": 1122, "y": 1782, "color": "#8a7f7d" },
-  { "id": "fish-breeding-technology", "x": 1188, "y": 1782, "color": "#6d7f62" },
-  { "id": "stronger-explosives-2", "x": 1254, "y": 1782, "color": "#ae8d4c" },
-  { "id": "refined-flammables-1", "x": 1320, "y": 1782, "color": "#986b36" },
-  { "id": "weapon-shooting-speed-3", "x": 1386, "y": 1782, "color": "#91847e" },
-  { "id": "follower-robot-count-1", "x": 1452, "y": 1782, "color": "#6b5d4d" },
-  { "id": "land-mine-technology", "x": 1518, "y": 1782, "color": "#746350" },
-  { "id": "flamethrower-technology", "x": 1584, "y": 1782, "color": "#88694f" },
-  { "id": "rocketry", "x": 1650, "y": 1782, "color": "#886849" },
-  { "id": "energy-shield-equipment-technology", "x": 1716, "y": 1782, "color": "#607f87" },
-  { "id": "defender", "x": 1782, "y": 1782, "color": "#5f666d" },
-  { "id": "production-science-pack-technology", "x": 1848, "y": 0, "color": "#81519f" },
-  { "id": "utility-science-pack-technology", "x": 1848, "y": 66, "color": "#a5874d" },
-  { "id": "processing-unit-technology", "x": 1848, "y": 132, "color": "#726e9b" },
-  { "id": "braking-force-1", "x": 1848, "y": 198, "color": "#855b4d" },
-  { "id": "laser", "x": 1848, "y": 264, "color": "#927d67" },
-  { "id": "power-armor-technology", "x": 1848, "y": 330, "color": "#845b26" },
-  { "id": "robotics", "x": 1848, "y": 396, "color": "#6e7373" },
-  { "id": "rocket-fuel-technology", "x": 1848, "y": 462, "color": "#645b4a" },
-  { "id": "low-density-structure-technology", "x": 1848, "y": 528, "color": "#877c6b" },
-  { "id": "rocket-silo-technology", "x": 1848, "y": 594, "color": "#755b45" },
-  { "id": "electric-energy-distribution-2", "x": 1848, "y": 660, "color": "#7f7b75" },
-  { "id": "advanced-material-processing-2", "x": 1848, "y": 726, "color": "#79604c" },
-  { "id": "lubricant-technology", "x": 1848, "y": 792, "color": "#5a8353" },
-  { "id": "electric-engine", "x": 1848, "y": 858, "color": "#836f67" },
-  { "id": "construction-robotics", "x": 1848, "y": 924, "color": "#7a6f67" },
-  { "id": "logistic-robotics", "x": 1848, "y": 990, "color": "#796c67" },
-  { "id": "worker-robots-speed-1", "x": 1848, "y": 1056, "color": "#656e74" },
-  { "id": "worker-robots-storage-1", "x": 1848, "y": 1122, "color": "#786c58" },
-  { "id": "exoskeleton-equipment-technology", "x": 1848, "y": 1188, "color": "#726a62" },
-  { "id": "personal-roboport-equipment-technology", "x": 1848, "y": 1254, "color": "#8d7966" },
-  { "id": "advanced-oil-processing-technology", "x": 1848, "y": 1320, "color": "#785c44" },
-  { "id": "uranium-mining", "x": 1848, "y": 1386, "color": "#7f7462" },
-  { "id": "nuclear-power", "x": 1848, "y": 1452, "color": "#786952" },
-  { "id": "advanced-combinators", "x": 1848, "y": 1518, "color": "#6c6752" },
-  { "id": "health", "x": 1848, "y": 1584, "color": "#745e49" },
-  { "id": "physical-projectile-damage-5", "x": 1848, "y": 1650, "color": "#aa8263" },
-  { "id": "weapon-shooting-speed-5", "x": 1848, "y": 1716, "color": "#938b84" },
-  { "id": "laser-shooting-speed-3", "x": 1848, "y": 1782, "color": "#8d8174" },
-  { "id": "tank-technology", "x": 0, "y": 1848, "color": "#6f5e45" },
-  { "id": "explosive-rocketry", "x": 66, "y": 1848, "color": "#6e5543" },
-  { "id": "personal-laser-defense-equipment-technology", "x": 132, "y": 1848, "color": "#7a6854" },
-  { "id": "discharge-defense-equipment-technology", "x": 198, "y": 1848, "color": "#778b86" },
-  { "id": "distractor", "x": 264, "y": 1848, "color": "#5f5b38" },
-  { "id": "stronger-explosives-3", "x": 330, "y": 1848, "color": "#a68047" },
-  { "id": "laser-weapons-damage-1", "x": 396, "y": 1848, "color": "#a27058" },
-  { "id": "laser-turret-technology", "x": 462, "y": 1848, "color": "#736248" },
-  { "id": "automation-3", "x": 528, "y": 1848, "color": "#615736" },
-  { "id": "logistics-3", "x": 594, "y": 1848, "color": "#5c7076" },
-  { "id": "effect-transmission", "x": 660, "y": 1848, "color": "#786756" },
-  { "id": "nuclear-fuel-reprocessing-technology", "x": 726, "y": 1848, "color": "#686f4a" },
-  { "id": "elevated-rail", "x": 792, "y": 1848, "color": "#755a4b" },
-  { "id": "steel-plate-productivity", "x": 858, "y": 1848, "color": "#767670" },
-  { "id": "battery-mk2-equipment-technology", "x": 924, "y": 1848, "color": "#7c6f65" },
-  { "id": "logistic-system", "x": 990, "y": 1848, "color": "#8e8252" },
-  { "id": "speed-module-2-technology", "x": 1056, "y": 1848, "color": "#4a7d8d" },
-  { "id": "productivity-module-2-technology", "x": 1122, "y": 1848, "color": "#836349" },
-  { "id": "efficiency-module-2-technology", "x": 1188, "y": 1848, "color": "#55874c" },
-  { "id": "kovarex-enrichment-process-technology", "x": 1254, "y": 1848, "color": "#4a7f3c" },
-  { "id": "quality-module-2-technology", "x": 1320, "y": 1848, "color": "#927f7c" },
-  { "id": "space-platform-thruster", "x": 1386, "y": 1848, "color": "#a68e72" },
-  { "id": "planet-discovery-vulcanus", "x": 1452, "y": 1848, "color": "#81563b" },
-  { "id": "planet-discovery-gleba", "x": 1518, "y": 1848, "color": "#9d8963" },
-  { "id": "planet-discovery-fulgora", "x": 1584, "y": 1848, "color": "#8b5f6a" },
-  { "id": "uranium-ammo", "x": 1650, "y": 1848, "color": "#6b8f3d" },
-  { "id": "power-armor-mk2-technology", "x": 1716, "y": 1848, "color": "#6c532f" },
-  { "id": "fission-reactor-equipment-technology", "x": 1782, "y": 1848, "color": "#897d64" },
-  { "id": "destroyer", "x": 1848, "y": 1848, "color": "#724138" },
-  { "id": "electric-weapons-damage-1", "x": 1914, "y": 0, "color": "#90877d" },
-  { "id": "cliff-explosives-technology", "x": 1914, "y": 66, "color": "#496670" },
-  { "id": "coal-liquefaction-technology", "x": 1914, "y": 132, "color": "#65473d" },
-  { "id": "speed-module-3-technology", "x": 1914, "y": 198, "color": "#4a8594" },
-  { "id": "asteroid-reprocessing", "x": 1914, "y": 264, "color": "#8c7c5a" },
-  { "id": "low-density-structure-productivity", "x": 1914, "y": 330, "color": "#887b6d" },
-  { "id": "productivity-module-3-technology", "x": 1914, "y": 396, "color": "#8a6a49" },
-  { "id": "efficiency-module-3-technology", "x": 1914, "y": 462, "color": "#568d4b" },
-  { "id": "toolbelt-equipment-technology", "x": 1914, "y": 528, "color": "#7b6a56" },
-  { "id": "tree-seeding", "x": 1914, "y": 594, "color": "#656b3a" },
-  { "id": "carbon-fiber-technology", "x": 1914, "y": 660, "color": "#5b5653" },
-  { "id": "plastic-bar-productivity", "x": 1914, "y": 726, "color": "#b4aeaa" },
-  { "id": "rocket-fuel-productivity", "x": 1914, "y": 792, "color": "#726654" },
-  { "id": "quality-module-3-technology", "x": 1914, "y": 858, "color": "#987f7c" },
-  { "id": "lightning-collector-technology", "x": 1914, "y": 924, "color": "#676d69" },
-  { "id": "processing-unit-productivity", "x": 1914, "y": 990, "color": "#67599f" },
-  { "id": "scrap-recycling-productivity", "x": 1914, "y": 1056, "color": "#9a7f68" },
-  { "id": "rocket-part-productivity", "x": 1914, "y": 1122, "color": "#938b76" },
-  { "id": "atomic-bomb-technology", "x": 1914, "y": 1188, "color": "#a88b69" },
-  { "id": "turbo-transport-belt-technology", "x": 1914, "y": 1254, "color": "#626e4d" },
-  { "id": "epic-quality", "x": 1914, "y": 1320, "color": "#a3939f" },
-  { "id": "rocket-turret-technology", "x": 1914, "y": 1386, "color": "#736650" },
-  { "id": "captivity", "x": 1914, "y": 1452, "color": "#8f6f5f" },
-  { "id": "personal-roboport-mk2-equipment-technology", "x": 1914, "y": 1518, "color": "#7f7469" },
-  { "id": "battery-mk3-equipment-technology", "x": 1914, "y": 1584, "color": "#827e7a" },
-  { "id": "artillery-shell-range-1", "x": 1914, "y": 1650, "color": "#786a5a" },
-  { "id": "artillery-shell-speed-1", "x": 1914, "y": 1716, "color": "#6b7378" },
-  { "id": "artillery", "x": 1914, "y": 1782, "color": "#796e61" },
-  { "id": "artillery-shell-damage-1", "x": 1914, "y": 1848, "color": "#7e5952" },
-  { "id": "stack-inserter-technology", "x": 0, "y": 1914, "color": "#7f7565" },
-  { "id": "transport-belt-capacity-1", "x": 66, "y": 1914, "color": "#837e75" },
-  { "id": "overgrowth-soil", "x": 132, "y": 1914, "color": "#735269" },
-  { "id": "advanced-asteroid-processing", "x": 198, "y": 1914, "color": "#908355" },
-  { "id": "asteroid-productivity", "x": 264, "y": 1914, "color": "#58696b" },
-  { "id": "energy-shield-mk2-equipment-technology", "x": 330, "y": 1914, "color": "#9a564c" },
-  { "id": "mech-armor-technology", "x": 396, "y": 1914, "color": "#806955" },
-  { "id": "tesla-weapons", "x": 462, "y": 1914, "color": "#6e7c70" },
-  { "id": "railgun-damage-1", "x": 528, "y": 1914, "color": "#8b6f71" },
-  { "id": "biolab-technology", "x": 594, "y": 1914, "color": "#847470" },
-  { "id": "spidertron-technology", "x": 660, "y": 1914, "color": "#745c43" },
-  { "id": "rail-support-foundations", "x": 726, "y": 1914, "color": "#7f6f5e" },
-  { "id": "railgun-shooting-speed-1", "x": 792, "y": 1914, "color": "#7b808b" },
-  { "id": "planet-discovery-aquilo", "x": 858, "y": 1914, "color": "#595c65" },
-  { "id": "legendary-quality", "x": 924, "y": 1914, "color": "#9c9484" },
-  { "id": "railgun-technology", "x": 990, "y": 1914, "color": "#6d6d6b" },
-  { "id": "quantum-processor-technology", "x": 1056, "y": 1914, "color": "#98777d" },
-  { "id": "fusion-reactor-technology", "x": 1122, "y": 1914, "color": "#817274" },
-  { "id": "fusion-reactor-equipment-technology", "x": 1188, "y": 1914, "color": "#807d73" },
-  { "id": "promethium-science-pack-technology", "x": 1254, "y": 1914, "color": "#505361" },
-  { "id": "foundation-technology", "x": 1320, "y": 1914, "color": "#6b615b" },
-  { "id": "captive-biter-spawner-technology", "x": 1386, "y": 1914, "color": "#917561" },
-  { "id": "research-productivity", "x": 1452, "y": 1914, "color": "#74716c" },
-  { "id": "logistics", "x": 1518, "y": 1914, "color": "#75684c" },
-  { "id": "production", "x": 1584, "y": 1914, "color": "#5e594f" },
-  { "id": "intermediate-products", "x": 1650, "y": 1914, "color": "#828574" },
-  { "id": "space", "x": 1716, "y": 1914, "color": "#747e7f" },
-  { "id": "combat", "x": 1782, "y": 1914, "color": "#756e64" },
-  { "id": "fluids", "x": 1848, "y": 1914, "color": "#476972" },
-  { "id": "other", "x": 1914, "y": 1914, "color": "#9b715b" },
-  { "id": "space-platform-0", "x": 1980, "y": 0, "color": "#565452" }
+  {
+    "id": "wooden-chest",
+    "x": 132,
+    "y": 66,
+    "color": "#91713d"
+  },
+  {
+    "id": "iron-chest",
+    "x": 0,
+    "y": 132,
+    "color": "#7b6c5f"
+  },
+  {
+    "id": "steel-chest",
+    "x": 66,
+    "y": 132,
+    "color": "#85787a"
+  },
+  {
+    "id": "storage-tank",
+    "x": 132,
+    "y": 132,
+    "color": "#7c715e"
+  },
+  {
+    "id": "transport-belt",
+    "x": 198,
+    "y": 0,
+    "color": "#716357"
+  },
+  {
+    "id": "fast-transport-belt",
+    "x": 198,
+    "y": 66,
+    "color": "#725a56"
+  },
+  {
+    "id": "express-transport-belt",
+    "x": 198,
+    "y": 132,
+    "color": "#616468"
+  },
+  {
+    "id": "turbo-transport-belt",
+    "x": 0,
+    "y": 198,
+    "color": "#686757"
+  },
+  {
+    "id": "underground-belt",
+    "x": 66,
+    "y": 198,
+    "color": "#78684a"
+  },
+  {
+    "id": "fast-underground-belt",
+    "x": 132,
+    "y": 198,
+    "color": "#744a46"
+  },
+  {
+    "id": "express-underground-belt",
+    "x": 198,
+    "y": 198,
+    "color": "#56666f"
+  },
+  {
+    "id": "turbo-underground-belt",
+    "x": 264,
+    "y": 0,
+    "color": "#5f6947"
+  },
+  {
+    "id": "splitter",
+    "x": 264,
+    "y": 66,
+    "color": "#756b54"
+  },
+  {
+    "id": "fast-splitter",
+    "x": 264,
+    "y": 132,
+    "color": "#7d615f"
+  },
+  {
+    "id": "express-splitter",
+    "x": 264,
+    "y": 198,
+    "color": "#6a787d"
+  },
+  {
+    "id": "turbo-splitter",
+    "x": 0,
+    "y": 264,
+    "color": "#737963"
+  },
+  {
+    "id": "burner-inserter",
+    "x": 66,
+    "y": 264,
+    "color": "#6e6b69"
+  },
+  {
+    "id": "inserter",
+    "x": 132,
+    "y": 264,
+    "color": "#9d845a"
+  },
+  {
+    "id": "long-handed-inserter",
+    "x": 198,
+    "y": 264,
+    "color": "#9a605b"
+  },
+  {
+    "id": "fast-inserter",
+    "x": 264,
+    "y": 264,
+    "color": "#5d8999"
+  },
+  {
+    "id": "bulk-inserter",
+    "x": 330,
+    "y": 0,
+    "color": "#81975e"
+  },
+  {
+    "id": "stack-inserter",
+    "x": 330,
+    "y": 66,
+    "color": "#928e82"
+  },
+  {
+    "id": "small-electric-pole",
+    "x": 330,
+    "y": 132,
+    "color": "#6e6157"
+  },
+  {
+    "id": "medium-electric-pole",
+    "x": 330,
+    "y": 198,
+    "color": "#837163"
+  },
+  {
+    "id": "big-electric-pole",
+    "x": 330,
+    "y": 264,
+    "color": "#6e7578"
+  },
+  {
+    "id": "substation",
+    "x": 0,
+    "y": 330,
+    "color": "#5a5e64"
+  },
+  {
+    "id": "pipe",
+    "x": 66,
+    "y": 330,
+    "color": "#6c634f"
+  },
+  {
+    "id": "pipe-to-ground",
+    "x": 132,
+    "y": 330,
+    "color": "#7f735b"
+  },
+  {
+    "id": "pump",
+    "x": 198,
+    "y": 330,
+    "color": "#6a5b50"
+  },
+  {
+    "id": "rail",
+    "x": 264,
+    "y": 330,
+    "color": "#7a6f5b"
+  },
+  {
+    "id": "rail-ramp",
+    "x": 330,
+    "y": 330,
+    "color": "#857160"
+  },
+  {
+    "id": "rail-support",
+    "x": 396,
+    "y": 0,
+    "color": "#897464"
+  },
+  {
+    "id": "train-stop",
+    "x": 396,
+    "y": 66,
+    "color": "#8e6558"
+  },
+  {
+    "id": "rail-signal",
+    "x": 396,
+    "y": 132,
+    "color": "#6d7156"
+  },
+  {
+    "id": "rail-chain-signal",
+    "x": 396,
+    "y": 198,
+    "color": "#5b7b85"
+  },
+  {
+    "id": "locomotive",
+    "x": 396,
+    "y": 264,
+    "color": "#714d49"
+  },
+  {
+    "id": "cargo-wagon",
+    "x": 396,
+    "y": 330,
+    "color": "#6b6868"
+  },
+  {
+    "id": "fluid-wagon",
+    "x": 0,
+    "y": 396,
+    "color": "#7d7b79"
+  },
+  {
+    "id": "artillery-wagon",
+    "x": 66,
+    "y": 396,
+    "color": "#736e59"
+  },
+  {
+    "id": "car",
+    "x": 132,
+    "y": 396,
+    "color": "#735a41"
+  },
+  {
+    "id": "tank",
+    "x": 198,
+    "y": 396,
+    "color": "#6e5842"
+  },
+  {
+    "id": "spidertron",
+    "x": 264,
+    "y": 396,
+    "color": "#735232"
+  },
+  {
+    "id": "logistic-robot",
+    "x": 330,
+    "y": 396,
+    "color": "#7c7166"
+  },
+  {
+    "id": "construction-robot",
+    "x": 396,
+    "y": 396,
+    "color": "#857a68"
+  },
+  {
+    "id": "active-provider-chest",
+    "x": 462,
+    "y": 0,
+    "color": "#6c556f"
+  },
+  {
+    "id": "passive-provider-chest",
+    "x": 462,
+    "y": 66,
+    "color": "#81574c"
+  },
+  {
+    "id": "storage-chest",
+    "x": 462,
+    "y": 132,
+    "color": "#7d7047"
+  },
+  {
+    "id": "buffer-chest",
+    "x": 462,
+    "y": 198,
+    "color": "#597a54"
+  },
+  {
+    "id": "requester-chest",
+    "x": 462,
+    "y": 264,
+    "color": "#5d7071"
+  },
+  {
+    "id": "roboport",
+    "x": 462,
+    "y": 330,
+    "color": "#736d67"
+  },
+  {
+    "id": "small-lamp",
+    "x": 462,
+    "y": 396,
+    "color": "#aaa8a7"
+  },
+  {
+    "id": "arithmetic-combinator",
+    "x": 0,
+    "y": 462,
+    "color": "#686c5c"
+  },
+  {
+    "id": "decider-combinator",
+    "x": 66,
+    "y": 462,
+    "color": "#7b6f4c"
+  },
+  {
+    "id": "selector-combinator",
+    "x": 132,
+    "y": 462,
+    "color": "#716f54"
+  },
+  {
+    "id": "constant-combinator",
+    "x": 198,
+    "y": 462,
+    "color": "#784f4c"
+  },
+  {
+    "id": "power-switch",
+    "x": 264,
+    "y": 462,
+    "color": "#676265"
+  },
+  {
+    "id": "programmable-speaker",
+    "x": 330,
+    "y": 462,
+    "color": "#727066"
+  },
+  {
+    "id": "display-panel",
+    "x": 396,
+    "y": 462,
+    "color": "#58554d"
+  },
+  {
+    "id": "concrete",
+    "x": 528,
+    "y": 0,
+    "color": "#828486"
+  },
+  {
+    "id": "hazard-concrete",
+    "x": 528,
+    "y": 66,
+    "color": "#7f7a60"
+  },
+  {
+    "id": "refined-concrete",
+    "x": 528,
+    "y": 132,
+    "color": "#7d7f7f"
+  },
+  {
+    "id": "refined-hazard-concrete",
+    "x": 528,
+    "y": 198,
+    "color": "#85795c"
+  },
+  {
+    "id": "landfill",
+    "x": 528,
+    "y": 264,
+    "color": "#6b5240"
+  },
+  {
+    "id": "artificial-yumako-soil",
+    "x": 528,
+    "y": 330,
+    "color": "#686c36"
+  },
+  {
+    "id": "overgrowth-yumako-soil",
+    "x": 528,
+    "y": 396,
+    "color": "#806f29"
+  },
+  {
+    "id": "artificial-jellynut-soil",
+    "x": 528,
+    "y": 462,
+    "color": "#825a74"
+  },
+  {
+    "id": "overgrowth-jellynut-soil",
+    "x": 0,
+    "y": 528,
+    "color": "#9a5976"
+  },
+  {
+    "id": "ice-platform",
+    "x": 66,
+    "y": 528,
+    "color": "#8294a0"
+  },
+  {
+    "id": "foundation",
+    "x": 132,
+    "y": 528,
+    "color": "#575450"
+  },
+  {
+    "id": "cliff-explosives",
+    "x": 198,
+    "y": 528,
+    "color": "#597c93"
+  },
+  {
+    "id": "repair-pack",
+    "x": 264,
+    "y": 528,
+    "color": "#a69e91"
+  },
+  {
+    "id": "boiler",
+    "x": 330,
+    "y": 528,
+    "color": "#6d6a57"
+  },
+  {
+    "id": "steam-engine",
+    "x": 396,
+    "y": 528,
+    "color": "#716a5c"
+  },
+  {
+    "id": "solar-panel",
+    "x": 462,
+    "y": 528,
+    "color": "#5e8894"
+  },
+  {
+    "id": "accumulator",
+    "x": 528,
+    "y": 528,
+    "color": "#809696"
+  },
+  {
+    "id": "nuclear-reactor",
+    "x": 594,
+    "y": 0,
+    "color": "#82866b"
+  },
+  {
+    "id": "heat-pipe",
+    "x": 594,
+    "y": 66,
+    "color": "#ae7160"
+  },
+  {
+    "id": "heat-exchanger",
+    "x": 594,
+    "y": 132,
+    "color": "#865645"
+  },
+  {
+    "id": "steam-turbine",
+    "x": 594,
+    "y": 198,
+    "color": "#666662"
+  },
+  {
+    "id": "fusion-reactor",
+    "x": 594,
+    "y": 264,
+    "color": "#81717f"
+  },
+  {
+    "id": "fusion-generator",
+    "x": 594,
+    "y": 330,
+    "color": "#7e7582"
+  },
+  {
+    "id": "burner-mining-drill",
+    "x": 594,
+    "y": 396,
+    "color": "#68615f"
+  },
+  {
+    "id": "electric-mining-drill",
+    "x": 594,
+    "y": 462,
+    "color": "#6a6a62"
+  },
+  {
+    "id": "big-mining-drill",
+    "x": 594,
+    "y": 528,
+    "color": "#815b53"
+  },
+  {
+    "id": "offshore-pump",
+    "x": 0,
+    "y": 594,
+    "color": "#6c5f4e"
+  },
+  {
+    "id": "pumpjack",
+    "x": 66,
+    "y": 594,
+    "color": "#677a4f"
+  },
+  {
+    "id": "stone-furnace",
+    "x": 132,
+    "y": 594,
+    "color": "#7a6c4b"
+  },
+  {
+    "id": "steel-furnace",
+    "x": 198,
+    "y": 594,
+    "color": "#706652"
+  },
+  {
+    "id": "electric-furnace",
+    "x": 264,
+    "y": 594,
+    "color": "#65615d"
+  },
+  {
+    "id": "foundry",
+    "x": 330,
+    "y": 594,
+    "color": "#8d5e3c"
+  },
+  {
+    "id": "recycler",
+    "x": 396,
+    "y": 594,
+    "color": "#6a6049"
+  },
+  {
+    "id": "agricultural-tower",
+    "x": 462,
+    "y": 594,
+    "color": "#7c7b52"
+  },
+  {
+    "id": "biochamber",
+    "x": 528,
+    "y": 594,
+    "color": "#737146"
+  },
+  {
+    "id": "captive-biter-spawner",
+    "x": 594,
+    "y": 594,
+    "color": "#99745a"
+  },
+  {
+    "id": "assembling-machine-1",
+    "x": 660,
+    "y": 0,
+    "color": "#72635c"
+  },
+  {
+    "id": "assembling-machine-2",
+    "x": 660,
+    "y": 66,
+    "color": "#65656e"
+  },
+  {
+    "id": "assembling-machine-3",
+    "x": 660,
+    "y": 132,
+    "color": "#707461"
+  },
+  {
+    "id": "oil-refinery",
+    "x": 660,
+    "y": 198,
+    "color": "#7d644a"
+  },
+  {
+    "id": "chemical-plant",
+    "x": 660,
+    "y": 264,
+    "color": "#726a5d"
+  },
+  {
+    "id": "centrifuge",
+    "x": 660,
+    "y": 330,
+    "color": "#798970"
+  },
+  {
+    "id": "electromagnetic-plant",
+    "x": 660,
+    "y": 396,
+    "color": "#6f7482"
+  },
+  {
+    "id": "cryogenic-plant",
+    "x": 660,
+    "y": 462,
+    "color": "#7e837e"
+  },
+  {
+    "id": "lab",
+    "x": 660,
+    "y": 528,
+    "color": "#677c9a"
+  },
+  {
+    "id": "biolab",
+    "x": 660,
+    "y": 594,
+    "color": "#73686c"
+  },
+  {
+    "id": "lightning-rod",
+    "x": 0,
+    "y": 660,
+    "color": "#767275"
+  },
+  {
+    "id": "lightning-collector",
+    "x": 66,
+    "y": 660,
+    "color": "#757571"
+  },
+  {
+    "id": "heating-tower",
+    "x": 132,
+    "y": 660,
+    "color": "#916348"
+  },
+  {
+    "id": "beacon",
+    "x": 198,
+    "y": 660,
+    "color": "#69635e"
+  },
+  {
+    "id": "speed-module",
+    "x": 264,
+    "y": 660,
+    "color": "#5d8290"
+  },
+  {
+    "id": "speed-module-2",
+    "x": 330,
+    "y": 660,
+    "color": "#5d8998"
+  },
+  {
+    "id": "speed-module-3",
+    "x": 396,
+    "y": 660,
+    "color": "#5c919f"
+  },
+  {
+    "id": "efficiency-module",
+    "x": 462,
+    "y": 660,
+    "color": "#6b8b58"
+  },
+  {
+    "id": "efficiency-module-2",
+    "x": 528,
+    "y": 660,
+    "color": "#76955f"
+  },
+  {
+    "id": "efficiency-module-3",
+    "x": 594,
+    "y": 660,
+    "color": "#7e9e61"
+  },
+  {
+    "id": "productivity-module",
+    "x": 660,
+    "y": 660,
+    "color": "#976f52"
+  },
+  {
+    "id": "productivity-module-2",
+    "x": 726,
+    "y": 0,
+    "color": "#9e7959"
+  },
+  {
+    "id": "productivity-module-3",
+    "x": 726,
+    "y": 66,
+    "color": "#a48157"
+  },
+  {
+    "id": "quality-module",
+    "x": 726,
+    "y": 132,
+    "color": "#8e847b"
+  },
+  {
+    "id": "quality-module-2",
+    "x": 726,
+    "y": 198,
+    "color": "#97877d"
+  },
+  {
+    "id": "quality-module-3",
+    "x": 726,
+    "y": 264,
+    "color": "#9d887d"
+  },
+  {
+    "id": "plastic-bar",
+    "x": 396,
+    "y": 726,
+    "color": "#cccccc"
+  },
+  {
+    "id": "sulfur",
+    "x": 462,
+    "y": 726,
+    "color": "#ada441"
+  },
+  {
+    "id": "battery",
+    "x": 528,
+    "y": 726,
+    "color": "#615c5a"
+  },
+  {
+    "id": "explosives",
+    "x": 594,
+    "y": 726,
+    "color": "#925e59"
+  },
+  {
+    "id": "carbon",
+    "x": 660,
+    "y": 726,
+    "color": "#494947"
+  },
+  {
+    "id": "water-barrel",
+    "x": 726,
+    "y": 726,
+    "color": "#6c737a"
+  },
+  {
+    "id": "crude-oil-barrel",
+    "x": 792,
+    "y": 0,
+    "color": "#626262"
+  },
+  {
+    "id": "petroleum-gas-barrel",
+    "x": 792,
+    "y": 66,
+    "color": "#787477"
+  },
+  {
+    "id": "light-oil-barrel",
+    "x": 792,
+    "y": 132,
+    "color": "#8a7550"
+  },
+  {
+    "id": "heavy-oil-barrel",
+    "x": 792,
+    "y": 198,
+    "color": "#806959"
+  },
+  {
+    "id": "lubricant-barrel",
+    "x": 792,
+    "y": 264,
+    "color": "#617559"
+  },
+  {
+    "id": "sulfuric-acid-barrel",
+    "x": 792,
+    "y": 330,
+    "color": "#818d53"
+  },
+  {
+    "id": "fluoroketone-hot-barrel",
+    "x": 792,
+    "y": 396,
+    "color": "#64725c"
+  },
+  {
+    "id": "fluoroketone-cold-barrel",
+    "x": 792,
+    "y": 462,
+    "color": "#527260"
+  },
+  {
+    "id": "iron-gear-wheel",
+    "x": 792,
+    "y": 528,
+    "color": "#6e6f6b"
+  },
+  {
+    "id": "iron-stick",
+    "x": 792,
+    "y": 594,
+    "color": "#868786"
+  },
+  {
+    "id": "copper-cable",
+    "x": 792,
+    "y": 660,
+    "color": "#b57c66"
+  },
+  {
+    "id": "barrel",
+    "x": 792,
+    "y": 726,
+    "color": "#777776"
+  },
+  {
+    "id": "electronic-circuit",
+    "x": 0,
+    "y": 792,
+    "color": "#7c9548"
+  },
+  {
+    "id": "advanced-circuit",
+    "x": 66,
+    "y": 792,
+    "color": "#af6b4b"
+  },
+  {
+    "id": "processing-unit",
+    "x": 132,
+    "y": 792,
+    "color": "#787cad"
+  },
+  {
+    "id": "engine-unit",
+    "x": 198,
+    "y": 792,
+    "color": "#6b6453"
+  },
+  {
+    "id": "electric-engine-unit",
+    "x": 264,
+    "y": 792,
+    "color": "#7f6b65"
+  },
+  {
+    "id": "flying-robot-frame",
+    "x": 330,
+    "y": 792,
+    "color": "#6c716d"
+  },
+  {
+    "id": "low-density-structure",
+    "x": 396,
+    "y": 792,
+    "color": "#8e7d64"
+  },
+  {
+    "id": "rocket-fuel",
+    "x": 462,
+    "y": 792,
+    "color": "#6f6352"
+  },
+  {
+    "id": "uranium-fuel-cell",
+    "x": 660,
+    "y": 792,
+    "color": "#588d55"
+  },
+  {
+    "id": "nuclear-fuel",
+    "x": 792,
+    "y": 792,
+    "color": "#628353"
+  },
+  {
+    "id": "tungsten-carbide",
+    "x": 858,
+    "y": 132,
+    "color": "#625a6d"
+  },
+  {
+    "id": "tungsten-plate",
+    "x": 858,
+    "y": 198,
+    "color": "#72687c"
+  },
+  {
+    "id": "holmium-plate",
+    "x": 858,
+    "y": 396,
+    "color": "#be9299"
+  },
+  {
+    "id": "superconductor",
+    "x": 858,
+    "y": 462,
+    "color": "#58759e"
+  },
+  {
+    "id": "supercapacitor",
+    "x": 858,
+    "y": 528,
+    "color": "#64667a"
+  },
+  {
+    "id": "iron-bacteria",
+    "x": 0,
+    "y": 858,
+    "color": "#577795"
+  },
+  {
+    "id": "copper-bacteria",
+    "x": 66,
+    "y": 858,
+    "color": "#ae7a54"
+  },
+  {
+    "id": "bioflux",
+    "x": 264,
+    "y": 858,
+    "color": "#a85b49"
+  },
+  {
+    "id": "carbon-fiber",
+    "x": 462,
+    "y": 858,
+    "color": "#767676"
+  },
+  {
+    "id": "pentapod-egg",
+    "x": 594,
+    "y": 858,
+    "color": "#687327"
+  },
+  {
+    "id": "lithium",
+    "x": 726,
+    "y": 858,
+    "color": "#7f8070"
+  },
+  {
+    "id": "quantum-processor",
+    "x": 858,
+    "y": 858,
+    "color": "#99817b"
+  },
+  {
+    "id": "fusion-power-cell",
+    "x": 924,
+    "y": 0,
+    "color": "#55808d"
+  },
+  {
+    "id": "automation-science-pack",
+    "x": 924,
+    "y": 66,
+    "color": "#ae6e6e"
+  },
+  {
+    "id": "logistic-science-pack",
+    "x": 924,
+    "y": 132,
+    "color": "#71b073"
+  },
+  {
+    "id": "military-science-pack",
+    "x": 924,
+    "y": 198,
+    "color": "#7f8087"
+  },
+  {
+    "id": "chemical-science-pack",
+    "x": 924,
+    "y": 264,
+    "color": "#6fa5b6"
+  },
+  {
+    "id": "production-science-pack",
+    "x": 924,
+    "y": 330,
+    "color": "#9a6ab3"
+  },
+  {
+    "id": "utility-science-pack",
+    "x": 924,
+    "y": 396,
+    "color": "#b8a573"
+  },
+  {
+    "id": "space-science-pack",
+    "x": 924,
+    "y": 462,
+    "color": "#bcbbbc"
+  },
+  {
+    "id": "metallurgic-science-pack",
+    "x": 924,
+    "y": 528,
+    "color": "#be814b"
+  },
+  {
+    "id": "agricultural-science-pack",
+    "x": 924,
+    "y": 594,
+    "color": "#8e9641"
+  },
+  {
+    "id": "electromagnetic-science-pack",
+    "x": 924,
+    "y": 660,
+    "color": "#bc5d8c"
+  },
+  {
+    "id": "cryogenic-science-pack",
+    "x": 924,
+    "y": 726,
+    "color": "#545d9e"
+  },
+  {
+    "id": "promethium-science-pack",
+    "x": 924,
+    "y": 792,
+    "color": "#545764"
+  },
+  {
+    "id": "rocket-silo",
+    "x": 924,
+    "y": 858,
+    "color": "#7a7463"
+  },
+  {
+    "id": "cargo-landing-pad",
+    "x": 66,
+    "y": 924,
+    "color": "#6b665e"
+  },
+  {
+    "id": "space-platform-foundation",
+    "x": 132,
+    "y": 924,
+    "color": "#4f4d4c"
+  },
+  {
+    "id": "cargo-bay",
+    "x": 198,
+    "y": 924,
+    "color": "#867965"
+  },
+  {
+    "id": "asteroid-collector",
+    "x": 264,
+    "y": 924,
+    "color": "#7b726d"
+  },
+  {
+    "id": "crusher",
+    "x": 330,
+    "y": 924,
+    "color": "#5d5e5a"
+  },
+  {
+    "id": "thruster",
+    "x": 396,
+    "y": 924,
+    "color": "#a28f79"
+  },
+  {
+    "id": "space-platform-starter-pack",
+    "x": 462,
+    "y": 924,
+    "color": "#74706b"
+  },
+  {
+    "id": "submachine-gun",
+    "x": 792,
+    "y": 924,
+    "color": "#625f5e"
+  },
+  {
+    "id": "railgun",
+    "x": 858,
+    "y": 924,
+    "color": "#4e5c6a"
+  },
+  {
+    "id": "teslagun",
+    "x": 924,
+    "y": 924,
+    "color": "#769087"
+  },
+  {
+    "id": "shotgun",
+    "x": 990,
+    "y": 0,
+    "color": "#846257"
+  },
+  {
+    "id": "combat-shotgun",
+    "x": 990,
+    "y": 66,
+    "color": "#836558"
+  },
+  {
+    "id": "rocket-launcher",
+    "x": 990,
+    "y": 132,
+    "color": "#6a6a60"
+  },
+  {
+    "id": "flamethrower",
+    "x": 990,
+    "y": 198,
+    "color": "#675e59"
+  },
+  {
+    "id": "firearm-magazine",
+    "x": 990,
+    "y": 264,
+    "color": "#645f40"
+  },
+  {
+    "id": "piercing-rounds-magazine",
+    "x": 990,
+    "y": 330,
+    "color": "#694040"
+  },
+  {
+    "id": "uranium-rounds-magazine",
+    "x": 990,
+    "y": 396,
+    "color": "#3b793b"
+  },
+  {
+    "id": "shotgun-shell",
+    "x": 990,
+    "y": 462,
+    "color": "#9f523a"
+  },
+  {
+    "id": "piercing-shotgun-shell",
+    "x": 990,
+    "y": 528,
+    "color": "#6d8168"
+  },
+  {
+    "id": "cannon-shell",
+    "x": 990,
+    "y": 594,
+    "color": "#6d5d46"
+  },
+  {
+    "id": "explosive-cannon-shell",
+    "x": 990,
+    "y": 660,
+    "color": "#8c5d45"
+  },
+  {
+    "id": "uranium-cannon-shell",
+    "x": 990,
+    "y": 726,
+    "color": "#646f41"
+  },
+  {
+    "id": "explosive-uranium-cannon-shell",
+    "x": 990,
+    "y": 792,
+    "color": "#846f40"
+  },
+  {
+    "id": "artillery-shell",
+    "x": 990,
+    "y": 858,
+    "color": "#9e7f62"
+  },
+  {
+    "id": "rocket",
+    "x": 990,
+    "y": 924,
+    "color": "#827b68"
+  },
+  {
+    "id": "explosive-rocket",
+    "x": 0,
+    "y": 990,
+    "color": "#836c6b"
+  },
+  {
+    "id": "atomic-bomb",
+    "x": 66,
+    "y": 990,
+    "color": "#6c8c67"
+  },
+  {
+    "id": "capture-robot-rocket",
+    "x": 132,
+    "y": 990,
+    "color": "#726353"
+  },
+  {
+    "id": "flamethrower-ammo",
+    "x": 198,
+    "y": 990,
+    "color": "#8b7771"
+  },
+  {
+    "id": "railgun-ammo",
+    "x": 264,
+    "y": 990,
+    "color": "#3b5b74"
+  },
+  {
+    "id": "tesla-ammo",
+    "x": 330,
+    "y": 990,
+    "color": "#7b7c6c"
+  },
+  {
+    "id": "grenade",
+    "x": 396,
+    "y": 990,
+    "color": "#656b5b"
+  },
+  {
+    "id": "cluster-grenade",
+    "x": 462,
+    "y": 990,
+    "color": "#755d53"
+  },
+  {
+    "id": "poison-capsule",
+    "x": 528,
+    "y": 990,
+    "color": "#5f8a98"
+  },
+  {
+    "id": "slowdown-capsule",
+    "x": 594,
+    "y": 990,
+    "color": "#97835e"
+  },
+  {
+    "id": "defender-capsule",
+    "x": 660,
+    "y": 990,
+    "color": "#67889f"
+  },
+  {
+    "id": "distractor-capsule",
+    "x": 726,
+    "y": 990,
+    "color": "#8b8a58"
+  },
+  {
+    "id": "destroyer-capsule",
+    "x": 792,
+    "y": 990,
+    "color": "#946456"
+  },
+  {
+    "id": "light-armor",
+    "x": 858,
+    "y": 990,
+    "color": "#6f593e"
+  },
+  {
+    "id": "heavy-armor",
+    "x": 924,
+    "y": 990,
+    "color": "#84603d"
+  },
+  {
+    "id": "modular-armor",
+    "x": 990,
+    "y": 990,
+    "color": "#866743"
+  },
+  {
+    "id": "power-armor",
+    "x": 1056,
+    "y": 0,
+    "color": "#77502a"
+  },
+  {
+    "id": "power-armor-mk2",
+    "x": 1056,
+    "y": 66,
+    "color": "#795533"
+  },
+  {
+    "id": "mech-armor",
+    "x": 1056,
+    "y": 132,
+    "color": "#9f7452"
+  },
+  {
+    "id": "solar-panel-equipment",
+    "x": 1056,
+    "y": 198,
+    "color": "#537a8d"
+  },
+  {
+    "id": "fission-reactor-equipment",
+    "x": 1056,
+    "y": 264,
+    "color": "#857a5c"
+  },
+  {
+    "id": "fusion-reactor-equipment",
+    "x": 1056,
+    "y": 330,
+    "color": "#7c7b78"
+  },
+  {
+    "id": "battery-equipment",
+    "x": 1056,
+    "y": 396,
+    "color": "#747664"
+  },
+  {
+    "id": "battery-mk2-equipment",
+    "x": 1056,
+    "y": 462,
+    "color": "#6d6e5e"
+  },
+  {
+    "id": "battery-mk3-equipment",
+    "x": 1056,
+    "y": 528,
+    "color": "#67706a"
+  },
+  {
+    "id": "belt-immunity-equipment",
+    "x": 1056,
+    "y": 594,
+    "color": "#6e7173"
+  },
+  {
+    "id": "exoskeleton-equipment",
+    "x": 1056,
+    "y": 660,
+    "color": "#797270"
+  },
+  {
+    "id": "personal-roboport-equipment",
+    "x": 1056,
+    "y": 726,
+    "color": "#78705c"
+  },
+  {
+    "id": "personal-roboport-mk2-equipment",
+    "x": 1056,
+    "y": 792,
+    "color": "#6a7378"
+  },
+  {
+    "id": "night-vision-equipment",
+    "x": 1056,
+    "y": 858,
+    "color": "#697660"
+  },
+  {
+    "id": "toolbelt-equipment",
+    "x": 1056,
+    "y": 924,
+    "color": "#725638"
+  },
+  {
+    "id": "energy-shield-equipment",
+    "x": 1056,
+    "y": 990,
+    "color": "#627f83"
+  },
+  {
+    "id": "energy-shield-mk2-equipment",
+    "x": 0,
+    "y": 1056,
+    "color": "#9d6e52"
+  },
+  {
+    "id": "personal-laser-defense-equipment",
+    "x": 66,
+    "y": 1056,
+    "color": "#735f44"
+  },
+  {
+    "id": "discharge-defense-equipment",
+    "x": 132,
+    "y": 1056,
+    "color": "#789284"
+  },
+  {
+    "id": "stone-wall",
+    "x": 198,
+    "y": 1056,
+    "color": "#625a49"
+  },
+  {
+    "id": "gate",
+    "x": 264,
+    "y": 1056,
+    "color": "#665f41"
+  },
+  {
+    "id": "radar",
+    "x": 330,
+    "y": 1056,
+    "color": "#7e7a66"
+  },
+  {
+    "id": "land-mine",
+    "x": 396,
+    "y": 1056,
+    "color": "#726555"
+  },
+  {
+    "id": "gun-turret",
+    "x": 462,
+    "y": 1056,
+    "color": "#816745"
+  },
+  {
+    "id": "laser-turret",
+    "x": 528,
+    "y": 1056,
+    "color": "#826f3f"
+  },
+  {
+    "id": "flamethrower-turret",
+    "x": 594,
+    "y": 1056,
+    "color": "#756551"
+  },
+  {
+    "id": "artillery-turret",
+    "x": 660,
+    "y": 1056,
+    "color": "#7e7769"
+  },
+  {
+    "id": "rocket-turret",
+    "x": 726,
+    "y": 1056,
+    "color": "#746148"
+  },
+  {
+    "id": "tesla-turret",
+    "x": 792,
+    "y": 1056,
+    "color": "#7f7760"
+  },
+  {
+    "id": "railgun-turret",
+    "x": 858,
+    "y": 1056,
+    "color": "#675e4f"
+  },
+  {
+    "id": "lubricant",
+    "x": 1122,
+    "y": 198,
+    "color": "#428230"
+  },
+  {
+    "id": "sulfuric-acid",
+    "x": 1122,
+    "y": 264,
+    "color": "#a4684b"
+  },
+  {
+    "id": "thruster-fuel",
+    "x": 1122,
+    "y": 330,
+    "color": "#f0ac69"
+  },
+  {
+    "id": "thruster-oxidizer",
+    "x": 1122,
+    "y": 396,
+    "color": "#69c7ee"
+  },
+  {
+    "id": "molten-iron",
+    "x": 1122,
+    "y": 528,
+    "color": "#9f886d"
+  },
+  {
+    "id": "molten-copper",
+    "x": 1122,
+    "y": 594,
+    "color": "#bb8233"
+  },
+  {
+    "id": "holmium-solution",
+    "x": 1122,
+    "y": 660,
+    "color": "#9c747b"
+  },
+  {
+    "id": "electrolyte",
+    "x": 1122,
+    "y": 726,
+    "color": "#972954"
+  },
+  {
+    "id": "casting-pipe",
+    "x": 66,
+    "y": 1122,
+    "color": "#86775f"
+  },
+  {
+    "id": "casting-pipe-to-ground",
+    "x": 132,
+    "y": 1122,
+    "color": "#8f7e65"
+  },
+  {
+    "id": "heavy-oil-cracking",
+    "x": 924,
+    "y": 1122,
+    "color": "#936530"
+  },
+  {
+    "id": "light-oil-cracking",
+    "x": 990,
+    "y": 1122,
+    "color": "#847762"
+  },
+  {
+    "id": "solid-fuel-from-petroleum-gas",
+    "x": 1056,
+    "y": 1122,
+    "color": "#545454"
+  },
+  {
+    "id": "solid-fuel-from-light-oil",
+    "x": 1122,
+    "y": 1122,
+    "color": "#595247"
+  },
+  {
+    "id": "solid-fuel-from-heavy-oil",
+    "x": 1188,
+    "y": 0,
+    "color": "#5a4a45"
+  },
+  {
+    "id": "acid-neutralisation",
+    "x": 1188,
+    "y": 66,
+    "color": "#998275"
+  },
+  {
+    "id": "steam-condensation",
+    "x": 1188,
+    "y": 132,
+    "color": "#6f858c"
+  },
+  {
+    "id": "ice-melting",
+    "x": 1188,
+    "y": 198,
+    "color": "#7194a4"
+  },
+  {
+    "id": "coal-synthesis",
+    "x": 924,
+    "y": 1188,
+    "color": "#666564"
+  },
+  {
+    "id": "empty-water-barrel",
+    "x": 1254,
+    "y": 924,
+    "color": "#556f7f"
+  },
+  {
+    "id": "empty-crude-oil-barrel",
+    "x": 1254,
+    "y": 990,
+    "color": "#575757"
+  },
+  {
+    "id": "empty-petroleum-gas-barrel",
+    "x": 1254,
+    "y": 1056,
+    "color": "#6f686e"
+  },
+  {
+    "id": "empty-light-oil-barrel",
+    "x": 1254,
+    "y": 1122,
+    "color": "#826e4f"
+  },
+  {
+    "id": "empty-heavy-oil-barrel",
+    "x": 1254,
+    "y": 1188,
+    "color": "#7e5c4f"
+  },
+  {
+    "id": "empty-lubricant-barrel",
+    "x": 0,
+    "y": 1254,
+    "color": "#597051"
+  },
+  {
+    "id": "empty-sulfuric-acid-barrel",
+    "x": 66,
+    "y": 1254,
+    "color": "#8f7d55"
+  },
+  {
+    "id": "empty-fluoroketone-hot-barrel",
+    "x": 132,
+    "y": 1254,
+    "color": "#706a5a"
+  },
+  {
+    "id": "empty-fluoroketone-cold-barrel",
+    "x": 198,
+    "y": 1254,
+    "color": "#577e6d"
+  },
+  {
+    "id": "uranium-processing",
+    "x": 396,
+    "y": 1254,
+    "color": "#53893a"
+  },
+  {
+    "id": "nuclear-fuel-reprocessing",
+    "x": 726,
+    "y": 1254,
+    "color": "#746a43"
+  },
+  {
+    "id": "kovarex-enrichment-process",
+    "x": 792,
+    "y": 1254,
+    "color": "#497d3a"
+  },
+  {
+    "id": "molten-iron-from-lava",
+    "x": 924,
+    "y": 1254,
+    "color": "#b78153"
+  },
+  {
+    "id": "molten-copper-from-lava",
+    "x": 990,
+    "y": 1254,
+    "color": "#bf7f3b"
+  },
+  {
+    "id": "casting-iron",
+    "x": 1188,
+    "y": 1254,
+    "color": "#8d8174"
+  },
+  {
+    "id": "casting-copper",
+    "x": 1254,
+    "y": 1254,
+    "color": "#ac7442"
+  },
+  {
+    "id": "casting-steel",
+    "x": 1320,
+    "y": 0,
+    "color": "#938676"
+  },
+  {
+    "id": "casting-iron-gear-wheel",
+    "x": 1320,
+    "y": 66,
+    "color": "#877a6a"
+  },
+  {
+    "id": "casting-iron-stick",
+    "x": 1320,
+    "y": 132,
+    "color": "#978775"
+  },
+  {
+    "id": "casting-low-density-structure",
+    "x": 1320,
+    "y": 198,
+    "color": "#a3845c"
+  },
+  {
+    "id": "concrete-from-molten-iron",
+    "x": 1320,
+    "y": 264,
+    "color": "#8f8579"
+  },
+  {
+    "id": "casting-copper-cable",
+    "x": 1320,
+    "y": 330,
+    "color": "#b37c4a"
+  },
+  {
+    "id": "yumako-processing",
+    "x": 1320,
+    "y": 924,
+    "color": "#cd7456"
+  },
+  {
+    "id": "jellynut-processing",
+    "x": 1320,
+    "y": 1122,
+    "color": "#819e7f"
+  },
+  {
+    "id": "iron-bacteria-cultivation",
+    "x": 198,
+    "y": 1320,
+    "color": "#6f7981"
+  },
+  {
+    "id": "copper-bacteria-cultivation",
+    "x": 330,
+    "y": 1320,
+    "color": "#ac7c4e"
+  },
+  {
+    "id": "nutrients-from-spoilage",
+    "x": 528,
+    "y": 1320,
+    "color": "#979286"
+  },
+  {
+    "id": "nutrients-from-yumako-mash",
+    "x": 594,
+    "y": 1320,
+    "color": "#b79c85"
+  },
+  {
+    "id": "nutrients-from-bioflux",
+    "x": 660,
+    "y": 1320,
+    "color": "#ac8a80"
+  },
+  {
+    "id": "rocket-fuel-from-jelly",
+    "x": 990,
+    "y": 1320,
+    "color": "#7e7c48"
+  },
+  {
+    "id": "biolubricant",
+    "x": 1056,
+    "y": 1320,
+    "color": "#549a36"
+  },
+  {
+    "id": "bioplastic",
+    "x": 1122,
+    "y": 1320,
+    "color": "#b49b8d"
+  },
+  {
+    "id": "biosulfur",
+    "x": 1188,
+    "y": 1320,
+    "color": "#9f893d"
+  },
+  {
+    "id": "burnt-spoilage",
+    "x": 1320,
+    "y": 1320,
+    "color": "#47453b"
+  },
+  {
+    "id": "wood-processing",
+    "x": 1386,
+    "y": 132,
+    "color": "#87653e"
+  },
+  {
+    "id": "fish-breeding",
+    "x": 1386,
+    "y": 330,
+    "color": "#848861"
+  },
+  {
+    "id": "nutrients-from-fish",
+    "x": 1386,
+    "y": 396,
+    "color": "#a5a391"
+  },
+  {
+    "id": "nutrients-from-biter-egg",
+    "x": 1386,
+    "y": 462,
+    "color": "#ae9d89"
+  },
+  {
+    "id": "ammoniacal-solution-separation",
+    "x": 1386,
+    "y": 594,
+    "color": "#818ba5"
+  },
+  {
+    "id": "solid-fuel-from-ammonia",
+    "x": 1386,
+    "y": 660,
+    "color": "#6d6d7b"
+  },
+  {
+    "id": "ammonia-rocket-fuel",
+    "x": 1386,
+    "y": 726,
+    "color": "#77737e"
+  },
+  {
+    "id": "fluoroketone-cooling",
+    "x": 1386,
+    "y": 792,
+    "color": "#3e9270"
+  },
+  {
+    "id": "metallic-asteroid-crushing",
+    "x": 726,
+    "y": 1386,
+    "color": "#a18763"
+  },
+  {
+    "id": "carbonic-asteroid-crushing",
+    "x": 792,
+    "y": 1386,
+    "color": "#9f8448"
+  },
+  {
+    "id": "oxide-asteroid-crushing",
+    "x": 858,
+    "y": 1386,
+    "color": "#ada27c"
+  },
+  {
+    "id": "metallic-asteroid-reprocessing",
+    "x": 924,
+    "y": 1386,
+    "color": "#82726a"
+  },
+  {
+    "id": "carbonic-asteroid-reprocessing",
+    "x": 990,
+    "y": 1386,
+    "color": "#80714e"
+  },
+  {
+    "id": "oxide-asteroid-reprocessing",
+    "x": 1056,
+    "y": 1386,
+    "color": "#909a8d"
+  },
+  {
+    "id": "advanced-metallic-asteroid-crushing",
+    "x": 1122,
+    "y": 1386,
+    "color": "#796d73"
+  },
+  {
+    "id": "advanced-carbonic-asteroid-crushing",
+    "x": 1188,
+    "y": 1386,
+    "color": "#746f4e"
+  },
+  {
+    "id": "advanced-oxide-asteroid-crushing",
+    "x": 1254,
+    "y": 1386,
+    "color": "#8da0a4"
+  },
+  {
+    "id": "advanced-thruster-fuel",
+    "x": 1320,
+    "y": 1386,
+    "color": "#aa8667"
+  },
+  {
+    "id": "advanced-thruster-oxidizer",
+    "x": 1386,
+    "y": 1386,
+    "color": "#6f9fb4"
+  }
 ]

@@ -59,6 +59,17 @@ export default new Map<string, Item>([
     ),
   ],
   [
+    "turbo-transport-belt",
+    new Item(
+      "turbo-transport-belt",
+      "Turbo transport belt",
+      "logistics",
+      1,
+      { "tungsten-plate": 5, "express-transport-belt": 1, lubricant: 20 },
+      { "turbo-transport-belt": 1 }
+    ),
+  ],
+  [
     "underground-belt",
     new Item(
       "underground-belt",
@@ -92,6 +103,17 @@ export default new Map<string, Item>([
     ),
   ],
   [
+    "turbo-underground-belt",
+    new Item(
+      "turbo-underground-belt",
+      "Turbo underground belt",
+      "logistics",
+      1,
+      { "tungsten-plate": 40, "express-underground-belt": 2, lubricant: 40 },
+      { "turbo-underground-belt": 2 }
+    ),
+  ],
+  [
     "splitter",
     new Item(
       "splitter",
@@ -122,6 +144,17 @@ export default new Map<string, Item>([
       1,
       { "fast-splitter": 1, "iron-gear-wheel": 10, "advanced-circuit": 10, lubricant: 80 },
       { "express-splitter": 1 }
+    ),
+  ],
+  [
+    "turbo-splitter",
+    new Item(
+      "turbo-splitter",
+      "Turbo splitter",
+      "logistics",
+      1,
+      { "express-splitter": 1, "tungsten-plate": 15, "processing-unit": 2, lubricant: 80 },
+      { "turbo-splitter": 1 }
     ),
   ],
   [
@@ -180,6 +213,17 @@ export default new Map<string, Item>([
     ),
   ],
   [
+    "stack-inserter",
+    new Item(
+      "stack-inserter",
+      "Stack inserter",
+      "logistics",
+      2,
+      { "bulk-inserter": 1, "processing-unit": 1, "carbon-fiber": 2, jelly: 10 },
+      { "stack-inserter": 1 }
+    ),
+  ],
+  [
     "small-electric-pole",
     new Item(
       "small-electric-pole",
@@ -235,8 +279,42 @@ export default new Map<string, Item>([
       { "pipe-to-ground": 2 }
     ),
   ],
+  ["casting-pipe", new Item("casting-pipe", "Casting pipe", "logistics", 3, { "molten-iron": 10 }, { pipe: 1 })],
+  [
+    "casting-pipe-to-ground",
+    new Item(
+      "casting-pipe-to-ground",
+      "Casting pipe to ground",
+      "logistics",
+      3,
+      { "molten-iron": 50, pipe: 10 },
+      { "pipe-to-ground": 2 }
+    ),
+  ],
   ["pump", new Item("pump", "Pump", "logistics", 3, { "engine-unit": 1, "steel-plate": 1, pipe: 1 }, { pump: 1 })],
   ["rail", new Item("rail", "Rail", "logistics", 4, { stone: 1, "iron-stick": 1, "steel-plate": 1 }, { rail: 2 })],
+  [
+    "rail-ramp",
+    new Item(
+      "rail-ramp",
+      "Rail ramp",
+      "logistics",
+      4,
+      { "refined-concrete": 100, rail: 8, "steel-plate": 10 },
+      { "rail-ramp": 1 }
+    ),
+  ],
+  [
+    "rail-support",
+    new Item(
+      "rail-support",
+      "Rail support",
+      "logistics",
+      4,
+      { "refined-concrete": 20, "steel-plate": 10 },
+      { "rail-support": 1 }
+    ),
+  ],
   [
     "train-stop",
     new Item(
@@ -310,7 +388,7 @@ export default new Map<string, Item>([
       "Artillery wagon",
       "logistics",
       4,
-      { "engine-unit": 64, "iron-gear-wheel": 10, "steel-plate": 40, pipe: 16, "advanced-circuit": 20 },
+      { "engine-unit": 60, "tungsten-plate": 60, "refined-concrete": 60, "iron-gear-wheel": 40, "processing-unit": 10 },
       { "artillery-wagon": 1 }
     ),
   ],
@@ -333,16 +411,7 @@ export default new Map<string, Item>([
       "Spidertron",
       "logistics",
       5,
-      {
-        "exoskeleton-equipment": 4,
-        "fission-reactor-equipment": 2,
-        "rocket-launcher": 4,
-        "processing-unit": 16,
-        "low-density-structure": 150,
-        radar: 2,
-        "efficiency-module-3": 2,
-        "raw-fish": 1,
-      },
+      { "exoskeleton-equipment": 4, "fission-reactor-equipment": 2, "rocket-turret": 1, radar: 2, "raw-fish": 1 },
       { spidertron: 1 }
     ),
   ],
@@ -522,7 +591,6 @@ export default new Map<string, Item>([
       { "display-panel": 1 }
     ),
   ],
-  ["stone-brick", new Item("stone-brick", "Stone brick", "logistics", 8, { stone: 2 }, { "stone-brick": 1 })],
   [
     "concrete",
     new Item("concrete", "Concrete", "logistics", 8, { "stone-brick": 5, "iron-ore": 1, water: 100 }, { concrete: 10 }),
@@ -555,13 +623,72 @@ export default new Map<string, Item>([
   ],
   ["landfill", new Item("landfill", "Landfill", "logistics", 8, { stone: 50 }, { landfill: 1 })],
   [
+    "artificial-yumako-soil",
+    new Item(
+      "artificial-yumako-soil",
+      "Artificial yumako soil",
+      "logistics",
+      8,
+      { "yumako-seed": 2, nutrients: 50, landfill: 5 },
+      { "artificial-yumako-soil": 10 }
+    ),
+  ],
+  [
+    "overgrowth-yumako-soil",
+    new Item(
+      "overgrowth-yumako-soil",
+      "Overgrowth yumako soil",
+      "logistics",
+      8,
+      { "artificial-yumako-soil": 2, "yumako-seed": 5, "biter-egg": 10, spoilage: 50, water: 100 },
+      { "overgrowth-yumako-soil": 1 }
+    ),
+  ],
+  [
+    "artificial-jellynut-soil",
+    new Item(
+      "artificial-jellynut-soil",
+      "Artificial jellynut soil",
+      "logistics",
+      8,
+      { "jellynut-seed": 2, nutrients: 50, landfill: 5 },
+      { "artificial-jellynut-soil": 10 }
+    ),
+  ],
+  [
+    "overgrowth-jellynut-soil",
+    new Item(
+      "overgrowth-jellynut-soil",
+      "Overgrowth jellynut soil",
+      "logistics",
+      8,
+      { "artificial-jellynut-soil": 2, "jellynut-seed": 5, "biter-egg": 10, spoilage: 50, water: 100 },
+      { "overgrowth-jellynut-soil": 1 }
+    ),
+  ],
+  [
+    "ice-platform",
+    new Item("ice-platform", "Ice platform", "logistics", 8, { ammonia: 400, ice: 50 }, { "ice-platform": 1 }),
+  ],
+  [
+    "foundation",
+    new Item(
+      "foundation",
+      "Foundation",
+      "logistics",
+      8,
+      { "tungsten-plate": 4, "lithium-plate": 4, "carbon-fiber": 4, stone: 20, "fluoroketone-cold": 20 },
+      { foundation: 1 }
+    ),
+  ],
+  [
     "cliff-explosives",
     new Item(
       "cliff-explosives",
       "Cliff explosives",
       "logistics",
       8,
-      { explosives: 10, grenade: 1, barrel: 1 },
+      { explosives: 10, calcite: 10, grenade: 1, barrel: 1 },
       { "cliff-explosives": 1 }
     ),
   ],
@@ -641,6 +768,28 @@ export default new Map<string, Item>([
     ),
   ],
   [
+    "fusion-reactor",
+    new Item(
+      "fusion-reactor",
+      "Fusion reactor",
+      "production",
+      1,
+      { "tungsten-plate": 200, superconductor: 200, "quantum-processor": 250 },
+      { "fusion-reactor": 1 }
+    ),
+  ],
+  [
+    "fusion-generator",
+    new Item(
+      "fusion-generator",
+      "Fusion generator",
+      "production",
+      1,
+      { "tungsten-plate": 100, superconductor: 100, "quantum-processor": 50 },
+      { "fusion-generator": 1 }
+    ),
+  ],
+  [
     "burner-mining-drill",
     new Item(
       "burner-mining-drill",
@@ -660,6 +809,23 @@ export default new Map<string, Item>([
       2,
       { "electronic-circuit": 3, "iron-gear-wheel": 5, "iron-plate": 10 },
       { "electric-mining-drill": 1 }
+    ),
+  ],
+  [
+    "big-mining-drill",
+    new Item(
+      "big-mining-drill",
+      "Big mining drill",
+      "production",
+      2,
+      {
+        "electric-mining-drill": 1,
+        "molten-iron": 200,
+        "tungsten-carbide": 20,
+        "electric-engine-unit": 10,
+        "advanced-circuit": 10,
+      },
+      { "big-mining-drill": 1 }
     ),
   ],
   [
@@ -708,12 +874,67 @@ export default new Map<string, Item>([
     ),
   ],
   [
+    "foundry",
+    new Item(
+      "foundry",
+      "Foundry",
+      "production",
+      3,
+      { "tungsten-carbide": 50, "steel-plate": 50, "electronic-circuit": 30, "refined-concrete": 20, lubricant: 20 },
+      { foundry: 1 }
+    ),
+  ],
+  [
+    "recycler",
+    new Item(
+      "recycler",
+      "Recycler",
+      "production",
+      3,
+      { "processing-unit": 6, "steel-plate": 20, "iron-gear-wheel": 40, concrete: 20 },
+      { recycler: 1 }
+    ),
+  ],
+  [
+    "agricultural-tower",
+    new Item(
+      "agricultural-tower",
+      "Agricultural tower",
+      "production",
+      4,
+      { "steel-plate": 10, "electronic-circuit": 3, spoilage: 20, landfill: 1 },
+      { "agricultural-tower": 1 }
+    ),
+  ],
+  [
+    "biochamber",
+    new Item(
+      "biochamber",
+      "Biochamber",
+      "production",
+      4,
+      { nutrients: 5, "pentapod-egg": 1, "iron-plate": 20, "electronic-circuit": 5, landfill: 1 },
+      { biochamber: 1 }
+    ),
+  ],
+  [
+    "captive-biter-spawner",
+    new Item(
+      "captive-biter-spawner",
+      "Captive biter spawner",
+      "production",
+      4,
+      { "biter-egg": 10, "capture-robot-rocket": 1, "uranium-235": 15, "fluoroketone-cold": 100 },
+      { "captive-biter-spawner": 1 }
+    ),
+  ],
+  [
     "assembling-machine-1",
     new Item(
       "assembling-machine-1",
       "Assembling machine 1",
       "production",
-      4,
+      5,
       { "electronic-circuit": 3, "iron-gear-wheel": 5, "iron-plate": 9 },
       { "assembling-machine-1": 1 }
     ),
@@ -724,7 +945,7 @@ export default new Map<string, Item>([
       "assembling-machine-2",
       "Assembling machine 2",
       "production",
-      4,
+      5,
       { "steel-plate": 2, "electronic-circuit": 3, "iron-gear-wheel": 5, "assembling-machine-1": 1 },
       { "assembling-machine-2": 1 }
     ),
@@ -735,8 +956,8 @@ export default new Map<string, Item>([
       "assembling-machine-3",
       "Assembling machine 3",
       "production",
-      4,
-      { "speed-module": 4, "assembling-machine-2": 2 },
+      5,
+      { "assembling-machine-2": 2, "speed-module": 4 },
       { "assembling-machine-3": 1 }
     ),
   ],
@@ -746,7 +967,7 @@ export default new Map<string, Item>([
       "oil-refinery",
       "Oil refinery",
       "production",
-      4,
+      5,
       { "steel-plate": 15, "iron-gear-wheel": 10, "stone-brick": 10, "electronic-circuit": 10, pipe: 10 },
       { "oil-refinery": 1 }
     ),
@@ -757,7 +978,7 @@ export default new Map<string, Item>([
       "chemical-plant",
       "Chemical plant",
       "production",
-      4,
+      5,
       { "steel-plate": 5, "iron-gear-wheel": 5, "electronic-circuit": 5, pipe: 5 },
       { "chemical-plant": 1 }
     ),
@@ -768,9 +989,31 @@ export default new Map<string, Item>([
       "centrifuge",
       "Centrifuge",
       "production",
-      4,
+      5,
       { concrete: 100, "steel-plate": 50, "advanced-circuit": 100, "iron-gear-wheel": 100 },
       { centrifuge: 1 }
+    ),
+  ],
+  [
+    "electromagnetic-plant",
+    new Item(
+      "electromagnetic-plant",
+      "Electromagnetic plant",
+      "production",
+      5,
+      { "holmium-plate": 150, "steel-plate": 50, "processing-unit": 50, "refined-concrete": 50 },
+      { "electromagnetic-plant": 1 }
+    ),
+  ],
+  [
+    "cryogenic-plant",
+    new Item(
+      "cryogenic-plant",
+      "Cryogenic plant",
+      "production",
+      5,
+      { "refined-concrete": 40, superconductor: 20, "processing-unit": 20, "lithium-plate": 20 },
+      { "cryogenic-plant": 1 }
     ),
   ],
   [
@@ -779,9 +1022,53 @@ export default new Map<string, Item>([
       "lab",
       "Lab",
       "production",
-      4,
+      5,
       { "electronic-circuit": 10, "iron-gear-wheel": 10, "transport-belt": 4 },
       { lab: 1 }
+    ),
+  ],
+  [
+    "biolab",
+    new Item(
+      "biolab",
+      "Biolab",
+      "production",
+      5,
+      { lab: 1, "biter-egg": 10, "refined-concrete": 25, "capture-robot-rocket": 2, "uranium-235": 3 },
+      { biolab: 1 }
+    ),
+  ],
+  [
+    "lightning-rod",
+    new Item(
+      "lightning-rod",
+      "Lightning rod",
+      "production",
+      6,
+      { "copper-cable": 12, "steel-plate": 8, "stone-brick": 4 },
+      { "lightning-rod": 1 }
+    ),
+  ],
+  [
+    "lightning-collector",
+    new Item(
+      "lightning-collector",
+      "Lightning collector",
+      "production",
+      6,
+      { "lightning-rod": 1, supercapacitor: 8, accumulator: 1, electrolyte: 80 },
+      { "lightning-collector": 1 }
+    ),
+  ],
+  [
+    "heating-tower",
+    new Item(
+      "heating-tower",
+      "Heating tower",
+      "production",
+      6,
+      { boiler: 2, "heat-pipe": 5, concrete: 20 },
+      { "heating-tower": 1 }
     ),
   ],
   [
@@ -790,7 +1077,7 @@ export default new Map<string, Item>([
       "beacon",
       "Beacon",
       "production",
-      5,
+      7,
       { "electronic-circuit": 20, "advanced-circuit": 20, "steel-plate": 10, "copper-cable": 10 },
       { beacon: 1 }
     ),
@@ -801,7 +1088,7 @@ export default new Map<string, Item>([
       "speed-module",
       "Speed module",
       "production",
-      5,
+      7,
       { "advanced-circuit": 5, "electronic-circuit": 5 },
       { "speed-module": 1 }
     ),
@@ -812,7 +1099,7 @@ export default new Map<string, Item>([
       "speed-module-2",
       "Speed module 2",
       "production",
-      5,
+      7,
       { "speed-module": 4, "advanced-circuit": 5, "processing-unit": 5 },
       { "speed-module-2": 1 }
     ),
@@ -823,8 +1110,8 @@ export default new Map<string, Item>([
       "speed-module-3",
       "Speed module 3",
       "production",
-      5,
-      { "speed-module-2": 4, "advanced-circuit": 5, "processing-unit": 5 },
+      7,
+      { "speed-module-2": 4, "advanced-circuit": 5, "processing-unit": 5, "tungsten-carbide": 1 },
       { "speed-module-3": 1 }
     ),
   ],
@@ -834,7 +1121,7 @@ export default new Map<string, Item>([
       "efficiency-module",
       "Efficiency module",
       "production",
-      5,
+      7,
       { "advanced-circuit": 5, "electronic-circuit": 5 },
       { "efficiency-module": 1 }
     ),
@@ -845,7 +1132,7 @@ export default new Map<string, Item>([
       "efficiency-module-2",
       "Efficiency module 2",
       "production",
-      5,
+      7,
       { "efficiency-module": 4, "advanced-circuit": 5, "processing-unit": 5 },
       { "efficiency-module-2": 1 }
     ),
@@ -856,8 +1143,8 @@ export default new Map<string, Item>([
       "efficiency-module-3",
       "Efficiency module 3",
       "production",
-      5,
-      { "efficiency-module-2": 4, "advanced-circuit": 5, "processing-unit": 5 },
+      7,
+      { "efficiency-module-2": 4, "advanced-circuit": 5, "processing-unit": 5, spoilage: 5 },
       { "efficiency-module-3": 1 }
     ),
   ],
@@ -867,7 +1154,7 @@ export default new Map<string, Item>([
       "productivity-module",
       "Productivity module",
       "production",
-      5,
+      7,
       { "advanced-circuit": 5, "electronic-circuit": 5 },
       { "productivity-module": 1 }
     ),
@@ -878,7 +1165,7 @@ export default new Map<string, Item>([
       "productivity-module-2",
       "Productivity module 2",
       "production",
-      5,
+      7,
       { "productivity-module": 4, "advanced-circuit": 5, "processing-unit": 5 },
       { "productivity-module-2": 1 }
     ),
@@ -889,93 +1176,42 @@ export default new Map<string, Item>([
       "productivity-module-3",
       "Productivity module 3",
       "production",
-      5,
-      { "productivity-module-2": 4, "advanced-circuit": 5, "processing-unit": 5 },
+      7,
+      { "productivity-module-2": 4, "advanced-circuit": 5, "processing-unit": 5, "biter-egg": 1 },
       { "productivity-module-3": 1 }
     ),
   ],
   [
-    "rocket-silo",
+    "quality-module",
     new Item(
-      "rocket-silo",
-      "Rocket silo",
+      "quality-module",
+      "Quality module",
       "production",
-      6,
-      { "steel-plate": 1000, concrete: 1000, pipe: 100, "processing-unit": 200, "electric-engine-unit": 200 },
-      { "rocket-silo": 1 }
+      7,
+      { "electronic-circuit": 5, "advanced-circuit": 5 },
+      { "quality-module": 1 }
     ),
   ],
   [
-    "cargo-landing-pad",
+    "quality-module-2",
     new Item(
-      "cargo-landing-pad",
-      "Cargo landing pad",
+      "quality-module-2",
+      "Quality module 2",
       "production",
-      6,
-      { concrete: 200, "steel-plate": 25, "processing-unit": 10 },
-      { "cargo-landing-pad": 1 }
+      7,
+      { "quality-module": 4, "advanced-circuit": 5, "processing-unit": 5 },
+      { "quality-module-2": 1 }
     ),
   ],
   [
-    "satellite",
+    "quality-module-3",
     new Item(
-      "satellite",
-      "Satellite",
+      "quality-module-3",
+      "Quality module 3",
       "production",
-      6,
-      {
-        "low-density-structure": 100,
-        "solar-panel": 100,
-        accumulator: 100,
-        radar: 5,
-        "processing-unit": 100,
-        "rocket-fuel": 50,
-      },
-      { satellite: 1 }
-    ),
-  ],
-  [
-    "basic-oil-processing",
-    new Item(
-      "basic-oil-processing",
-      "Basic oil processing",
-      "intermediate-products",
-      0,
-      { "crude-oil": 100 },
-      { "petroleum-gas": 45 }
-    ),
-  ],
-  [
-    "advanced-oil-processing",
-    new Item(
-      "advanced-oil-processing",
-      "Advanced oil processing",
-      "intermediate-products",
-      0,
-      { water: 50, "crude-oil": 100 },
-      { "heavy-oil": 25, "light-oil": 45, "petroleum-gas": 55 }
-    ),
-  ],
-  [
-    "coal-liquefaction",
-    new Item(
-      "coal-liquefaction",
-      "Coal liquefaction",
-      "intermediate-products",
-      0,
-      { coal: 10, "heavy-oil": 25, steam: 50 },
-      { "heavy-oil": 90, "light-oil": 20, "petroleum-gas": 10 }
-    ),
-  ],
-  [
-    "coal-liquefaction-steam-500",
-    new Item(
-      "coal-liquefaction-steam-500",
-      "Coal liquefaction",
-      "intermediate-products",
-      0,
-      { coal: 10, "heavy-oil": 25, "steam-500": 50 },
-      { "heavy-oil": 90, "light-oil": 20, "petroleum-gas": 10 }
+      7,
+      { "quality-module-2": 4, "advanced-circuit": 5, "processing-unit": 5, superconductor: 1 },
+      { "quality-module-3": 1 }
     ),
   ],
   [
@@ -1046,31 +1282,46 @@ export default new Map<string, Item>([
     ),
   ],
   [
-    "iron-plate",
-    new Item("iron-plate", "Iron plate", "intermediate-products", 1, { "iron-ore": 1 }, { "iron-plate": 1 }),
+    "acid-neutralisation",
+    new Item(
+      "acid-neutralisation",
+      "Acid neutralisation",
+      "intermediate-products",
+      0,
+      { calcite: 1, "sulfuric-acid": 1000 },
+      { steam: 10000 }
+    ),
   ],
   [
-    "copper-plate",
-    new Item("copper-plate", "Copper plate", "intermediate-products", 1, { "copper-ore": 1 }, { "copper-plate": 1 }),
+    "steam-condensation",
+    new Item("steam-condensation", "Steam condensation", "intermediate-products", 0, { steam: 1000 }, { water: 90 }),
   ],
   [
-    "steel-plate",
-    new Item("steel-plate", "Steel plate", "intermediate-products", 1, { "iron-plate": 5 }, { "steel-plate": 1 }),
+    "steam-condensation-steam-165",
+    new Item(
+      "steam-condensation-steam-165",
+      "Steam condensation",
+      "intermediate-products",
+      0,
+      { "steam-165": 1000 },
+      { water: 90 }
+    ),
   ],
+  ["ice-melting", new Item("ice-melting", "Ice melting", "intermediate-products", 0, { ice: 1 }, { water: 20 })],
   [
     "plastic-bar",
     new Item(
       "plastic-bar",
       "Plastic bar",
       "intermediate-products",
-      1,
+      2,
       { "petroleum-gas": 20, coal: 1 },
       { "plastic-bar": 2 }
     ),
   ],
   [
     "sulfur",
-    new Item("sulfur", "Sulfur", "intermediate-products", 1, { water: 30, "petroleum-gas": 30 }, { sulfur: 2 }),
+    new Item("sulfur", "Sulfur", "intermediate-products", 2, { water: 30, "petroleum-gas": 30 }, { sulfur: 2 }),
   ],
   [
     "battery",
@@ -1078,7 +1329,7 @@ export default new Map<string, Item>([
       "battery",
       "Battery",
       "intermediate-products",
-      1,
+      2,
       { "sulfuric-acid": 20, "iron-plate": 1, "copper-plate": 1 },
       { battery: 1 }
     ),
@@ -1089,9 +1340,21 @@ export default new Map<string, Item>([
       "explosives",
       "Explosives",
       "intermediate-products",
-      1,
+      2,
       { sulfur: 1, coal: 1, water: 10 },
       { explosives: 2 }
+    ),
+  ],
+  ["carbon", new Item("carbon", "Carbon", "intermediate-products", 2, { coal: 2, "sulfuric-acid": 20 }, { carbon: 1 })],
+  [
+    "coal-synthesis",
+    new Item(
+      "coal-synthesis",
+      "Coal synthesis",
+      "intermediate-products",
+      2,
+      { carbon: 5, sulfur: 1, water: 10 },
+      { coal: 1 }
     ),
   ],
   [
@@ -1100,7 +1363,7 @@ export default new Map<string, Item>([
       "water-barrel",
       "Fill Water barrel",
       "intermediate-products",
-      2,
+      3,
       { water: 50, barrel: 1 },
       { "water-barrel": 1 }
     ),
@@ -1111,7 +1374,7 @@ export default new Map<string, Item>([
       "crude-oil-barrel",
       "Fill Crude oil barrel",
       "intermediate-products",
-      2,
+      3,
       { "crude-oil": 50, barrel: 1 },
       { "crude-oil-barrel": 1 }
     ),
@@ -1122,7 +1385,7 @@ export default new Map<string, Item>([
       "petroleum-gas-barrel",
       "Fill Petroleum gas barrel",
       "intermediate-products",
-      2,
+      3,
       { "petroleum-gas": 50, barrel: 1 },
       { "petroleum-gas-barrel": 1 }
     ),
@@ -1133,7 +1396,7 @@ export default new Map<string, Item>([
       "light-oil-barrel",
       "Fill Light oil barrel",
       "intermediate-products",
-      2,
+      3,
       { "light-oil": 50, barrel: 1 },
       { "light-oil-barrel": 1 }
     ),
@@ -1144,7 +1407,7 @@ export default new Map<string, Item>([
       "heavy-oil-barrel",
       "Fill Heavy oil barrel",
       "intermediate-products",
-      2,
+      3,
       { "heavy-oil": 50, barrel: 1 },
       { "heavy-oil-barrel": 1 }
     ),
@@ -1155,7 +1418,7 @@ export default new Map<string, Item>([
       "lubricant-barrel",
       "Fill Lubricant barrel",
       "intermediate-products",
-      2,
+      3,
       { lubricant: 50, barrel: 1 },
       { "lubricant-barrel": 1 }
     ),
@@ -1166,9 +1429,31 @@ export default new Map<string, Item>([
       "sulfuric-acid-barrel",
       "Fill Sulfuric acid barrel",
       "intermediate-products",
-      2,
+      3,
       { "sulfuric-acid": 50, barrel: 1 },
       { "sulfuric-acid-barrel": 1 }
+    ),
+  ],
+  [
+    "fluoroketone-hot-barrel",
+    new Item(
+      "fluoroketone-hot-barrel",
+      "Fill Fluoroketone (Hot) barrel",
+      "intermediate-products",
+      3,
+      { "fluoroketone-hot": 50, barrel: 1 },
+      { "fluoroketone-hot-barrel": 1 }
+    ),
+  ],
+  [
+    "fluoroketone-cold-barrel",
+    new Item(
+      "fluoroketone-cold-barrel",
+      "Fill Fluoroketone (Cold) barrel",
+      "intermediate-products",
+      3,
+      { "fluoroketone-cold": 50, barrel: 1 },
+      { "fluoroketone-cold-barrel": 1 }
     ),
   ],
   [
@@ -1177,7 +1462,7 @@ export default new Map<string, Item>([
       "empty-water-barrel",
       "Empty Water barrel",
       "intermediate-products",
-      3,
+      4,
       { "water-barrel": 1 },
       { water: 50, barrel: 1 }
     ),
@@ -1188,7 +1473,7 @@ export default new Map<string, Item>([
       "empty-crude-oil-barrel",
       "Empty Crude oil barrel",
       "intermediate-products",
-      3,
+      4,
       { "crude-oil-barrel": 1 },
       { "crude-oil": 50, barrel: 1 }
     ),
@@ -1199,7 +1484,7 @@ export default new Map<string, Item>([
       "empty-petroleum-gas-barrel",
       "Empty Petroleum gas barrel",
       "intermediate-products",
-      3,
+      4,
       { "petroleum-gas-barrel": 1 },
       { "petroleum-gas": 50, barrel: 1 }
     ),
@@ -1210,7 +1495,7 @@ export default new Map<string, Item>([
       "empty-light-oil-barrel",
       "Empty Light oil barrel",
       "intermediate-products",
-      3,
+      4,
       { "light-oil-barrel": 1 },
       { "light-oil": 50, barrel: 1 }
     ),
@@ -1221,7 +1506,7 @@ export default new Map<string, Item>([
       "empty-heavy-oil-barrel",
       "Empty Heavy oil barrel",
       "intermediate-products",
-      3,
+      4,
       { "heavy-oil-barrel": 1 },
       { "heavy-oil": 50, barrel: 1 }
     ),
@@ -1232,7 +1517,7 @@ export default new Map<string, Item>([
       "empty-lubricant-barrel",
       "Empty Lubricant barrel",
       "intermediate-products",
-      3,
+      4,
       { "lubricant-barrel": 1 },
       { lubricant: 50, barrel: 1 }
     ),
@@ -1243,9 +1528,31 @@ export default new Map<string, Item>([
       "empty-sulfuric-acid-barrel",
       "Empty Sulfuric acid barrel",
       "intermediate-products",
-      3,
+      4,
       { "sulfuric-acid-barrel": 1 },
       { "sulfuric-acid": 50, barrel: 1 }
+    ),
+  ],
+  [
+    "empty-fluoroketone-hot-barrel",
+    new Item(
+      "empty-fluoroketone-hot-barrel",
+      "Empty Fluoroketone (Hot) barrel",
+      "intermediate-products",
+      4,
+      { "fluoroketone-hot-barrel": 1 },
+      { "fluoroketone-hot": 50, barrel: 1 }
+    ),
+  ],
+  [
+    "empty-fluoroketone-cold-barrel",
+    new Item(
+      "empty-fluoroketone-cold-barrel",
+      "Empty Fluoroketone (Cold) barrel",
+      "intermediate-products",
+      4,
+      { "fluoroketone-cold-barrel": 1 },
+      { "fluoroketone-cold": 50, barrel: 1 }
     ),
   ],
   [
@@ -1254,27 +1561,27 @@ export default new Map<string, Item>([
       "iron-gear-wheel",
       "Iron gear wheel",
       "intermediate-products",
-      4,
+      5,
       { "iron-plate": 2 },
       { "iron-gear-wheel": 1 }
     ),
   ],
   [
     "iron-stick",
-    new Item("iron-stick", "Iron stick", "intermediate-products", 4, { "iron-plate": 1 }, { "iron-stick": 2 }),
+    new Item("iron-stick", "Iron stick", "intermediate-products", 5, { "iron-plate": 1 }, { "iron-stick": 2 }),
   ],
   [
     "copper-cable",
-    new Item("copper-cable", "Copper cable", "intermediate-products", 4, { "copper-plate": 1 }, { "copper-cable": 2 }),
+    new Item("copper-cable", "Copper cable", "intermediate-products", 5, { "copper-plate": 1 }, { "copper-cable": 2 }),
   ],
-  ["barrel", new Item("barrel", "Barrel", "intermediate-products", 4, { "steel-plate": 1 }, { barrel: 1 })],
+  ["barrel", new Item("barrel", "Barrel", "intermediate-products", 5, { "steel-plate": 1 }, { barrel: 1 })],
   [
     "electronic-circuit",
     new Item(
       "electronic-circuit",
       "Electronic circuit",
       "intermediate-products",
-      4,
+      5,
       { "iron-plate": 1, "copper-cable": 3 },
       { "electronic-circuit": 1 }
     ),
@@ -1285,7 +1592,7 @@ export default new Map<string, Item>([
       "advanced-circuit",
       "Advanced circuit",
       "intermediate-products",
-      4,
+      5,
       { "electronic-circuit": 2, "plastic-bar": 2, "copper-cable": 4 },
       { "advanced-circuit": 1 }
     ),
@@ -1296,7 +1603,7 @@ export default new Map<string, Item>([
       "processing-unit",
       "Processing unit",
       "intermediate-products",
-      4,
+      5,
       { "electronic-circuit": 20, "advanced-circuit": 2, "sulfuric-acid": 5 },
       { "processing-unit": 1 }
     ),
@@ -1307,7 +1614,7 @@ export default new Map<string, Item>([
       "engine-unit",
       "Engine unit",
       "intermediate-products",
-      4,
+      5,
       { "steel-plate": 1, "iron-gear-wheel": 1, pipe: 2 },
       { "engine-unit": 1 }
     ),
@@ -1318,7 +1625,7 @@ export default new Map<string, Item>([
       "electric-engine-unit",
       "Electric engine unit",
       "intermediate-products",
-      4,
+      5,
       { "engine-unit": 1, lubricant: 15, "electronic-circuit": 2 },
       { "electric-engine-unit": 1 }
     ),
@@ -1329,7 +1636,7 @@ export default new Map<string, Item>([
       "flying-robot-frame",
       "Flying robot frame",
       "intermediate-products",
-      4,
+      5,
       { "electric-engine-unit": 1, battery: 2, "steel-plate": 1, "electronic-circuit": 3 },
       { "flying-robot-frame": 1 }
     ),
@@ -1340,7 +1647,7 @@ export default new Map<string, Item>([
       "low-density-structure",
       "Low density structure",
       "intermediate-products",
-      4,
+      5,
       { "steel-plate": 2, "copper-plate": 20, "plastic-bar": 5 },
       { "low-density-structure": 1 }
     ),
@@ -1351,20 +1658,9 @@ export default new Map<string, Item>([
       "rocket-fuel",
       "Rocket fuel",
       "intermediate-products",
-      4,
+      5,
       { "solid-fuel": 10, "light-oil": 10 },
       { "rocket-fuel": 1 }
-    ),
-  ],
-  [
-    "rocket-part",
-    new Item(
-      "rocket-part",
-      "Rocket part",
-      "intermediate-products",
-      4,
-      { "processing-unit": 10, "low-density-structure": 10, "rocket-fuel": 10 },
-      { "rocket-part": 1 }
     ),
   ],
   [
@@ -1373,20 +1669,9 @@ export default new Map<string, Item>([
       "uranium-processing",
       "Uranium processing",
       "intermediate-products",
-      5,
+      6,
       { "uranium-ore": 10 },
       { "uranium-235": 0.007000000000000001, "uranium-238": 0.993 }
-    ),
-  ],
-  [
-    "depleted-uranium-fuel-cell",
-    new Item(
-      "depleted-uranium-fuel-cell",
-      "Uranium fuel cell : Depleted uranium fuel cell",
-      "intermediate-products",
-      5,
-      { "uranium-fuel-cell": 0 },
-      { "depleted-uranium-fuel-cell": 0 }
     ),
   ],
   [
@@ -1395,7 +1680,7 @@ export default new Map<string, Item>([
       "uranium-fuel-cell",
       "Uranium fuel cell",
       "intermediate-products",
-      5,
+      6,
       { "iron-plate": 10, "uranium-235": 1, "uranium-238": 19 },
       { "uranium-fuel-cell": 10 }
     ),
@@ -1406,7 +1691,7 @@ export default new Map<string, Item>([
       "nuclear-fuel-reprocessing",
       "Nuclear fuel reprocessing",
       "intermediate-products",
-      5,
+      6,
       { "depleted-uranium-fuel-cell": 5 },
       { "uranium-238": 3 }
     ),
@@ -1417,7 +1702,7 @@ export default new Map<string, Item>([
       "kovarex-enrichment-process",
       "Kovarex enrichment process",
       "intermediate-products",
-      5,
+      6,
       { "uranium-235": 40, "uranium-238": 5 },
       { "uranium-235": 41, "uranium-238": 2 }
     ),
@@ -1428,9 +1713,495 @@ export default new Map<string, Item>([
       "nuclear-fuel",
       "Nuclear fuel",
       "intermediate-products",
-      5,
+      6,
       { "uranium-235": 1, "rocket-fuel": 1 },
       { "nuclear-fuel": 1 }
+    ),
+  ],
+  [
+    "molten-iron-from-lava",
+    new Item(
+      "molten-iron-from-lava",
+      "Molten iron from lava",
+      "intermediate-products",
+      7,
+      { lava: 500, calcite: 1 },
+      { "molten-iron": 250, stone: 10 }
+    ),
+  ],
+  [
+    "molten-copper-from-lava",
+    new Item(
+      "molten-copper-from-lava",
+      "Molten copper from lava",
+      "intermediate-products",
+      7,
+      { lava: 500, calcite: 1 },
+      { "molten-copper": 250, stone: 15 }
+    ),
+  ],
+  [
+    "molten-iron",
+    new Item(
+      "molten-iron",
+      "Iron ore melting",
+      "intermediate-products",
+      7,
+      { "iron-ore": 50, calcite: 1 },
+      { "molten-iron": 500 }
+    ),
+  ],
+  [
+    "molten-copper",
+    new Item(
+      "molten-copper",
+      "Copper ore melting",
+      "intermediate-products",
+      7,
+      { "copper-ore": 50, calcite: 1 },
+      { "molten-copper": 500 }
+    ),
+  ],
+  [
+    "casting-iron",
+    new Item("casting-iron", "Casting iron", "intermediate-products", 7, { "molten-iron": 20 }, { "iron-plate": 2 }),
+  ],
+  [
+    "casting-copper",
+    new Item(
+      "casting-copper",
+      "Casting copper",
+      "intermediate-products",
+      7,
+      { "molten-copper": 20 },
+      { "copper-plate": 2 }
+    ),
+  ],
+  [
+    "casting-steel",
+    new Item("casting-steel", "Casting steel", "intermediate-products", 7, { "molten-iron": 30 }, { "steel-plate": 1 }),
+  ],
+  [
+    "casting-iron-gear-wheel",
+    new Item(
+      "casting-iron-gear-wheel",
+      "Casting iron gear wheel",
+      "intermediate-products",
+      7,
+      { "molten-iron": 10 },
+      { "iron-gear-wheel": 1 }
+    ),
+  ],
+  [
+    "casting-iron-stick",
+    new Item(
+      "casting-iron-stick",
+      "Casting iron stick",
+      "intermediate-products",
+      7,
+      { "molten-iron": 20 },
+      { "iron-stick": 4 }
+    ),
+  ],
+  [
+    "casting-low-density-structure",
+    new Item(
+      "casting-low-density-structure",
+      "Casting low density structure",
+      "intermediate-products",
+      7,
+      { "molten-iron": 80, "molten-copper": 250, "plastic-bar": 5 },
+      { "low-density-structure": 1 }
+    ),
+  ],
+  [
+    "concrete-from-molten-iron",
+    new Item(
+      "concrete-from-molten-iron",
+      "Concrete from molten iron",
+      "intermediate-products",
+      7,
+      { "molten-iron": 20, water: 100, "stone-brick": 5 },
+      { concrete: 10 }
+    ),
+  ],
+  [
+    "casting-copper-cable",
+    new Item(
+      "casting-copper-cable",
+      "Casting copper cable",
+      "intermediate-products",
+      7,
+      { "molten-copper": 5 },
+      { "copper-cable": 2 }
+    ),
+  ],
+  [
+    "tungsten-carbide",
+    new Item(
+      "tungsten-carbide",
+      "Tungsten carbide",
+      "intermediate-products",
+      7,
+      { "tungsten-ore": 2, "sulfuric-acid": 10, carbon: 1 },
+      { "tungsten-carbide": 1 }
+    ),
+  ],
+  [
+    "tungsten-plate",
+    new Item(
+      "tungsten-plate",
+      "Tungsten plate",
+      "intermediate-products",
+      7,
+      { "tungsten-ore": 4, "molten-iron": 10 },
+      { "tungsten-plate": 1 }
+    ),
+  ],
+  [
+    "holmium-solution",
+    new Item(
+      "holmium-solution",
+      "Holmium solution",
+      "intermediate-products",
+      8,
+      { "holmium-ore": 2, stone: 1, water: 10 },
+      { "holmium-solution": 100 }
+    ),
+  ],
+  [
+    "holmium-plate",
+    new Item(
+      "holmium-plate",
+      "Holmium plate",
+      "intermediate-products",
+      8,
+      { "holmium-solution": 20 },
+      { "holmium-plate": 1 }
+    ),
+  ],
+  [
+    "superconductor",
+    new Item(
+      "superconductor",
+      "Superconductor",
+      "intermediate-products",
+      8,
+      { "holmium-plate": 1, "copper-plate": 1, "plastic-bar": 1, "light-oil": 5 },
+      { superconductor: 2 }
+    ),
+  ],
+  [
+    "electrolyte",
+    new Item(
+      "electrolyte",
+      "Electrolyte",
+      "intermediate-products",
+      8,
+      { stone: 1, "heavy-oil": 10, "holmium-solution": 10 },
+      { electrolyte: 10 }
+    ),
+  ],
+  [
+    "supercapacitor",
+    new Item(
+      "supercapacitor",
+      "Supercapacitor",
+      "intermediate-products",
+      8,
+      { "holmium-plate": 2, superconductor: 2, "electronic-circuit": 4, battery: 1, electrolyte: 10 },
+      { supercapacitor: 1 }
+    ),
+  ],
+  [
+    "yumako-processing",
+    new Item(
+      "yumako-processing",
+      "Yumako processing",
+      "intermediate-products",
+      9,
+      { yumako: 1 },
+      { "yumako-seed": 0.02, "yumako-mash": 2 }
+    ),
+  ],
+  [
+    "jellynut-processing",
+    new Item(
+      "jellynut-processing",
+      "Jellynut processing",
+      "intermediate-products",
+      0,
+      { jellynut: 1 },
+      { "jellynut-seed": 0.02, jelly: 4 }
+    ),
+  ],
+  [
+    "iron-bacteria",
+    new Item(
+      "iron-bacteria",
+      "Iron bacteria",
+      "intermediate-products",
+      0,
+      { jelly: 6 },
+      { "iron-bacteria": 0.1, spoilage: 4 }
+    ),
+  ],
+  [
+    "iron-bacteria-cultivation",
+    new Item(
+      "iron-bacteria-cultivation",
+      "Iron bacteria cultivation",
+      "intermediate-products",
+      0,
+      { "iron-bacteria": 1, bioflux: 1 },
+      { "iron-bacteria": 4 }
+    ),
+  ],
+  [
+    "copper-bacteria",
+    new Item(
+      "copper-bacteria",
+      "Copper bacteria",
+      "intermediate-products",
+      0,
+      { "yumako-mash": 3 },
+      { "copper-bacteria": 0.1, spoilage: 1 }
+    ),
+  ],
+  [
+    "copper-bacteria-cultivation",
+    new Item(
+      "copper-bacteria-cultivation",
+      "Copper bacteria cultivation",
+      "intermediate-products",
+      0,
+      { "copper-bacteria": 1, bioflux: 1 },
+      { "copper-bacteria": 4 }
+    ),
+  ],
+  [
+    "nutrients-from-spoilage",
+    new Item(
+      "nutrients-from-spoilage",
+      "Nutrients from spoilage",
+      "intermediate-products",
+      0,
+      { spoilage: 10 },
+      { nutrients: 1 }
+    ),
+  ],
+  [
+    "nutrients-from-yumako-mash",
+    new Item(
+      "nutrients-from-yumako-mash",
+      "Nutrients from yumako mash",
+      "intermediate-products",
+      0,
+      { "yumako-mash": 4 },
+      { nutrients: 6 }
+    ),
+  ],
+  [
+    "nutrients-from-bioflux",
+    new Item(
+      "nutrients-from-bioflux",
+      "Nutrients from bioflux",
+      "intermediate-products",
+      0,
+      { bioflux: 5 },
+      { nutrients: 40 }
+    ),
+  ],
+  [
+    "pentapod-egg",
+    new Item(
+      "pentapod-egg",
+      "Pentapod egg",
+      "intermediate-products",
+      0,
+      { "pentapod-egg": 1, nutrients: 30, water: 60 },
+      { "pentapod-egg": 2 }
+    ),
+  ],
+  [
+    "rocket-fuel-from-jelly",
+    new Item(
+      "rocket-fuel-from-jelly",
+      "Rocket fuel from jelly",
+      "intermediate-products",
+      1,
+      { water: 30, jelly: 30, bioflux: 2 },
+      { "rocket-fuel": 1 }
+    ),
+  ],
+  [
+    "biolubricant",
+    new Item("biolubricant", "Biolubricant", "intermediate-products", 1, { jelly: 60 }, { lubricant: 20 }),
+  ],
+  [
+    "bioplastic",
+    new Item(
+      "bioplastic",
+      "Bioplastic",
+      "intermediate-products",
+      1,
+      { bioflux: 1, "yumako-mash": 4 },
+      { "plastic-bar": 3 }
+    ),
+  ],
+  [
+    "biosulfur",
+    new Item("biosulfur", "Biosulfur", "intermediate-products", 1, { spoilage: 5, bioflux: 1 }, { sulfur: 2 }),
+  ],
+  [
+    "bioflux",
+    new Item("bioflux", "Bioflux", "intermediate-products", 1, { "yumako-mash": 15, jelly: 12 }, { bioflux: 4 }),
+  ],
+  [
+    "burnt-spoilage",
+    new Item("burnt-spoilage", "Burnt spoilage", "intermediate-products", 1, { spoilage: 6 }, { carbon: 1 }),
+  ],
+  [
+    "carbon-fiber",
+    new Item(
+      "carbon-fiber",
+      "Carbon fiber",
+      "intermediate-products",
+      1,
+      { "yumako-mash": 10, carbon: 1 },
+      { "carbon-fiber": 1 }
+    ),
+  ],
+  [
+    "wood-processing",
+    new Item("wood-processing", "Wood processing", "intermediate-products", 2, { wood: 2 }, { "tree-seed": 1 }),
+  ],
+  [
+    "fish-breeding",
+    new Item(
+      "fish-breeding",
+      "Fish breeding",
+      "intermediate-products",
+      0,
+      { "raw-fish": 2, nutrients: 100, water: 100 },
+      { "raw-fish": 3 }
+    ),
+  ],
+  [
+    "nutrients-from-fish",
+    new Item(
+      "nutrients-from-fish",
+      "Nutrients from fish",
+      "intermediate-products",
+      0,
+      { "raw-fish": 1 },
+      { nutrients: 20 }
+    ),
+  ],
+  [
+    "nutrients-from-biter-egg",
+    new Item(
+      "nutrients-from-biter-egg",
+      "Nutrients from biter egg",
+      "intermediate-products",
+      0,
+      { "biter-egg": 1 },
+      { nutrients: 20 }
+    ),
+  ],
+  [
+    "ammoniacal-solution-separation",
+    new Item(
+      "ammoniacal-solution-separation",
+      "Ammoniacal solution separation",
+      "intermediate-products",
+      1,
+      { "ammoniacal-solution": 50 },
+      { ice: 5, ammonia: 50 }
+    ),
+  ],
+  [
+    "solid-fuel-from-ammonia",
+    new Item(
+      "solid-fuel-from-ammonia",
+      "Solid fuel from ammonia",
+      "intermediate-products",
+      1,
+      { ammonia: 15, "crude-oil": 6 },
+      { "solid-fuel": 1 }
+    ),
+  ],
+  [
+    "ammonia-rocket-fuel",
+    new Item(
+      "ammonia-rocket-fuel",
+      "Ammonia rocket fuel",
+      "intermediate-products",
+      1,
+      { "solid-fuel": 10, water: 50, ammonia: 500 },
+      { "rocket-fuel": 1 }
+    ),
+  ],
+  [
+    "fluoroketone",
+    new Item(
+      "fluoroketone",
+      "Fluoroketone",
+      "intermediate-products",
+      1,
+      { fluorine: 50, ammonia: 50, "solid-fuel": 1, lithium: 1 },
+      { "fluoroketone-hot": 50 }
+    ),
+  ],
+  [
+    "fluoroketone-cooling",
+    new Item(
+      "fluoroketone-cooling",
+      "Cooling hot fluoroketone",
+      "intermediate-products",
+      1,
+      { "fluoroketone-hot": 10 },
+      { "fluoroketone-cold": 10 }
+    ),
+  ],
+  [
+    "lithium",
+    new Item(
+      "lithium",
+      "Lithium",
+      "intermediate-products",
+      1,
+      { "holmium-plate": 1, "lithium-brine": 50, ammonia: 50 },
+      { lithium: 5 }
+    ),
+  ],
+  [
+    "quantum-processor",
+    new Item(
+      "quantum-processor",
+      "Quantum processor",
+      "intermediate-products",
+      1,
+      {
+        "tungsten-carbide": 1,
+        "processing-unit": 1,
+        superconductor: 1,
+        "carbon-fiber": 1,
+        "lithium-plate": 2,
+        "fluoroketone-cold": 10,
+      },
+      { "quantum-processor": 1, "fluoroketone-hot": 5 }
+    ),
+  ],
+  [
+    "fusion-power-cell",
+    new Item(
+      "fusion-power-cell",
+      "Fusion power cell",
+      "intermediate-products",
+      1,
+      { "lithium-plate": 5, "holmium-plate": 1, ammonia: 100 },
+      { "fusion-power-cell": 1 }
     ),
   ],
   [
@@ -1439,7 +2210,7 @@ export default new Map<string, Item>([
       "automation-science-pack",
       "Automation science pack",
       "intermediate-products",
-      6,
+      2,
       { "copper-plate": 1, "iron-gear-wheel": 1 },
       { "automation-science-pack": 1 }
     ),
@@ -1450,7 +2221,7 @@ export default new Map<string, Item>([
       "logistic-science-pack",
       "Logistic science pack",
       "intermediate-products",
-      6,
+      2,
       { inserter: 1, "transport-belt": 1 },
       { "logistic-science-pack": 1 }
     ),
@@ -1461,7 +2232,7 @@ export default new Map<string, Item>([
       "military-science-pack",
       "Military science pack",
       "intermediate-products",
-      6,
+      2,
       { "piercing-rounds-magazine": 1, grenade: 1, "stone-wall": 2 },
       { "military-science-pack": 2 }
     ),
@@ -1472,7 +2243,7 @@ export default new Map<string, Item>([
       "chemical-science-pack",
       "Chemical science pack",
       "intermediate-products",
-      6,
+      2,
       { "engine-unit": 2, "advanced-circuit": 3, sulfur: 1 },
       { "chemical-science-pack": 2 }
     ),
@@ -1483,7 +2254,7 @@ export default new Map<string, Item>([
       "production-science-pack",
       "Production science pack",
       "intermediate-products",
-      6,
+      2,
       { "electric-furnace": 1, "productivity-module": 1, rail: 30 },
       { "production-science-pack": 3 }
     ),
@@ -1494,7 +2265,7 @@ export default new Map<string, Item>([
       "utility-science-pack",
       "Utility science pack",
       "intermediate-products",
-      6,
+      2,
       { "low-density-structure": 3, "processing-unit": 2, "flying-robot-frame": 1 },
       { "utility-science-pack": 3 }
     ),
@@ -1503,11 +2274,290 @@ export default new Map<string, Item>([
     "space-science-pack",
     new Item(
       "space-science-pack",
-      "Rocket silo : Space science pack",
+      "Space science pack",
       "intermediate-products",
-      6,
-      { satellite: 1, "rocket-part": 100 },
-      { "space-science-pack": 1000 }
+      2,
+      { "iron-plate": 2, carbon: 1, ice: 1 },
+      { "space-science-pack": 5 }
+    ),
+  ],
+  [
+    "metallurgic-science-pack",
+    new Item(
+      "metallurgic-science-pack",
+      "Metallurgic science pack",
+      "intermediate-products",
+      2,
+      { "tungsten-carbide": 3, "tungsten-plate": 2, "molten-copper": 200 },
+      { "metallurgic-science-pack": 1 }
+    ),
+  ],
+  [
+    "agricultural-science-pack",
+    new Item(
+      "agricultural-science-pack",
+      "Agricultural science pack",
+      "intermediate-products",
+      2,
+      { bioflux: 1, "pentapod-egg": 1 },
+      { "agricultural-science-pack": 1 }
+    ),
+  ],
+  [
+    "electromagnetic-science-pack",
+    new Item(
+      "electromagnetic-science-pack",
+      "Electromagnetic science pack",
+      "intermediate-products",
+      2,
+      { supercapacitor: 1, accumulator: 1, electrolyte: 25, "holmium-solution": 25 },
+      { "electromagnetic-science-pack": 1 }
+    ),
+  ],
+  [
+    "cryogenic-science-pack",
+    new Item(
+      "cryogenic-science-pack",
+      "Cryogenic science pack",
+      "intermediate-products",
+      2,
+      { ice: 3, "lithium-plate": 1, "fluoroketone-cold": 6 },
+      { "cryogenic-science-pack": 1, "fluoroketone-hot": 3 }
+    ),
+  ],
+  [
+    "promethium-science-pack",
+    new Item(
+      "promethium-science-pack",
+      "Promethium science pack",
+      "intermediate-products",
+      2,
+      { "promethium-asteroid-chunk": 25, "quantum-processor": 1, "biter-egg": 10 },
+      { "promethium-science-pack": 10 }
+    ),
+  ],
+  [
+    "rocket-silo",
+    new Item(
+      "rocket-silo",
+      "Rocket silo",
+      "space",
+      0,
+      { "steel-plate": 1000, concrete: 1000, pipe: 100, "processing-unit": 200, "electric-engine-unit": 200 },
+      { "rocket-silo": 1 }
+    ),
+  ],
+  [
+    "cargo-landing-pad",
+    new Item(
+      "cargo-landing-pad",
+      "Cargo landing pad",
+      "space",
+      0,
+      { concrete: 200, "steel-plate": 25, "processing-unit": 10 },
+      { "cargo-landing-pad": 1 }
+    ),
+  ],
+  [
+    "space-platform-foundation",
+    new Item(
+      "space-platform-foundation",
+      "Space platform foundation",
+      "space",
+      1,
+      { "steel-plate": 20, "copper-cable": 20 },
+      { "space-platform-foundation": 1 }
+    ),
+  ],
+  [
+    "cargo-bay",
+    new Item(
+      "cargo-bay",
+      "Cargo bay",
+      "space",
+      1,
+      { "steel-plate": 20, "low-density-structure": 20, "processing-unit": 5 },
+      { "cargo-bay": 1 }
+    ),
+  ],
+  [
+    "asteroid-collector",
+    new Item(
+      "asteroid-collector",
+      "Asteroid collector",
+      "space",
+      1,
+      { "low-density-structure": 20, "electric-engine-unit": 8, "processing-unit": 5 },
+      { "asteroid-collector": 1 }
+    ),
+  ],
+  [
+    "crusher",
+    new Item(
+      "crusher",
+      "Crusher",
+      "space",
+      1,
+      { "low-density-structure": 20, "steel-plate": 10, "electric-engine-unit": 10 },
+      { crusher: 1 }
+    ),
+  ],
+  [
+    "thruster",
+    new Item(
+      "thruster",
+      "Thruster",
+      "space",
+      1,
+      { "steel-plate": 10, "processing-unit": 10, "electric-engine-unit": 5 },
+      { thruster: 1 }
+    ),
+  ],
+  [
+    "space-platform-starter-pack",
+    new Item(
+      "space-platform-starter-pack",
+      "Space platform starter pack",
+      "space",
+      2,
+      { "space-platform-foundation": 60, "steel-plate": 20, "processing-unit": 20 },
+      { "space-platform-starter-pack": 1 }
+    ),
+  ],
+  [
+    "metallic-asteroid-crushing",
+    new Item(
+      "metallic-asteroid-crushing",
+      "Metallic asteroid crushing",
+      "space",
+      4,
+      { "metallic-asteroid-chunk": 1 },
+      { "iron-ore": 20, "metallic-asteroid-chunk": 0.2 }
+    ),
+  ],
+  [
+    "carbonic-asteroid-crushing",
+    new Item(
+      "carbonic-asteroid-crushing",
+      "Carbonic asteroid crushing",
+      "space",
+      4,
+      { "carbonic-asteroid-chunk": 1 },
+      { carbon: 10, "carbonic-asteroid-chunk": 0.2 }
+    ),
+  ],
+  [
+    "oxide-asteroid-crushing",
+    new Item(
+      "oxide-asteroid-crushing",
+      "Oxide asteroid crushing",
+      "space",
+      4,
+      { "oxide-asteroid-chunk": 1 },
+      { ice: 5, "oxide-asteroid-chunk": 0.2 }
+    ),
+  ],
+  [
+    "metallic-asteroid-reprocessing",
+    new Item(
+      "metallic-asteroid-reprocessing",
+      "Metallic asteroid reprocessing",
+      "space",
+      4,
+      { "metallic-asteroid-chunk": 1 },
+      { "metallic-asteroid-chunk": 0.4, "carbonic-asteroid-chunk": 0.2, "oxide-asteroid-chunk": 0.2 }
+    ),
+  ],
+  [
+    "carbonic-asteroid-reprocessing",
+    new Item(
+      "carbonic-asteroid-reprocessing",
+      "Carbonic asteroid reprocessing",
+      "space",
+      4,
+      { "carbonic-asteroid-chunk": 1 },
+      { "carbonic-asteroid-chunk": 0.4, "metallic-asteroid-chunk": 0.2, "oxide-asteroid-chunk": 0.2 }
+    ),
+  ],
+  [
+    "oxide-asteroid-reprocessing",
+    new Item(
+      "oxide-asteroid-reprocessing",
+      "Oxide asteroid reprocessing",
+      "space",
+      4,
+      { "oxide-asteroid-chunk": 1 },
+      { "oxide-asteroid-chunk": 0.4, "metallic-asteroid-chunk": 0.2, "carbonic-asteroid-chunk": 0.2 }
+    ),
+  ],
+  [
+    "advanced-metallic-asteroid-crushing",
+    new Item(
+      "advanced-metallic-asteroid-crushing",
+      "Advanced metallic asteroid crushing",
+      "space",
+      4,
+      { "metallic-asteroid-chunk": 1 },
+      { "iron-ore": 10, "copper-ore": 4, "metallic-asteroid-chunk": 0.05 }
+    ),
+  ],
+  [
+    "advanced-carbonic-asteroid-crushing",
+    new Item(
+      "advanced-carbonic-asteroid-crushing",
+      "Advanced carbonic asteroid crushing",
+      "space",
+      4,
+      { "carbonic-asteroid-chunk": 1 },
+      { carbon: 5, sulfur: 2, "carbonic-asteroid-chunk": 0.05 }
+    ),
+  ],
+  [
+    "advanced-oxide-asteroid-crushing",
+    new Item(
+      "advanced-oxide-asteroid-crushing",
+      "Advanced oxide asteroid crushing",
+      "space",
+      4,
+      { "oxide-asteroid-chunk": 1 },
+      { ice: 3, calcite: 2, "oxide-asteroid-chunk": 0.05 }
+    ),
+  ],
+  [
+    "thruster-fuel",
+    new Item("thruster-fuel", "Thruster fuel", "space", 5, { carbon: 2, water: 10 }, { "thruster-fuel": 75 }),
+  ],
+  [
+    "advanced-thruster-fuel",
+    new Item(
+      "advanced-thruster-fuel",
+      "Advanced thruster fuel",
+      "space",
+      5,
+      { carbon: 2, calcite: 1, water: 100 },
+      { "thruster-fuel": 1500 }
+    ),
+  ],
+  [
+    "thruster-oxidizer",
+    new Item(
+      "thruster-oxidizer",
+      "Thruster oxidizer",
+      "space",
+      5,
+      { "iron-ore": 2, water: 10 },
+      { "thruster-oxidizer": 75 }
+    ),
+  ],
+  [
+    "advanced-thruster-oxidizer",
+    new Item(
+      "advanced-thruster-oxidizer",
+      "Advanced thruster oxidizer",
+      "space",
+      5,
+      { "iron-ore": 2, calcite: 1, water: 100 },
+      { "thruster-oxidizer": 1500 }
     ),
   ],
   [
@@ -1519,6 +2569,28 @@ export default new Map<string, Item>([
       0,
       { "iron-gear-wheel": 10, "copper-plate": 5, "iron-plate": 10 },
       { "submachine-gun": 1 }
+    ),
+  ],
+  [
+    "railgun",
+    new Item(
+      "railgun",
+      "Railgun",
+      "combat",
+      0,
+      { "tungsten-plate": 10, superconductor: 10, "quantum-processor": 20, "fluoroketone-cold": 10 },
+      { railgun: 1 }
+    ),
+  ],
+  [
+    "teslagun",
+    new Item(
+      "teslagun",
+      "Tesla gun",
+      "combat",
+      0,
+      { "holmium-plate": 10, superconductor: 10, "plastic-bar": 30, electrolyte: 100 },
+      { teslagun: 1 }
     ),
   ],
   [
@@ -1664,7 +2736,7 @@ export default new Map<string, Item>([
       "Artillery shell",
       "combat",
       1,
-      { "explosive-cannon-shell": 4, radar: 1, explosives: 8 },
+      { radar: 1, calcite: 1, "tungsten-plate": 4, explosives: 8 },
       { "artillery-shell": 1 }
     ),
   ],
@@ -1687,8 +2759,19 @@ export default new Map<string, Item>([
       "Atomic bomb",
       "combat",
       1,
-      { "processing-unit": 10, explosives: 10, "uranium-235": 30 },
+      { "processing-unit": 10, explosives: 10, "uranium-235": 100 },
       { "atomic-bomb": 1 }
+    ),
+  ],
+  [
+    "capture-robot-rocket",
+    new Item(
+      "capture-robot-rocket",
+      "Capture bot rocket",
+      "combat",
+      1,
+      { "flying-robot-frame": 1, "steel-plate": 2, bioflux: 20, "processing-unit": 2 },
+      { "capture-robot-rocket": 1 }
     ),
   ],
   [
@@ -1700,6 +2783,28 @@ export default new Map<string, Item>([
       1,
       { "steel-plate": 5, "crude-oil": 100 },
       { "flamethrower-ammo": 1 }
+    ),
+  ],
+  [
+    "railgun-ammo",
+    new Item(
+      "railgun-ammo",
+      "Railgun ammo",
+      "combat",
+      1,
+      { "steel-plate": 5, "copper-cable": 10, explosives: 2 },
+      { "railgun-ammo": 1 }
+    ),
+  ],
+  [
+    "tesla-ammo",
+    new Item(
+      "tesla-ammo",
+      "Tesla ammo",
+      "combat",
+      1,
+      { supercapacitor: 1, "plastic-bar": 1, electrolyte: 10 },
+      { "tesla-ammo": 1 }
     ),
   ],
   ["grenade", new Item("grenade", "Grenade", "combat", 2, { "iron-plate": 5, coal: 10 }, { grenade: 1 })],
@@ -1765,7 +2870,7 @@ export default new Map<string, Item>([
       "Destroyer capsule",
       "combat",
       2,
-      { "distractor-capsule": 4, "speed-module": 1 },
+      { "distractor-capsule": 4, "steel-plate": 4, "processing-unit": 1 },
       { "destroyer-capsule": 1 }
     ),
   ],
@@ -1811,13 +2916,24 @@ export default new Map<string, Item>([
       "combat",
       3,
       {
-        "efficiency-module-2": 25,
-        "speed-module-2": 25,
+        "efficiency-module": 100,
+        "speed-module": 100,
         "processing-unit": 60,
         "electric-engine-unit": 40,
         "low-density-structure": 30,
       },
       { "power-armor-mk2": 1 }
+    ),
+  ],
+  [
+    "mech-armor",
+    new Item(
+      "mech-armor",
+      "Mech armor",
+      "combat",
+      3,
+      { "power-armor-mk2": 1, "holmium-plate": 200, "processing-unit": 100, superconductor: 50, supercapacitor: 50 },
+      { "mech-armor": 1 }
     ),
   ],
   [
@@ -1843,6 +2959,24 @@ export default new Map<string, Item>([
     ),
   ],
   [
+    "fusion-reactor-equipment",
+    new Item(
+      "fusion-reactor-equipment",
+      "Portable fusion reactor",
+      "combat",
+      4,
+      {
+        "fission-reactor-equipment": 1,
+        "fusion-power-cell": 10,
+        "tungsten-plate": 250,
+        "carbon-fiber": 100,
+        supercapacitor: 25,
+        "quantum-processor": 250,
+      },
+      { "fusion-reactor-equipment": 1 }
+    ),
+  ],
+  [
     "battery-equipment",
     new Item(
       "battery-equipment",
@@ -1862,6 +2996,17 @@ export default new Map<string, Item>([
       4,
       { "battery-equipment": 10, "processing-unit": 15, "low-density-structure": 5 },
       { "battery-mk2-equipment": 1 }
+    ),
+  ],
+  [
+    "battery-mk3-equipment",
+    new Item(
+      "battery-mk3-equipment",
+      "Personal battery MK3",
+      "combat",
+      4,
+      { "battery-mk2-equipment": 5, supercapacitor: 10 },
+      { "battery-mk3-equipment": 1 }
     ),
   ],
   [
@@ -1904,7 +3049,7 @@ export default new Map<string, Item>([
       "Personal roboport MK2",
       "combat",
       5,
-      { "personal-roboport-equipment": 5, "processing-unit": 100, "low-density-structure": 20 },
+      { "personal-roboport-equipment": 5, "processing-unit": 50, superconductor: 50 },
       { "personal-roboport-mk2-equipment": 1 }
     ),
   ],
@@ -1917,6 +3062,17 @@ export default new Map<string, Item>([
       5,
       { "advanced-circuit": 5, "steel-plate": 10 },
       { "night-vision-equipment": 1 }
+    ),
+  ],
+  [
+    "toolbelt-equipment",
+    new Item(
+      "toolbelt-equipment",
+      "Toolbelt equipment",
+      "combat",
+      5,
+      { "advanced-circuit": 3, "carbon-fiber": 10 },
+      { "toolbelt-equipment": 1 }
     ),
   ],
   [
@@ -2023,2524 +3179,47 @@ export default new Map<string, Item>([
       "Artillery turret",
       "combat",
       8,
-      { "steel-plate": 60, concrete: 60, "iron-gear-wheel": 40, "advanced-circuit": 20 },
+      { "tungsten-plate": 60, "refined-concrete": 60, "iron-gear-wheel": 40, "processing-unit": 10 },
       { "artillery-turret": 1 }
     ),
   ],
-  ["water", new Item("water", "Offshore pump : Water", "fluids", 0, {}, { water: 1200 })],
-  ["steam", new Item("steam", "Boiler : Steam", "fluids", 0, { water: 1 }, { steam: 10 })],
   [
-    "heat-exchanger-steam-boil",
-    new Item("heat-exchanger-steam-boil", "Heat exchanger : Steam", "fluids", 0, { water: 1 }, { "steam-500": 10 }),
-  ],
-  ["iron-ore", new Item("iron-ore", "Iron ore", "intermediate-products", 0, {}, { "iron-ore": 1 })],
-  ["copper-ore", new Item("copper-ore", "Copper ore", "intermediate-products", 0, {}, { "copper-ore": 1 })],
-  ["coal", new Item("coal", "Coal", "intermediate-products", 0, {}, { coal: 1 })],
-  ["stone", new Item("stone", "Stone", "intermediate-products", 0, {}, { stone: 1 })],
-  [
-    "uranium-ore",
-    new Item("uranium-ore", "Uranium ore", "intermediate-products", 0, { "sulfuric-acid": 1 }, { "uranium-ore": 1 }),
-  ],
-  ["crude-oil", new Item("crude-oil", "Crude oil", "fluids", 0, {}, { "crude-oil": 10 })],
-  [
-    "electric-mining-drill-technology",
-    new Item(
-      "electric-mining-drill-technology",
-      "Electric mining drill",
-      "technology",
-      1,
-      { "automation-science-pack": 1 },
-      { "electric-mining-drill-technology": 1 }
-    ),
-  ],
-  [
-    "repair-pack-technology",
-    new Item(
-      "repair-pack-technology",
-      "Repair pack",
-      "technology",
-      1,
-      { "automation-science-pack": 1 },
-      { "repair-pack-technology": 1 }
-    ),
-  ],
-  [
-    "radar-technology",
-    new Item("radar-technology", "Radar", "technology", 1, { "automation-science-pack": 1 }, { "radar-technology": 1 }),
-  ],
-  [
-    "physical-projectile-damage-1",
-    new Item(
-      "physical-projectile-damage-1",
-      "Physical projectile damage 1",
-      "technology",
-      1,
-      { "automation-science-pack": 1 },
-      { "physical-projectile-damage-1": 1 }
-    ),
-  ],
-  [
-    "weapon-shooting-speed-1",
-    new Item(
-      "weapon-shooting-speed-1",
-      "Weapon shooting speed 1",
-      "technology",
-      1,
-      { "automation-science-pack": 1 },
-      { "weapon-shooting-speed-1": 1 }
-    ),
-  ],
-  [
-    "automation",
-    new Item("automation", "Automation", "technology", 1, { "automation-science-pack": 1 }, { automation: 1 }),
-  ],
-  [
-    "logistic-science-pack-technology",
-    new Item(
-      "logistic-science-pack-technology",
-      "Logistic science pack",
-      "technology",
-      1,
-      { "automation-science-pack": 1 },
-      { "logistic-science-pack-technology": 1 }
-    ),
-  ],
-  [
-    "steel-processing",
-    new Item(
-      "steel-processing",
-      "Steel processing",
-      "technology",
-      1,
-      { "automation-science-pack": 1 },
-      { "steel-processing": 1 }
-    ),
-  ],
-  ["military", new Item("military", "Military", "technology", 1, { "automation-science-pack": 1 }, { military: 1 })],
-  [
-    "fast-inserter-technology",
-    new Item(
-      "fast-inserter-technology",
-      "Fast inserter",
-      "technology",
-      1,
-      { "automation-science-pack": 1 },
-      { "fast-inserter-technology": 1 }
-    ),
-  ],
-  [
-    "logistics-technology",
-    new Item(
-      "logistics-technology",
-      "Logistics",
-      "technology",
-      1,
-      { "automation-science-pack": 1 },
-      { "logistics-technology": 1 }
-    ),
-  ],
-  ["lamp", new Item("lamp", "Lamp", "technology", 1, { "automation-science-pack": 1 }, { lamp: 1 })],
-  [
-    "heavy-armor-technology",
-    new Item(
-      "heavy-armor-technology",
-      "Heavy armor",
-      "technology",
-      1,
-      { "automation-science-pack": 1 },
-      { "heavy-armor-technology": 1 }
-    ),
-  ],
-  [
-    "gun-turret-technology",
-    new Item(
-      "gun-turret-technology",
-      "Gun turret",
-      "technology",
-      1,
-      { "automation-science-pack": 1 },
-      { "gun-turret-technology": 1 }
-    ),
-  ],
-  [
-    "stone-wall-technology",
-    new Item(
-      "stone-wall-technology",
-      "Stone wall",
-      "technology",
-      1,
-      { "automation-science-pack": 1 },
-      { "stone-wall-technology": 1 }
-    ),
-  ],
-  [
-    "physical-projectile-damage-2",
-    new Item(
-      "physical-projectile-damage-2",
-      "Physical projectile damage 2",
-      "technology",
-      2,
-      { "automation-science-pack": 1, "logistic-science-pack": 1 },
-      { "physical-projectile-damage-2": 1 }
-    ),
-  ],
-  [
-    "weapon-shooting-speed-2",
-    new Item(
-      "weapon-shooting-speed-2",
-      "Weapon shooting speed 2",
-      "technology",
-      2,
-      { "automation-science-pack": 1, "logistic-science-pack": 1 },
-      { "weapon-shooting-speed-2": 1 }
-    ),
-  ],
-  [
-    "stronger-explosives-1",
-    new Item(
-      "stronger-explosives-1",
-      "Stronger explosives 1",
-      "technology",
-      2,
-      { "automation-science-pack": 1, "logistic-science-pack": 1 },
-      { "stronger-explosives-1": 1 }
-    ),
-  ],
-  [
-    "bulk-inserter-technology",
-    new Item(
-      "bulk-inserter-technology",
-      "Bulk inserter",
-      "technology",
-      2,
-      { "automation-science-pack": 1, "logistic-science-pack": 1 },
-      { "bulk-inserter-technology": 1 }
-    ),
-  ],
-  [
-    "inserter-capacity-bonus-1",
-    new Item(
-      "inserter-capacity-bonus-1",
-      "Inserter capacity bonus 1",
-      "technology",
-      2,
-      { "automation-science-pack": 1, "logistic-science-pack": 1 },
-      { "inserter-capacity-bonus-1": 1 }
-    ),
-  ],
-  [
-    "inserter-capacity-bonus-2",
-    new Item(
-      "inserter-capacity-bonus-2",
-      "Inserter capacity bonus 2",
-      "technology",
-      2,
-      { "automation-science-pack": 1, "logistic-science-pack": 1 },
-      { "inserter-capacity-bonus-2": 1 }
-    ),
-  ],
-  [
-    "automation-2",
-    new Item(
-      "automation-2",
-      "Automation 2",
-      "technology",
-      2,
-      { "automation-science-pack": 1, "logistic-science-pack": 1 },
-      { "automation-2": 1 }
-    ),
-  ],
-  [
-    "military-2",
-    new Item(
-      "military-2",
-      "Military 2",
-      "technology",
-      2,
-      { "automation-science-pack": 1, "logistic-science-pack": 1 },
-      { "military-2": 1 }
-    ),
-  ],
-  [
-    "railway",
-    new Item(
-      "railway",
-      "Railway",
-      "technology",
-      2,
-      { "automation-science-pack": 1, "logistic-science-pack": 1 },
-      { railway: 1 }
-    ),
-  ],
-  [
-    "automated-rail-transportation",
-    new Item(
-      "automated-rail-transportation",
-      "Automated rail transportation",
-      "technology",
-      2,
-      { "automation-science-pack": 1, "logistic-science-pack": 1 },
-      { "automated-rail-transportation": 1 }
-    ),
-  ],
-  [
-    "automobilism",
-    new Item(
-      "automobilism",
-      "Automobilism",
-      "technology",
-      2,
-      { "automation-science-pack": 1, "logistic-science-pack": 1 },
-      { automobilism: 1 }
-    ),
-  ],
-  [
-    "solar-energy",
-    new Item(
-      "solar-energy",
-      "Solar energy",
-      "technology",
-      2,
-      { "automation-science-pack": 1, "logistic-science-pack": 1 },
-      { "solar-energy": 1 }
-    ),
-  ],
-  [
-    "research-speed-1",
-    new Item(
-      "research-speed-1",
-      "Lab research speed 1",
-      "technology",
-      2,
-      { "automation-science-pack": 1, "logistic-science-pack": 1 },
-      { "research-speed-1": 1 }
-    ),
-  ],
-  [
-    "research-speed-2",
-    new Item(
-      "research-speed-2",
-      "Lab research speed 2",
-      "technology",
-      2,
-      { "automation-science-pack": 1, "logistic-science-pack": 1 },
-      { "research-speed-2": 1 }
-    ),
-  ],
-  [
-    "electric-energy-distribution-1",
-    new Item(
-      "electric-energy-distribution-1",
-      "Electric energy distribution 1",
-      "technology",
-      2,
-      { "automation-science-pack": 1, "logistic-science-pack": 1 },
-      { "electric-energy-distribution-1": 1 }
-    ),
-  ],
-  [
-    "advanced-material-processing",
-    new Item(
-      "advanced-material-processing",
-      "Advanced material processing",
-      "technology",
-      2,
-      { "automation-science-pack": 1, "logistic-science-pack": 1 },
-      { "advanced-material-processing": 1 }
-    ),
-  ],
-  [
-    "concrete-technology",
-    new Item(
-      "concrete-technology",
-      "Concrete",
-      "technology",
-      2,
-      { "automation-science-pack": 1, "logistic-science-pack": 1 },
-      { "concrete-technology": 1 }
-    ),
-  ],
-  [
-    "engine",
-    new Item(
-      "engine",
-      "Engine",
-      "technology",
-      2,
-      { "automation-science-pack": 1, "logistic-science-pack": 1 },
-      { engine: 1 }
-    ),
-  ],
-  [
-    "landfill-technology",
-    new Item(
-      "landfill-technology",
-      "Landfill",
-      "technology",
-      2,
-      { "automation-science-pack": 1, "logistic-science-pack": 1 },
-      { "landfill-technology": 1 }
-    ),
-  ],
-  [
-    "logistics-2",
-    new Item(
-      "logistics-2",
-      "Logistics 2",
-      "technology",
-      2,
-      { "automation-science-pack": 1, "logistic-science-pack": 1 },
-      { "logistics-2": 1 }
-    ),
-  ],
-  [
-    "toolbelt",
-    new Item(
-      "toolbelt",
-      "Toolbelt",
-      "technology",
-      2,
-      { "automation-science-pack": 1, "logistic-science-pack": 1 },
-      { toolbelt: 1 }
-    ),
-  ],
-  [
-    "gate-technology",
-    new Item(
-      "gate-technology",
-      "Gate",
-      "technology",
-      2,
-      { "automation-science-pack": 1, "logistic-science-pack": 1 },
-      { "gate-technology": 1 }
-    ),
-  ],
-  [
-    "chemical-science-pack-technology",
-    new Item(
-      "chemical-science-pack-technology",
-      "Chemical science pack",
-      "technology",
-      2,
-      { "automation-science-pack": 1, "logistic-science-pack": 1 },
-      { "chemical-science-pack-technology": 1 }
-    ),
-  ],
-  [
-    "military-science-pack-technology",
-    new Item(
-      "military-science-pack-technology",
-      "Military science pack",
-      "technology",
-      2,
-      { "automation-science-pack": 1, "logistic-science-pack": 1 },
-      { "military-science-pack-technology": 1 }
-    ),
-  ],
-  [
-    "explosives-technology",
-    new Item(
-      "explosives-technology",
-      "Explosives",
-      "technology",
-      2,
-      { "automation-science-pack": 1, "logistic-science-pack": 1 },
-      { "explosives-technology": 1 }
-    ),
-  ],
-  [
-    "cliff-explosives-technology",
-    new Item(
-      "cliff-explosives-technology",
-      "Cliff explosives",
-      "technology",
-      2,
-      { "automation-science-pack": 1, "logistic-science-pack": 1 },
-      { "cliff-explosives-technology": 1 }
-    ),
-  ],
-  [
-    "flammables",
-    new Item(
-      "flammables",
-      "Flammables",
-      "technology",
-      2,
-      { "automation-science-pack": 1, "logistic-science-pack": 1 },
-      { flammables: 1 }
-    ),
-  ],
-  [
-    "advanced-circuit-technology",
-    new Item(
-      "advanced-circuit-technology",
-      "Advanced circuit",
-      "technology",
-      2,
-      { "automation-science-pack": 1, "logistic-science-pack": 1 },
-      { "advanced-circuit-technology": 1 }
-    ),
-  ],
-  [
-    "fluid-wagon-technology",
-    new Item(
-      "fluid-wagon-technology",
-      "Fluid wagon",
-      "technology",
-      2,
-      { "automation-science-pack": 1, "logistic-science-pack": 1 },
-      { "fluid-wagon-technology": 1 }
-    ),
-  ],
-  [
-    "modular-armor-technology",
-    new Item(
-      "modular-armor-technology",
-      "Modular armor",
-      "technology",
-      2,
-      { "automation-science-pack": 1, "logistic-science-pack": 1 },
-      { "modular-armor-technology": 1 }
-    ),
-  ],
-  [
-    "electric-energy-accumulators",
-    new Item(
-      "electric-energy-accumulators",
-      "Electric energy accumulators",
-      "technology",
-      2,
-      { "automation-science-pack": 1, "logistic-science-pack": 1 },
-      { "electric-energy-accumulators": 1 }
-    ),
-  ],
-  [
-    "battery-technology",
-    new Item(
-      "battery-technology",
-      "Battery",
-      "technology",
-      2,
-      { "automation-science-pack": 1, "logistic-science-pack": 1 },
-      { "battery-technology": 1 }
-    ),
-  ],
-  [
-    "night-vision-equipment-technology",
-    new Item(
-      "night-vision-equipment-technology",
-      "Nightvision equipment",
-      "technology",
-      2,
-      { "automation-science-pack": 1, "logistic-science-pack": 1 },
-      { "night-vision-equipment-technology": 1 }
-    ),
-  ],
-  [
-    "belt-immunity-equipment-technology",
-    new Item(
-      "belt-immunity-equipment-technology",
-      "Belt immunity equipment",
-      "technology",
-      2,
-      { "automation-science-pack": 1, "logistic-science-pack": 1 },
-      { "belt-immunity-equipment-technology": 1 }
-    ),
-  ],
-  [
-    "battery-equipment-technology",
-    new Item(
-      "battery-equipment-technology",
-      "Personal battery",
-      "technology",
-      2,
-      { "automation-science-pack": 1, "logistic-science-pack": 1 },
-      { "battery-equipment-technology": 1 }
-    ),
-  ],
-  [
-    "solar-panel-equipment-technology",
-    new Item(
-      "solar-panel-equipment-technology",
-      "Portable solar panel",
-      "technology",
-      2,
-      { "automation-science-pack": 1, "logistic-science-pack": 1 },
-      { "solar-panel-equipment-technology": 1 }
-    ),
-  ],
-  [
-    "fluid-handling",
-    new Item(
-      "fluid-handling",
-      "Fluid handling",
-      "technology",
-      2,
-      { "automation-science-pack": 1, "logistic-science-pack": 1 },
-      { "fluid-handling": 1 }
-    ),
-  ],
-  [
-    "oil-gathering",
-    new Item(
-      "oil-gathering",
-      "Oil gathering",
-      "technology",
-      2,
-      { "automation-science-pack": 1, "logistic-science-pack": 1 },
-      { "oil-gathering": 1 }
-    ),
-  ],
-  [
-    "sulfur-processing",
-    new Item(
-      "sulfur-processing",
-      "Sulfur processing",
-      "technology",
-      2,
-      { "automation-science-pack": 1, "logistic-science-pack": 1 },
-      { "sulfur-processing": 1 }
-    ),
-  ],
-  [
-    "plastics",
-    new Item(
-      "plastics",
-      "Plastics",
-      "technology",
-      2,
-      { "automation-science-pack": 1, "logistic-science-pack": 1 },
-      { plastics: 1 }
-    ),
-  ],
-  [
-    "modules",
-    new Item(
-      "modules",
-      "Modules",
-      "technology",
-      2,
-      { "automation-science-pack": 1, "logistic-science-pack": 1 },
-      { modules: 1 }
-    ),
-  ],
-  [
-    "speed-module-technology",
-    new Item(
-      "speed-module-technology",
-      "Speed module",
-      "technology",
-      2,
-      { "automation-science-pack": 1, "logistic-science-pack": 1 },
-      { "speed-module-technology": 1 }
-    ),
-  ],
-  [
-    "productivity-module-technology",
-    new Item(
-      "productivity-module-technology",
-      "Productivity module",
-      "technology",
-      2,
-      { "automation-science-pack": 1, "logistic-science-pack": 1 },
-      { "productivity-module-technology": 1 }
-    ),
-  ],
-  [
-    "efficiency-module-technology",
-    new Item(
-      "efficiency-module-technology",
-      "Efficiency module",
-      "technology",
-      2,
-      { "automation-science-pack": 1, "logistic-science-pack": 1 },
-      { "efficiency-module-technology": 1 }
-    ),
-  ],
-  [
-    "mining-productivity-1",
-    new Item(
-      "mining-productivity-1",
-      "Mining productivity 1",
-      "technology",
-      2,
-      { "automation-science-pack": 1, "logistic-science-pack": 1 },
-      { "mining-productivity-1": 1 }
-    ),
-  ],
-  [
-    "circuit-network",
-    new Item(
-      "circuit-network",
-      "Circuit network",
-      "technology",
-      2,
-      { "automation-science-pack": 1, "logistic-science-pack": 1 },
-      { "circuit-network": 1 }
-    ),
-  ],
-  [
-    "physical-projectile-damage-3",
-    new Item(
-      "physical-projectile-damage-3",
-      "Physical projectile damage 3",
-      "technology",
-      3,
-      { "automation-science-pack": 1, "logistic-science-pack": 1, "military-science-pack": 1 },
-      { "physical-projectile-damage-3": 1 }
-    ),
-  ],
-  [
-    "physical-projectile-damage-4",
-    new Item(
-      "physical-projectile-damage-4",
-      "Physical projectile damage 4",
-      "technology",
-      3,
-      { "automation-science-pack": 1, "logistic-science-pack": 1, "military-science-pack": 1 },
-      { "physical-projectile-damage-4": 1 }
-    ),
-  ],
-  [
-    "stronger-explosives-2",
-    new Item(
-      "stronger-explosives-2",
-      "Stronger explosives 2",
-      "technology",
-      3,
-      { "automation-science-pack": 1, "logistic-science-pack": 1, "military-science-pack": 1 },
-      { "stronger-explosives-2": 1 }
-    ),
-  ],
-  [
-    "refined-flammables-1",
-    new Item(
-      "refined-flammables-1",
-      "Refined flammables 1",
-      "technology",
-      3,
-      { "automation-science-pack": 1, "logistic-science-pack": 1, "military-science-pack": 1 },
-      { "refined-flammables-1": 1 }
-    ),
-  ],
-  [
-    "refined-flammables-2",
-    new Item(
-      "refined-flammables-2",
-      "Refined flammables 2",
-      "technology",
-      3,
-      { "automation-science-pack": 1, "logistic-science-pack": 1, "military-science-pack": 1 },
-      { "refined-flammables-2": 1 }
-    ),
-  ],
-  [
-    "weapon-shooting-speed-3",
-    new Item(
-      "weapon-shooting-speed-3",
-      "Weapon shooting speed 3",
-      "technology",
-      3,
-      { "automation-science-pack": 1, "logistic-science-pack": 1, "military-science-pack": 1 },
-      { "weapon-shooting-speed-3": 1 }
-    ),
-  ],
-  [
-    "weapon-shooting-speed-4",
-    new Item(
-      "weapon-shooting-speed-4",
-      "Weapon shooting speed 4",
-      "technology",
-      3,
-      { "automation-science-pack": 1, "logistic-science-pack": 1, "military-science-pack": 1 },
-      { "weapon-shooting-speed-4": 1 }
-    ),
-  ],
-  [
-    "follower-robot-count-1",
-    new Item(
-      "follower-robot-count-1",
-      "Follower robot count 1",
-      "technology",
-      3,
-      { "automation-science-pack": 1, "logistic-science-pack": 1, "military-science-pack": 1 },
-      { "follower-robot-count-1": 1 }
-    ),
-  ],
-  [
-    "follower-robot-count-2",
-    new Item(
-      "follower-robot-count-2",
-      "Follower robot count 2",
-      "technology",
-      3,
-      { "automation-science-pack": 1, "logistic-science-pack": 1, "military-science-pack": 1 },
-      { "follower-robot-count-2": 1 }
-    ),
-  ],
-  [
-    "land-mine-technology",
-    new Item(
-      "land-mine-technology",
-      "Land mines",
-      "technology",
-      3,
-      { "automation-science-pack": 1, "logistic-science-pack": 1, "military-science-pack": 1 },
-      { "land-mine-technology": 1 }
-    ),
-  ],
-  [
-    "flamethrower-technology",
-    new Item(
-      "flamethrower-technology",
-      "Flamethrower",
-      "technology",
-      3,
-      { "automation-science-pack": 1, "logistic-science-pack": 1, "military-science-pack": 1 },
-      { "flamethrower-technology": 1 }
-    ),
-  ],
-  [
-    "rocketry",
-    new Item(
-      "rocketry",
-      "Rocketry",
-      "technology",
-      3,
-      { "automation-science-pack": 1, "logistic-science-pack": 1, "military-science-pack": 1 },
-      { rocketry: 1 }
-    ),
-  ],
-  [
-    "energy-shield-equipment-technology",
-    new Item(
-      "energy-shield-equipment-technology",
-      "Energy shield equipment",
-      "technology",
-      3,
-      { "automation-science-pack": 1, "logistic-science-pack": 1, "military-science-pack": 1 },
-      { "energy-shield-equipment-technology": 1 }
-    ),
-  ],
-  [
-    "defender",
-    new Item(
-      "defender",
-      "Defender",
-      "technology",
-      3,
-      { "automation-science-pack": 1, "logistic-science-pack": 1, "military-science-pack": 1 },
-      { defender: 1 }
-    ),
-  ],
-  [
-    "inserter-capacity-bonus-3",
-    new Item(
-      "inserter-capacity-bonus-3",
-      "Inserter capacity bonus 3",
-      "technology",
-      3,
-      { "automation-science-pack": 1, "logistic-science-pack": 1, "chemical-science-pack": 1 },
-      { "inserter-capacity-bonus-3": 1 }
-    ),
-  ],
-  [
-    "production-science-pack-technology",
-    new Item(
-      "production-science-pack-technology",
-      "Production science pack",
-      "technology",
-      3,
-      { "automation-science-pack": 1, "logistic-science-pack": 1, "chemical-science-pack": 1 },
-      { "production-science-pack-technology": 1 }
-    ),
-  ],
-  [
-    "utility-science-pack-technology",
-    new Item(
-      "utility-science-pack-technology",
-      "Utility science pack",
-      "technology",
-      3,
-      { "automation-science-pack": 1, "logistic-science-pack": 1, "chemical-science-pack": 1 },
-      { "utility-science-pack-technology": 1 }
-    ),
-  ],
-  [
-    "processing-unit-technology",
-    new Item(
-      "processing-unit-technology",
-      "Processing unit",
-      "technology",
-      3,
-      { "automation-science-pack": 1, "logistic-science-pack": 1, "chemical-science-pack": 1 },
-      { "processing-unit-technology": 1 }
-    ),
-  ],
-  [
-    "braking-force-1",
-    new Item(
-      "braking-force-1",
-      "Braking force 1",
-      "technology",
-      3,
-      { "automation-science-pack": 1, "logistic-science-pack": 1, "chemical-science-pack": 1 },
-      { "braking-force-1": 1 }
-    ),
-  ],
-  [
-    "braking-force-2",
-    new Item(
-      "braking-force-2",
-      "Braking force 2",
-      "technology",
-      3,
-      { "automation-science-pack": 1, "logistic-science-pack": 1, "chemical-science-pack": 1 },
-      { "braking-force-2": 1 }
-    ),
-  ],
-  [
-    "laser",
-    new Item(
-      "laser",
-      "Laser",
-      "technology",
-      3,
-      { "automation-science-pack": 1, "logistic-science-pack": 1, "chemical-science-pack": 1 },
-      { laser: 1 }
-    ),
-  ],
-  [
-    "power-armor-technology",
-    new Item(
-      "power-armor-technology",
-      "Power armor",
-      "technology",
-      3,
-      { "automation-science-pack": 1, "logistic-science-pack": 1, "chemical-science-pack": 1 },
-      { "power-armor-technology": 1 }
-    ),
-  ],
-  [
-    "robotics",
-    new Item(
-      "robotics",
-      "Robotics",
-      "technology",
-      3,
-      { "automation-science-pack": 1, "logistic-science-pack": 1, "chemical-science-pack": 1 },
-      { robotics: 1 }
-    ),
-  ],
-  [
-    "rocket-fuel-technology",
-    new Item(
-      "rocket-fuel-technology",
-      "Rocket fuel",
-      "technology",
-      3,
-      { "automation-science-pack": 1, "logistic-science-pack": 1, "chemical-science-pack": 1 },
-      { "rocket-fuel-technology": 1 }
-    ),
-  ],
-  [
-    "low-density-structure-technology",
-    new Item(
-      "low-density-structure-technology",
-      "Low density structure",
-      "technology",
-      3,
-      { "automation-science-pack": 1, "logistic-science-pack": 1, "chemical-science-pack": 1 },
-      { "low-density-structure-technology": 1 }
-    ),
-  ],
-  [
-    "research-speed-3",
-    new Item(
-      "research-speed-3",
-      "Lab research speed 3",
-      "technology",
-      3,
-      { "automation-science-pack": 1, "logistic-science-pack": 1, "chemical-science-pack": 1 },
-      { "research-speed-3": 1 }
-    ),
-  ],
-  [
-    "research-speed-4",
-    new Item(
-      "research-speed-4",
-      "Lab research speed 4",
-      "technology",
-      3,
-      { "automation-science-pack": 1, "logistic-science-pack": 1, "chemical-science-pack": 1 },
-      { "research-speed-4": 1 }
-    ),
-  ],
-  [
-    "electric-energy-distribution-2",
-    new Item(
-      "electric-energy-distribution-2",
-      "Electric energy distribution 2",
-      "technology",
-      3,
-      { "automation-science-pack": 1, "logistic-science-pack": 1, "chemical-science-pack": 1 },
-      { "electric-energy-distribution-2": 1 }
-    ),
-  ],
-  [
-    "advanced-material-processing-2",
-    new Item(
-      "advanced-material-processing-2",
-      "Advanced material processing 2",
-      "technology",
-      3,
-      { "automation-science-pack": 1, "logistic-science-pack": 1, "chemical-science-pack": 1 },
-      { "advanced-material-processing-2": 1 }
-    ),
-  ],
-  [
-    "lubricant-technology",
-    new Item(
-      "lubricant-technology",
-      "Lubricant",
-      "technology",
-      3,
-      { "automation-science-pack": 1, "logistic-science-pack": 1, "chemical-science-pack": 1 },
-      { "lubricant-technology": 1 }
-    ),
-  ],
-  [
-    "electric-engine",
-    new Item(
-      "electric-engine",
-      "Electric engine",
-      "technology",
-      3,
-      { "automation-science-pack": 1, "logistic-science-pack": 1, "chemical-science-pack": 1 },
-      { "electric-engine": 1 }
-    ),
-  ],
-  [
-    "construction-robotics",
-    new Item(
-      "construction-robotics",
-      "Construction robotics",
-      "technology",
-      3,
-      { "automation-science-pack": 1, "logistic-science-pack": 1, "chemical-science-pack": 1 },
-      { "construction-robotics": 1 }
-    ),
-  ],
-  [
-    "logistic-robotics",
-    new Item(
-      "logistic-robotics",
-      "Logistic robotics",
-      "technology",
-      3,
-      { "automation-science-pack": 1, "logistic-science-pack": 1, "chemical-science-pack": 1 },
-      { "logistic-robotics": 1 }
-    ),
-  ],
-  [
-    "worker-robots-speed-1",
-    new Item(
-      "worker-robots-speed-1",
-      "Worker robot speed 1",
-      "technology",
-      3,
-      { "automation-science-pack": 1, "logistic-science-pack": 1, "chemical-science-pack": 1 },
-      { "worker-robots-speed-1": 1 }
-    ),
-  ],
-  [
-    "worker-robots-speed-2",
-    new Item(
-      "worker-robots-speed-2",
-      "Worker robot speed 2",
-      "technology",
-      3,
-      { "automation-science-pack": 1, "logistic-science-pack": 1, "chemical-science-pack": 1 },
-      { "worker-robots-speed-2": 1 }
-    ),
-  ],
-  [
-    "worker-robots-storage-1",
-    new Item(
-      "worker-robots-storage-1",
-      "Worker robot cargo size 1",
-      "technology",
-      3,
-      { "automation-science-pack": 1, "logistic-science-pack": 1, "chemical-science-pack": 1 },
-      { "worker-robots-storage-1": 1 }
-    ),
-  ],
-  [
-    "battery-mk2-equipment-technology",
-    new Item(
-      "battery-mk2-equipment-technology",
-      "Personal battery MK2",
-      "technology",
-      3,
-      { "automation-science-pack": 1, "logistic-science-pack": 1, "chemical-science-pack": 1 },
-      { "battery-mk2-equipment-technology": 1 }
-    ),
-  ],
-  [
-    "exoskeleton-equipment-technology",
-    new Item(
-      "exoskeleton-equipment-technology",
-      "Exoskeleton equipment",
-      "technology",
-      3,
-      { "automation-science-pack": 1, "logistic-science-pack": 1, "chemical-science-pack": 1 },
-      { "exoskeleton-equipment-technology": 1 }
-    ),
-  ],
-  [
-    "personal-roboport-equipment-technology",
-    new Item(
-      "personal-roboport-equipment-technology",
-      "Personal roboport",
-      "technology",
-      3,
-      { "automation-science-pack": 1, "logistic-science-pack": 1, "chemical-science-pack": 1 },
-      { "personal-roboport-equipment-technology": 1 }
-    ),
-  ],
-  [
-    "advanced-oil-processing-technology",
-    new Item(
-      "advanced-oil-processing-technology",
-      "Advanced oil processing",
-      "technology",
-      3,
-      { "automation-science-pack": 1, "logistic-science-pack": 1, "chemical-science-pack": 1 },
-      { "advanced-oil-processing-technology": 1 }
-    ),
-  ],
-  [
-    "speed-module-2-technology",
-    new Item(
-      "speed-module-2-technology",
-      "Speed module 2",
-      "technology",
-      3,
-      { "automation-science-pack": 1, "logistic-science-pack": 1, "chemical-science-pack": 1 },
-      { "speed-module-2-technology": 1 }
-    ),
-  ],
-  [
-    "productivity-module-2-technology",
-    new Item(
-      "productivity-module-2-technology",
-      "Productivity module 2",
-      "technology",
-      3,
-      { "automation-science-pack": 1, "logistic-science-pack": 1, "chemical-science-pack": 1 },
-      { "productivity-module-2-technology": 1 }
-    ),
-  ],
-  [
-    "efficiency-module-2-technology",
-    new Item(
-      "efficiency-module-2-technology",
-      "Efficiency module 2",
-      "technology",
-      3,
-      { "automation-science-pack": 1, "logistic-science-pack": 1, "chemical-science-pack": 1 },
-      { "efficiency-module-2-technology": 1 }
-    ),
-  ],
-  [
-    "uranium-mining",
-    new Item(
-      "uranium-mining",
-      "Uranium mining",
-      "technology",
-      3,
-      { "automation-science-pack": 1, "logistic-science-pack": 1, "chemical-science-pack": 1 },
-      { "uranium-mining": 1 }
-    ),
-  ],
-  [
-    "nuclear-power",
-    new Item(
-      "nuclear-power",
-      "Nuclear power",
-      "technology",
-      3,
-      { "automation-science-pack": 1, "logistic-science-pack": 1, "chemical-science-pack": 1 },
-      { "nuclear-power": 1 }
-    ),
-  ],
-  [
-    "mining-productivity-2",
-    new Item(
-      "mining-productivity-2",
-      "Mining productivity 2",
-      "technology",
-      3,
-      { "automation-science-pack": 1, "logistic-science-pack": 1, "chemical-science-pack": 1 },
-      { "mining-productivity-2": 1 }
-    ),
-  ],
-  [
-    "advanced-combinators",
-    new Item(
-      "advanced-combinators",
-      "Advanced combinators",
-      "technology",
-      3,
-      { "automation-science-pack": 1, "logistic-science-pack": 1, "chemical-science-pack": 1 },
-      { "advanced-combinators": 1 }
-    ),
-  ],
-  [
-    "physical-projectile-damage-5",
-    new Item(
-      "physical-projectile-damage-5",
-      "Physical projectile damage 5",
-      "technology",
-      4,
-      {
-        "automation-science-pack": 1,
-        "logistic-science-pack": 1,
-        "chemical-science-pack": 1,
-        "military-science-pack": 1,
-      },
-      { "physical-projectile-damage-5": 1 }
-    ),
-  ],
-  [
-    "weapon-shooting-speed-5",
-    new Item(
-      "weapon-shooting-speed-5",
-      "Weapon shooting speed 5",
-      "technology",
-      4,
-      {
-        "automation-science-pack": 1,
-        "logistic-science-pack": 1,
-        "chemical-science-pack": 1,
-        "military-science-pack": 1,
-      },
-      { "weapon-shooting-speed-5": 1 }
-    ),
-  ],
-  [
-    "laser-shooting-speed-3",
-    new Item(
-      "laser-shooting-speed-3",
-      "Laser shooting speed 3",
-      "technology",
-      4,
-      {
-        "automation-science-pack": 1,
-        "logistic-science-pack": 1,
-        "chemical-science-pack": 1,
-        "military-science-pack": 1,
-      },
-      { "laser-shooting-speed-3": 1 }
-    ),
-  ],
-  [
-    "laser-shooting-speed-4",
-    new Item(
-      "laser-shooting-speed-4",
-      "Laser shooting speed 4",
-      "technology",
-      4,
-      {
-        "automation-science-pack": 1,
-        "logistic-science-pack": 1,
-        "chemical-science-pack": 1,
-        "military-science-pack": 1,
-      },
-      { "laser-shooting-speed-4": 1 }
-    ),
-  ],
-  [
-    "follower-robot-count-3",
-    new Item(
-      "follower-robot-count-3",
-      "Follower robot count 3",
-      "technology",
-      4,
-      {
-        "automation-science-pack": 1,
-        "logistic-science-pack": 1,
-        "chemical-science-pack": 1,
-        "military-science-pack": 1,
-      },
-      { "follower-robot-count-3": 1 }
-    ),
-  ],
-  [
-    "military-3",
-    new Item(
-      "military-3",
-      "Military 3",
-      "technology",
-      4,
-      {
-        "automation-science-pack": 1,
-        "logistic-science-pack": 1,
-        "chemical-science-pack": 1,
-        "military-science-pack": 1,
-      },
-      { "military-3": 1 }
-    ),
-  ],
-  [
-    "tank-technology",
-    new Item(
-      "tank-technology",
-      "Tank",
-      "technology",
-      4,
-      {
-        "automation-science-pack": 1,
-        "logistic-science-pack": 1,
-        "chemical-science-pack": 1,
-        "military-science-pack": 1,
-      },
-      { "tank-technology": 1 }
-    ),
-  ],
-  [
-    "explosive-rocketry",
-    new Item(
-      "explosive-rocketry",
-      "Explosive rocketry",
-      "technology",
-      4,
-      {
-        "automation-science-pack": 1,
-        "logistic-science-pack": 1,
-        "chemical-science-pack": 1,
-        "military-science-pack": 1,
-      },
-      { "explosive-rocketry": 1 }
-    ),
-  ],
-  [
-    "energy-shield-mk2-equipment-technology",
-    new Item(
-      "energy-shield-mk2-equipment-technology",
-      "Energy shield MK2 equipment",
-      "technology",
-      4,
-      {
-        "automation-science-pack": 1,
-        "logistic-science-pack": 1,
-        "chemical-science-pack": 1,
-        "military-science-pack": 1,
-      },
-      { "energy-shield-mk2-equipment-technology": 1 }
-    ),
-  ],
-  [
-    "personal-laser-defense-equipment-technology",
-    new Item(
-      "personal-laser-defense-equipment-technology",
-      "Personal laser defense",
-      "technology",
-      4,
-      {
-        "automation-science-pack": 1,
-        "logistic-science-pack": 1,
-        "chemical-science-pack": 1,
-        "military-science-pack": 1,
-      },
-      { "personal-laser-defense-equipment-technology": 1 }
-    ),
-  ],
-  [
-    "discharge-defense-equipment-technology",
-    new Item(
-      "discharge-defense-equipment-technology",
-      "Discharge defense",
-      "technology",
-      4,
-      {
-        "automation-science-pack": 1,
-        "logistic-science-pack": 1,
-        "chemical-science-pack": 1,
-        "military-science-pack": 1,
-      },
-      { "discharge-defense-equipment-technology": 1 }
-    ),
-  ],
-  [
-    "distractor",
-    new Item(
-      "distractor",
-      "Distractor",
-      "technology",
-      4,
-      {
-        "automation-science-pack": 1,
-        "logistic-science-pack": 1,
-        "chemical-science-pack": 1,
-        "military-science-pack": 1,
-      },
-      { distractor: 1 }
-    ),
-  ],
-  [
-    "stronger-explosives-3",
-    new Item(
-      "stronger-explosives-3",
-      "Stronger explosives 3",
-      "technology",
-      4,
-      {
-        "automation-science-pack": 1,
-        "logistic-science-pack": 1,
-        "military-science-pack": 1,
-        "chemical-science-pack": 1,
-      },
-      { "stronger-explosives-3": 1 }
-    ),
-  ],
-  [
-    "refined-flammables-3",
-    new Item(
-      "refined-flammables-3",
-      "Refined flammables 3",
-      "technology",
-      4,
-      {
-        "automation-science-pack": 1,
-        "logistic-science-pack": 1,
-        "military-science-pack": 1,
-        "chemical-science-pack": 1,
-      },
-      { "refined-flammables-3": 1 }
-    ),
-  ],
-  [
-    "laser-weapons-damage-1",
-    new Item(
-      "laser-weapons-damage-1",
-      "Energy weapons damage 1",
-      "technology",
-      4,
-      {
-        "automation-science-pack": 1,
-        "logistic-science-pack": 1,
-        "military-science-pack": 1,
-        "chemical-science-pack": 1,
-      },
-      { "laser-weapons-damage-1": 1 }
-    ),
-  ],
-  [
-    "laser-weapons-damage-2",
-    new Item(
-      "laser-weapons-damage-2",
-      "Energy weapons damage 2",
-      "technology",
-      4,
-      {
-        "automation-science-pack": 1,
-        "logistic-science-pack": 1,
-        "military-science-pack": 1,
-        "chemical-science-pack": 1,
-      },
-      { "laser-weapons-damage-2": 1 }
-    ),
-  ],
-  [
-    "laser-weapons-damage-3",
-    new Item(
-      "laser-weapons-damage-3",
-      "Energy weapons damage 3",
-      "technology",
-      4,
-      {
-        "automation-science-pack": 1,
-        "logistic-science-pack": 1,
-        "military-science-pack": 1,
-        "chemical-science-pack": 1,
-      },
-      { "laser-weapons-damage-3": 1 }
-    ),
-  ],
-  [
-    "laser-weapons-damage-4",
-    new Item(
-      "laser-weapons-damage-4",
-      "Energy weapons damage 4",
-      "technology",
-      4,
-      {
-        "automation-science-pack": 1,
-        "logistic-science-pack": 1,
-        "military-science-pack": 1,
-        "chemical-science-pack": 1,
-      },
-      { "laser-weapons-damage-4": 1 }
-    ),
-  ],
-  [
-    "laser-shooting-speed-1",
-    new Item(
-      "laser-shooting-speed-1",
-      "Laser shooting speed 1",
-      "technology",
-      4,
-      {
-        "automation-science-pack": 1,
-        "logistic-science-pack": 1,
-        "military-science-pack": 1,
-        "chemical-science-pack": 1,
-      },
-      { "laser-shooting-speed-1": 1 }
-    ),
-  ],
-  [
-    "laser-shooting-speed-2",
-    new Item(
-      "laser-shooting-speed-2",
-      "Laser shooting speed 2",
-      "technology",
-      4,
-      {
-        "automation-science-pack": 1,
-        "logistic-science-pack": 1,
-        "military-science-pack": 1,
-        "chemical-science-pack": 1,
-      },
-      { "laser-shooting-speed-2": 1 }
-    ),
-  ],
-  [
-    "laser-turret-technology",
-    new Item(
-      "laser-turret-technology",
-      "Laser turret",
-      "technology",
-      4,
-      {
-        "automation-science-pack": 1,
-        "logistic-science-pack": 1,
-        "military-science-pack": 1,
-        "chemical-science-pack": 1,
-      },
-      { "laser-turret-technology": 1 }
-    ),
-  ],
-  [
-    "inserter-capacity-bonus-4",
-    new Item(
-      "inserter-capacity-bonus-4",
-      "Inserter capacity bonus 4",
-      "technology",
-      4,
-      {
-        "automation-science-pack": 1,
-        "logistic-science-pack": 1,
-        "chemical-science-pack": 1,
-        "production-science-pack": 1,
-      },
-      { "inserter-capacity-bonus-4": 1 }
-    ),
-  ],
-  [
-    "inserter-capacity-bonus-5",
-    new Item(
-      "inserter-capacity-bonus-5",
-      "Inserter capacity bonus 5",
-      "technology",
-      4,
-      {
-        "automation-science-pack": 1,
-        "logistic-science-pack": 1,
-        "chemical-science-pack": 1,
-        "production-science-pack": 1,
-      },
-      { "inserter-capacity-bonus-5": 1 }
-    ),
-  ],
-  [
-    "inserter-capacity-bonus-6",
-    new Item(
-      "inserter-capacity-bonus-6",
-      "Inserter capacity bonus 6",
-      "technology",
-      4,
-      {
-        "automation-science-pack": 1,
-        "logistic-science-pack": 1,
-        "chemical-science-pack": 1,
-        "production-science-pack": 1,
-      },
-      { "inserter-capacity-bonus-6": 1 }
-    ),
-  ],
-  [
-    "automation-3",
-    new Item(
-      "automation-3",
-      "Automation 3",
-      "technology",
-      4,
-      {
-        "automation-science-pack": 1,
-        "logistic-science-pack": 1,
-        "chemical-science-pack": 1,
-        "production-science-pack": 1,
-      },
-      { "automation-3": 1 }
-    ),
-  ],
-  [
-    "braking-force-3",
-    new Item(
-      "braking-force-3",
-      "Braking force 3",
-      "technology",
-      4,
-      {
-        "automation-science-pack": 1,
-        "logistic-science-pack": 1,
-        "chemical-science-pack": 1,
-        "production-science-pack": 1,
-      },
-      { "braking-force-3": 1 }
-    ),
-  ],
-  [
-    "braking-force-4",
-    new Item(
-      "braking-force-4",
-      "Braking force 4",
-      "technology",
-      4,
-      {
-        "automation-science-pack": 1,
-        "logistic-science-pack": 1,
-        "chemical-science-pack": 1,
-        "production-science-pack": 1,
-      },
-      { "braking-force-4": 1 }
-    ),
-  ],
-  [
-    "braking-force-5",
-    new Item(
-      "braking-force-5",
-      "Braking force 5",
-      "technology",
-      4,
-      {
-        "automation-science-pack": 1,
-        "logistic-science-pack": 1,
-        "chemical-science-pack": 1,
-        "production-science-pack": 1,
-      },
-      { "braking-force-5": 1 }
-    ),
-  ],
-  [
-    "logistics-3",
-    new Item(
-      "logistics-3",
-      "Logistics 3",
-      "technology",
-      4,
-      {
-        "automation-science-pack": 1,
-        "logistic-science-pack": 1,
-        "chemical-science-pack": 1,
-        "production-science-pack": 1,
-      },
-      { "logistics-3": 1 }
-    ),
-  ],
-  [
-    "research-speed-5",
-    new Item(
-      "research-speed-5",
-      "Lab research speed 5",
-      "technology",
-      4,
-      {
-        "automation-science-pack": 1,
-        "logistic-science-pack": 1,
-        "chemical-science-pack": 1,
-        "production-science-pack": 1,
-      },
-      { "research-speed-5": 1 }
-    ),
-  ],
-  [
-    "effect-transmission",
-    new Item(
-      "effect-transmission",
-      "Effect transmission",
-      "technology",
-      4,
-      {
-        "automation-science-pack": 1,
-        "logistic-science-pack": 1,
-        "chemical-science-pack": 1,
-        "production-science-pack": 1,
-      },
-      { "effect-transmission": 1 }
-    ),
-  ],
-  [
-    "worker-robots-storage-2",
-    new Item(
-      "worker-robots-storage-2",
-      "Worker robot cargo size 2",
-      "technology",
-      4,
-      {
-        "automation-science-pack": 1,
-        "logistic-science-pack": 1,
-        "chemical-science-pack": 1,
-        "production-science-pack": 1,
-      },
-      { "worker-robots-storage-2": 1 }
-    ),
-  ],
-  [
-    "coal-liquefaction-technology",
-    new Item(
-      "coal-liquefaction-technology",
-      "Coal liquefaction",
-      "technology",
-      4,
-      {
-        "automation-science-pack": 1,
-        "logistic-science-pack": 1,
-        "chemical-science-pack": 1,
-        "production-science-pack": 1,
-      },
-      { "coal-liquefaction-technology": 1 }
-    ),
-  ],
-  [
-    "speed-module-3-technology",
-    new Item(
-      "speed-module-3-technology",
-      "Speed module 3",
-      "technology",
-      4,
-      {
-        "automation-science-pack": 1,
-        "logistic-science-pack": 1,
-        "chemical-science-pack": 1,
-        "production-science-pack": 1,
-      },
-      { "speed-module-3-technology": 1 }
-    ),
-  ],
-  [
-    "productivity-module-3-technology",
-    new Item(
-      "productivity-module-3-technology",
-      "Productivity module 3",
-      "technology",
-      4,
-      {
-        "automation-science-pack": 1,
-        "logistic-science-pack": 1,
-        "chemical-science-pack": 1,
-        "production-science-pack": 1,
-      },
-      { "productivity-module-3-technology": 1 }
-    ),
-  ],
-  [
-    "efficiency-module-3-technology",
-    new Item(
-      "efficiency-module-3-technology",
-      "Efficiency module 3",
-      "technology",
-      4,
-      {
-        "automation-science-pack": 1,
-        "logistic-science-pack": 1,
-        "chemical-science-pack": 1,
-        "production-science-pack": 1,
-      },
-      { "efficiency-module-3-technology": 1 }
-    ),
-  ],
-  [
-    "kovarex-enrichment-process-technology",
-    new Item(
-      "kovarex-enrichment-process-technology",
-      "Kovarex enrichment process",
-      "technology",
-      4,
-      {
-        "automation-science-pack": 1,
-        "logistic-science-pack": 1,
-        "chemical-science-pack": 1,
-        "production-science-pack": 1,
-      },
-      { "kovarex-enrichment-process-technology": 1 }
-    ),
-  ],
-  [
-    "nuclear-fuel-reprocessing-technology",
-    new Item(
-      "nuclear-fuel-reprocessing-technology",
-      "Nuclear fuel reprocessing",
-      "technology",
-      4,
-      {
-        "automation-science-pack": 1,
-        "logistic-science-pack": 1,
-        "chemical-science-pack": 1,
-        "production-science-pack": 1,
-      },
-      { "nuclear-fuel-reprocessing-technology": 1 }
-    ),
-  ],
-  [
-    "logistic-system",
-    new Item(
-      "logistic-system",
-      "Logistic system",
-      "technology",
-      4,
-      {
-        "automation-science-pack": 1,
-        "logistic-science-pack": 1,
-        "chemical-science-pack": 1,
-        "utility-science-pack": 1,
-      },
-      { "logistic-system": 1 }
-    ),
-  ],
-  [
-    "worker-robots-speed-3",
-    new Item(
-      "worker-robots-speed-3",
-      "Worker robot speed 3",
-      "technology",
-      4,
-      {
-        "automation-science-pack": 1,
-        "logistic-science-pack": 1,
-        "chemical-science-pack": 1,
-        "utility-science-pack": 1,
-      },
-      { "worker-robots-speed-3": 1 }
-    ),
-  ],
-  [
-    "worker-robots-speed-4",
-    new Item(
-      "worker-robots-speed-4",
-      "Worker robot speed 4",
-      "technology",
-      4,
-      {
-        "automation-science-pack": 1,
-        "logistic-science-pack": 1,
-        "chemical-science-pack": 1,
-        "utility-science-pack": 1,
-      },
-      { "worker-robots-speed-4": 1 }
-    ),
-  ],
-  [
-    "personal-roboport-mk2-equipment-technology",
-    new Item(
-      "personal-roboport-mk2-equipment-technology",
-      "Personal roboport MK2",
-      "technology",
-      4,
-      {
-        "automation-science-pack": 1,
-        "logistic-science-pack": 1,
-        "chemical-science-pack": 1,
-        "utility-science-pack": 1,
-      },
-      { "personal-roboport-mk2-equipment-technology": 1 }
-    ),
-  ],
-  [
-    "physical-projectile-damage-6",
-    new Item(
-      "physical-projectile-damage-6",
-      "Physical projectile damage 6",
-      "technology",
-      5,
-      {
-        "automation-science-pack": 1,
-        "logistic-science-pack": 1,
-        "chemical-science-pack": 1,
-        "military-science-pack": 1,
-        "utility-science-pack": 1,
-      },
-      { "physical-projectile-damage-6": 1 }
-    ),
-  ],
-  [
-    "stronger-explosives-4",
-    new Item(
-      "stronger-explosives-4",
-      "Stronger explosives 4",
-      "technology",
-      5,
-      {
-        "automation-science-pack": 1,
-        "logistic-science-pack": 1,
-        "military-science-pack": 1,
-        "chemical-science-pack": 1,
-        "utility-science-pack": 1,
-      },
-      { "stronger-explosives-4": 1 }
-    ),
-  ],
-  [
-    "stronger-explosives-5",
-    new Item(
-      "stronger-explosives-5",
-      "Stronger explosives 5",
-      "technology",
-      5,
-      {
-        "automation-science-pack": 1,
-        "logistic-science-pack": 1,
-        "military-science-pack": 1,
-        "chemical-science-pack": 1,
-        "utility-science-pack": 1,
-      },
-      { "stronger-explosives-5": 1 }
-    ),
-  ],
-  [
-    "stronger-explosives-6",
-    new Item(
-      "stronger-explosives-6",
-      "Stronger explosives 6",
-      "technology",
-      5,
-      {
-        "automation-science-pack": 1,
-        "logistic-science-pack": 1,
-        "chemical-science-pack": 1,
-        "military-science-pack": 1,
-        "utility-science-pack": 1,
-      },
-      { "stronger-explosives-6": 1 }
-    ),
-  ],
-  [
-    "refined-flammables-4",
-    new Item(
-      "refined-flammables-4",
-      "Refined flammables 4",
-      "technology",
-      5,
-      {
-        "automation-science-pack": 1,
-        "logistic-science-pack": 1,
-        "military-science-pack": 1,
-        "chemical-science-pack": 1,
-        "utility-science-pack": 1,
-      },
-      { "refined-flammables-4": 1 }
-    ),
-  ],
-  [
-    "refined-flammables-5",
-    new Item(
-      "refined-flammables-5",
-      "Refined flammables 5",
-      "technology",
-      5,
-      {
-        "automation-science-pack": 1,
-        "logistic-science-pack": 1,
-        "military-science-pack": 1,
-        "chemical-science-pack": 1,
-        "utility-science-pack": 1,
-      },
-      { "refined-flammables-5": 1 }
-    ),
-  ],
-  [
-    "refined-flammables-6",
-    new Item(
-      "refined-flammables-6",
-      "Refined flammables 6",
-      "technology",
-      5,
-      {
-        "automation-science-pack": 1,
-        "logistic-science-pack": 1,
-        "chemical-science-pack": 1,
-        "military-science-pack": 1,
-        "utility-science-pack": 1,
-      },
-      { "refined-flammables-6": 1 }
-    ),
-  ],
-  [
-    "laser-weapons-damage-5",
-    new Item(
-      "laser-weapons-damage-5",
-      "Energy weapons damage 5",
-      "technology",
-      5,
-      {
-        "automation-science-pack": 1,
-        "logistic-science-pack": 1,
-        "chemical-science-pack": 1,
-        "military-science-pack": 1,
-        "utility-science-pack": 1,
-      },
-      { "laser-weapons-damage-5": 1 }
-    ),
-  ],
-  [
-    "laser-weapons-damage-6",
-    new Item(
-      "laser-weapons-damage-6",
-      "Energy weapons damage 6",
-      "technology",
-      5,
-      {
-        "automation-science-pack": 1,
-        "logistic-science-pack": 1,
-        "chemical-science-pack": 1,
-        "military-science-pack": 1,
-        "utility-science-pack": 1,
-      },
-      { "laser-weapons-damage-6": 1 }
-    ),
-  ],
-  [
-    "weapon-shooting-speed-6",
-    new Item(
-      "weapon-shooting-speed-6",
-      "Weapon shooting speed 6",
-      "technology",
-      5,
-      {
-        "automation-science-pack": 1,
-        "logistic-science-pack": 1,
-        "chemical-science-pack": 1,
-        "military-science-pack": 1,
-        "utility-science-pack": 1,
-      },
-      { "weapon-shooting-speed-6": 1 }
-    ),
-  ],
-  [
-    "laser-shooting-speed-5",
-    new Item(
-      "laser-shooting-speed-5",
-      "Laser shooting speed 5",
-      "technology",
-      5,
-      {
-        "automation-science-pack": 1,
-        "logistic-science-pack": 1,
-        "chemical-science-pack": 1,
-        "military-science-pack": 1,
-        "utility-science-pack": 1,
-      },
-      { "laser-shooting-speed-5": 1 }
-    ),
-  ],
-  [
-    "laser-shooting-speed-6",
-    new Item(
-      "laser-shooting-speed-6",
-      "Laser shooting speed 6",
-      "technology",
-      5,
-      {
-        "automation-science-pack": 1,
-        "logistic-science-pack": 1,
-        "chemical-science-pack": 1,
-        "military-science-pack": 1,
-        "utility-science-pack": 1,
-      },
-      { "laser-shooting-speed-6": 1 }
-    ),
-  ],
-  [
-    "laser-shooting-speed-7",
-    new Item(
-      "laser-shooting-speed-7",
-      "Laser shooting speed 7",
-      "technology",
-      5,
-      {
-        "automation-science-pack": 1,
-        "logistic-science-pack": 1,
-        "chemical-science-pack": 1,
-        "military-science-pack": 1,
-        "utility-science-pack": 1,
-      },
-      { "laser-shooting-speed-7": 1 }
-    ),
-  ],
-  [
-    "follower-robot-count-4",
-    new Item(
-      "follower-robot-count-4",
-      "Follower robot count 4",
-      "technology",
-      5,
-      {
-        "automation-science-pack": 1,
-        "logistic-science-pack": 1,
-        "chemical-science-pack": 1,
-        "military-science-pack": 1,
-        "utility-science-pack": 1,
-      },
-      { "follower-robot-count-4": 1 }
-    ),
-  ],
-  [
-    "inserter-capacity-bonus-7",
-    new Item(
-      "inserter-capacity-bonus-7",
-      "Inserter capacity bonus 7",
-      "technology",
-      5,
-      {
-        "automation-science-pack": 1,
-        "logistic-science-pack": 1,
-        "chemical-science-pack": 1,
-        "production-science-pack": 1,
-        "utility-science-pack": 1,
-      },
-      { "inserter-capacity-bonus-7": 1 }
-    ),
-  ],
-  [
-    "military-4",
-    new Item(
-      "military-4",
-      "Military 4",
-      "technology",
-      5,
-      {
-        "automation-science-pack": 1,
-        "logistic-science-pack": 1,
-        "chemical-science-pack": 1,
-        "military-science-pack": 1,
-        "utility-science-pack": 1,
-      },
-      { "military-4": 1 }
-    ),
-  ],
-  [
-    "uranium-ammo",
-    new Item(
-      "uranium-ammo",
-      "Uranium ammo",
-      "technology",
-      5,
-      {
-        "automation-science-pack": 1,
-        "logistic-science-pack": 1,
-        "chemical-science-pack": 1,
-        "military-science-pack": 1,
-        "utility-science-pack": 1,
-      },
-      { "uranium-ammo": 1 }
-    ),
-  ],
-  [
-    "braking-force-6",
-    new Item(
-      "braking-force-6",
-      "Braking force 6",
-      "technology",
-      5,
-      {
-        "automation-science-pack": 1,
-        "logistic-science-pack": 1,
-        "chemical-science-pack": 1,
-        "production-science-pack": 1,
-        "utility-science-pack": 1,
-      },
-      { "braking-force-6": 1 }
-    ),
-  ],
-  [
-    "braking-force-7",
-    new Item(
-      "braking-force-7",
-      "Braking force 7",
-      "technology",
-      5,
-      {
-        "automation-science-pack": 1,
-        "logistic-science-pack": 1,
-        "chemical-science-pack": 1,
-        "production-science-pack": 1,
-        "utility-science-pack": 1,
-      },
-      { "braking-force-7": 1 }
-    ),
-  ],
-  [
-    "power-armor-mk2-technology",
-    new Item(
-      "power-armor-mk2-technology",
-      "Power armor MK2",
-      "technology",
-      5,
-      {
-        "automation-science-pack": 1,
-        "logistic-science-pack": 1,
-        "chemical-science-pack": 1,
-        "military-science-pack": 1,
-        "utility-science-pack": 1,
-      },
-      { "power-armor-mk2-technology": 1 }
-    ),
-  ],
-  [
-    "rocket-silo-technology",
-    new Item(
-      "rocket-silo-technology",
-      "Rocket silo",
-      "technology",
-      5,
-      {
-        "automation-science-pack": 1,
-        "logistic-science-pack": 1,
-        "chemical-science-pack": 1,
-        "production-science-pack": 1,
-        "utility-science-pack": 1,
-      },
-      { "rocket-silo-technology": 1 }
-    ),
-  ],
-  [
-    "research-speed-6",
-    new Item(
-      "research-speed-6",
-      "Lab research speed 6",
-      "technology",
-      5,
-      {
-        "automation-science-pack": 1,
-        "logistic-science-pack": 1,
-        "chemical-science-pack": 1,
-        "production-science-pack": 1,
-        "utility-science-pack": 1,
-      },
-      { "research-speed-6": 1 }
-    ),
-  ],
-  [
-    "worker-robots-speed-5",
-    new Item(
-      "worker-robots-speed-5",
-      "Worker robot speed 5",
-      "technology",
-      5,
-      {
-        "automation-science-pack": 1,
-        "logistic-science-pack": 1,
-        "chemical-science-pack": 1,
-        "production-science-pack": 1,
-        "utility-science-pack": 1,
-      },
-      { "worker-robots-speed-5": 1 }
-    ),
-  ],
-  [
-    "worker-robots-storage-3",
-    new Item(
-      "worker-robots-storage-3",
-      "Worker robot cargo size 3",
-      "technology",
-      5,
-      {
-        "automation-science-pack": 1,
-        "logistic-science-pack": 1,
-        "chemical-science-pack": 1,
-        "production-science-pack": 1,
-        "utility-science-pack": 1,
-      },
-      { "worker-robots-storage-3": 1 }
-    ),
-  ],
-  [
-    "fission-reactor-equipment-technology",
-    new Item(
-      "fission-reactor-equipment-technology",
-      "Portable fission reactor",
-      "technology",
-      5,
-      {
-        "automation-science-pack": 1,
-        "logistic-science-pack": 1,
-        "chemical-science-pack": 1,
-        "military-science-pack": 1,
-        "utility-science-pack": 1,
-      },
-      { "fission-reactor-equipment-technology": 1 }
-    ),
-  ],
-  [
-    "destroyer",
-    new Item(
-      "destroyer",
-      "Destroyer",
-      "technology",
-      5,
-      {
-        "automation-science-pack": 1,
-        "logistic-science-pack": 1,
-        "chemical-science-pack": 1,
-        "military-science-pack": 1,
-        "utility-science-pack": 1,
-      },
-      { destroyer: 1 }
-    ),
-  ],
-  [
-    "mining-productivity-3",
-    new Item(
-      "mining-productivity-3",
-      "Mining productivity 3",
-      "technology",
-      5,
-      {
-        "automation-science-pack": 1,
-        "logistic-science-pack": 1,
-        "chemical-science-pack": 1,
-        "production-science-pack": 1,
-        "utility-science-pack": 1,
-      },
-      { "mining-productivity-3": 1 }
-    ),
-  ],
-  [
-    "artillery",
-    new Item(
-      "artillery",
-      "Artillery",
-      "technology",
-      5,
-      {
-        "automation-science-pack": 1,
-        "logistic-science-pack": 1,
-        "chemical-science-pack": 1,
-        "military-science-pack": 1,
-        "utility-science-pack": 1,
-      },
-      { artillery: 1 }
-    ),
-  ],
-  [
-    "atomic-bomb-technology",
-    new Item(
-      "atomic-bomb-technology",
-      "Atomic bomb",
-      "technology",
-      6,
-      {
-        "automation-science-pack": 1,
-        "logistic-science-pack": 1,
-        "chemical-science-pack": 1,
-        "military-science-pack": 1,
-        "production-science-pack": 1,
-        "utility-science-pack": 1,
-      },
-      { "atomic-bomb-technology": 1 }
-    ),
-  ],
-  [
-    "spidertron-technology",
-    new Item(
-      "spidertron-technology",
-      "Spidertron",
-      "technology",
-      6,
-      {
-        "automation-science-pack": 1,
-        "logistic-science-pack": 1,
-        "military-science-pack": 1,
-        "chemical-science-pack": 1,
-        "production-science-pack": 1,
-        "utility-science-pack": 1,
-      },
-      { "spidertron-technology": 1 }
-    ),
-  ],
-  [
-    "physical-projectile-damage-7",
-    new Item(
-      "physical-projectile-damage-7",
-      "Physical projectile damage",
-      "technology",
-      6,
-      {
-        "automation-science-pack": 1,
-        "logistic-science-pack": 1,
-        "chemical-science-pack": 1,
-        "military-science-pack": 1,
-        "utility-science-pack": 1,
-        "space-science-pack": 1,
-      },
-      { "physical-projectile-damage-7": 1 }
-    ),
-  ],
-  [
-    "stronger-explosives-7",
-    new Item(
-      "stronger-explosives-7",
-      "Stronger explosives",
-      "technology",
-      6,
-      {
-        "automation-science-pack": 1,
-        "logistic-science-pack": 1,
-        "chemical-science-pack": 1,
-        "military-science-pack": 1,
-        "utility-science-pack": 1,
-        "space-science-pack": 1,
-      },
-      { "stronger-explosives-7": 1 }
-    ),
-  ],
-  [
-    "refined-flammables-7",
-    new Item(
-      "refined-flammables-7",
-      "Refined flammables",
-      "technology",
-      6,
-      {
-        "automation-science-pack": 1,
-        "logistic-science-pack": 1,
-        "chemical-science-pack": 1,
-        "military-science-pack": 1,
-        "utility-science-pack": 1,
-        "space-science-pack": 1,
-      },
-      { "refined-flammables-7": 1 }
-    ),
-  ],
-  [
-    "laser-weapons-damage-7",
-    new Item(
-      "laser-weapons-damage-7",
-      "Energy weapons damage",
-      "technology",
-      6,
-      {
-        "automation-science-pack": 1,
-        "logistic-science-pack": 1,
-        "chemical-science-pack": 1,
-        "military-science-pack": 1,
-        "utility-science-pack": 1,
-        "space-science-pack": 1,
-      },
-      { "laser-weapons-damage-7": 1 }
-    ),
-  ],
-  [
-    "artillery-shell-range-1",
-    new Item(
-      "artillery-shell-range-1",
-      "Artillery shell range",
-      "technology",
-      6,
-      {
-        "automation-science-pack": 1,
-        "logistic-science-pack": 1,
-        "chemical-science-pack": 1,
-        "military-science-pack": 1,
-        "utility-science-pack": 1,
-        "space-science-pack": 1,
-      },
-      { "artillery-shell-range-1": 1 }
-    ),
-  ],
-  [
-    "artillery-shell-speed-1",
-    new Item(
-      "artillery-shell-speed-1",
-      "Artillery shell shooting speed",
-      "technology",
-      6,
-      {
-        "automation-science-pack": 1,
-        "logistic-science-pack": 1,
-        "chemical-science-pack": 1,
-        "military-science-pack": 1,
-        "utility-science-pack": 1,
-        "space-science-pack": 1,
-      },
-      { "artillery-shell-speed-1": 1 }
-    ),
-  ],
-  [
-    "worker-robots-speed-6",
+    "rocket-turret",
     new Item(
-      "worker-robots-speed-6",
-      "Worker robot speed",
-      "technology",
-      6,
-      {
-        "automation-science-pack": 1,
-        "logistic-science-pack": 1,
-        "chemical-science-pack": 1,
-        "production-science-pack": 1,
-        "utility-science-pack": 1,
-        "space-science-pack": 1,
-      },
-      { "worker-robots-speed-6": 1 }
+      "rocket-turret",
+      "Rocket turret",
+      "combat",
+      8,
+      { "rocket-launcher": 4, "processing-unit": 4, "carbon-fiber": 20, "steel-plate": 20, "iron-gear-wheel": 20 },
+      { "rocket-turret": 1 }
     ),
   ],
   [
-    "mining-productivity-4",
+    "tesla-turret",
     new Item(
-      "mining-productivity-4",
-      "Mining productivity",
-      "technology",
-      6,
-      {
-        "automation-science-pack": 1,
-        "logistic-science-pack": 1,
-        "chemical-science-pack": 1,
-        "production-science-pack": 1,
-        "utility-science-pack": 1,
-        "space-science-pack": 1,
-      },
-      { "mining-productivity-4": 1 }
+      "tesla-turret",
+      "Tesla turret",
+      "combat",
+      8,
+      { teslagun: 1, supercapacitor: 10, "processing-unit": 10, superconductor: 50, electrolyte: 500 },
+      { "tesla-turret": 1 }
     ),
   ],
   [
-    "follower-robot-count-5",
+    "railgun-turret",
     new Item(
-      "follower-robot-count-5",
-      "Follower robot count",
-      "technology",
-      7,
+      "railgun-turret",
+      "Railgun turret",
+      "combat",
+      8,
       {
-        "automation-science-pack": 1,
-        "logistic-science-pack": 1,
-        "chemical-science-pack": 1,
-        "military-science-pack": 1,
-        "production-science-pack": 1,
-        "utility-science-pack": 1,
-        "space-science-pack": 1,
+        "quantum-processor": 100,
+        "tungsten-plate": 30,
+        superconductor: 50,
+        "carbon-fiber": 20,
+        "fluoroketone-cold": 100,
       },
-      { "follower-robot-count-5": 1 }
+      { "railgun-turret": 1 }
     ),
   ],
 ]) as ReadonlyMap<string, Item>;

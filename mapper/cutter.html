@@ -135,7 +135,7 @@
             const input = document.createElement("input");
             input.id = id;
             input.type = "checkbox";
-            input.checked = false;
+            input.checked = true;
             input.meta = {
               x,
               y,
@@ -197,24 +197,19 @@
 
       buttonDownload.onclick = async () => {
         const css = [
-          `span[data-sprite] { width: ${+inputWidth.value}px; height: ${+inputHeight.value}px; background-image: url(${inputImage.files[0].name}); }`,
+          `[sprite] { width: ${+inputWidth.value}px; height: ${+inputHeight.value}px; background-image: url(${inputImage.files[0].name}); }`,
         ];
 
         for (const { id, x, y } of sprites) {
-          css.push(`span[data-sprite="${id}"] { background-position: -${x}px -${y}px; }`);
+          css.push(`[sprite="${id}"] { background-position: -${x}px -${y}px; }`);
         }
 
         const zip = new Zip("result");
         zip.addStr("icons.css", new Date(), css.join("\n"));
         zip.addStr("icons.json", new Date(), JSON.stringify(sprites));
-        resultCanvas.toBlob(
-          async (blob) => {
-            zip.add("icons.webp", new Date(), await blob.arrayBuffer());
-            zip.makeZip();
-          },
-          "image/webp",
-          1
-        );
+        const blob = await new Promise((resolve) => resultCanvas.toBlob(resolve, "image/webp", 1));
+        zip.add("icons.webp", new Date(), await blob.arrayBuffer());
+        zip.makeZip();
       };
     </script>
   </body>

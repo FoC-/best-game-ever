@@ -3,7 +3,7 @@
   <head>
     <title>Mapper</title>
     <meta charset="UTF-8" />
-    <link rel="stylesheet" href="bin/icons.css" />
+    <link rel="stylesheet" href="assets/icons.css" />
     <style>
       * {
         margin: 0;
@@ -47,36 +47,63 @@
       .picker {
         display: flex;
         flex-direction: column;
+        background-color: #ccc;
+      }
+
+      .picker .header {
+        border-bottom: #000 1px solid;
+      }
+
+      .picker .header label {
+        cursor: pointer;
+        padding: 20px;
       }
 
       .picker .buttons-row {
-        height: 100%;
-        width: 100%;
-        display: inline-flex;
-        background-color: #333;
+        display: none;
+        flex-wrap: wrap;
       }
 
-      .picker .button {
-        cursor: pointer;
-        scale: 60%;
-        outline: 3px solid #000;
-        outline-offset: 20px;
+      .picker .tabs input[name="tabs-tag"] {
+        display: none;
+      }
+
+      .picker .tabs input[name="tabs-tag"]:checked + .buttons-row {
+        display: flex;
       }
 
       .hidden {
         display: none !important;
       }
+
+      label[sprite] {
+        cursor: pointer;
+        position: relative;
+      }
+
+      .buttons-row label {
+        cursor: pointer;
+        scale: 75%;
+        outline: 3px solid #000;
+        outline-offset: 4px;
+      }
+
+      .buttons-row label input[type="radio"] {
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        z-index: 10;
+        opacity: 0.6;
+        width: 100%;
+        height: 100%;
+        scale: 35%;
+      }
     </style>
   </head>
   <body>
     <div class="picker">
-      <span class="buttons-row">
-        <span class="button" data-sprite="combat"></span>
-        <span class="button" data-sprite="space"></span>
-      </span>
-      <span class="buttons-row">
-        <span class="button" data-sprite="active-provider-chest"></span>
-      </span>
+      <div class="header"></div>
+      <div class="tabs"></div>
     </div>
     <div id="container">
       <div class="from">
@@ -93,6 +120,41 @@
 
     <script type="module">
       import * as core from "./src/core";
+      import data from "./src/core/data";
+
+      const $ = (selector, el = document) => el.querySelector(selector);
+      const $$ = (selector, el = document) => el.querySelectorAll(selector);
+      const $ce = (name, props = {}) => Object.assign(document.createElement(name), props);
+
+      const buttonOnClick = (name, handler) => {
+        $(`button[name=${name}]`).onclick = (e) => handler(e.target);
+      };
+
+      const pickerHeader = $(".picker .header");
+      const pickerTabs = $(".picker .tabs");
+      const tabs = {};
+
+      for (const [key, item] of data) {
+        let tab = tabs[item.category];
+        if (!tab) {
+          const tabHeader = $ce("label");
+          tabHeader.innerText = item.category;
+          tabHeader.setAttribute("for", item.category + "-tabs-tag");
+
+          pickerHeader.appendChild(tabHeader);
+          pickerTabs.appendChild($ce("input", { id: item.category + "-tabs-tag", type: "radio", name: "tabs-tag" }));
+          tab = $ce("div", { className: "buttons-row" });
+          pickerTabs.appendChild(tab);
+          tabs[item.category] = tab;
+        }
+
+        const label = $ce("label");
+        label.setAttribute("sprite", key);
+        tab.appendChild(label);
+
+        const input = $ce("input", { type: "radio", name: "item-picker", value: key });
+        label.appendChild(input);
+      }
 
       const fromTextarea = document.querySelector("textarea[name=from]");
       const goButton = document.querySelector("button[name=go]");
